@@ -8,9 +8,9 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    background : #33FF3B;
     justify-content: center;
     align-items: center;
+
 }
 
 .lettre{
@@ -20,6 +20,7 @@ body {
     margin-bottom: 100px;
     animation: flash 1.2s linear  infinite;
     font-family: OCR A Std, monospace;
+    font-style: italic;
 
 
 }
@@ -27,8 +28,8 @@ body {
 @keyframes flash {
 
     0%{
-        color: #FF3333;
-        text-shadow: 0 0 7 px  #FF3334;
+        color: #c9ff33;
+        text-shadow: 0 0 7 px  #c9ff33;
     }
 
     90%{
@@ -37,8 +38,8 @@ body {
 
     }
     100%{
-        color: #FF3334;
-        text-shadow: 0 0 7 px  #FF3333;
+        color: #c9ff33;
+        text-shadow: 0 0 7 px  #c9ff33;
     }
     
 }
@@ -65,3 +66,7 @@ body {
     animation-delay: 0.7s;
 }
 
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s;
+}
