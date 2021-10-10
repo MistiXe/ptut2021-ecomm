@@ -68,5 +68,5 @@ body {
 
 .fondu-out{
     opacity: 0;
-    transition: opacity 0.4s;
+    transition: opacity 0.4s ease-out;
 }
