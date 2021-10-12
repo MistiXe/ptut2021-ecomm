@@ -6,7 +6,16 @@
     <title>Preloader</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header> <img class = "titre" src="img/ecomm.png" alt="logo"> 
+       
+                <button class = "boutona">Tutorial</button>
+                <button class = "boutona">About us</button>
+        
+       
+        
+    </header>
 
     <div class="loader">
         <span class="lettre">C</span>
@@ -22,11 +31,17 @@
     </div>
 
     <div class="accueil">
-        <h1 id = "titre">CREATE PARTY </h1>
-        <button id = "btn" aria-setsize="400px">Jouer</button>        
-    </div>
+        <label for="name">Name (4 to 8 characters):</label>
 
+        <input type="text" id="name" name="name" required
+       minlength="10" maxlength="8" size="20">
+       
+        <div class = "boutonf">Jouer</button></div> 
+        <div class = "boutonf">Créer une partie</button></div>
+    </div>
+   
 
     <script src="scriptEcomm.js"></script>
 </body>
+<footer><h4>Projet PTUT 2021-2022 Hecker Corporation</h4></footer>
 </html>
