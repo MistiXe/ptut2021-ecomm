@@ -110,8 +110,15 @@ body {
 }
 
 #btn {
-  align-items: center;
-  size: 200%;
+ 
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
 }
 
 .accueil {
