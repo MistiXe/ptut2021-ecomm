@@ -1,63 +1,70 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(font/LexendDeca-Regular.ttf);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+  font-family: "Lexend Deca";
+  height: 100vh;
 }
 
 .accueil {
-    height: 100%;
-    width: 100%;
-    background: url(cool-background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  background: url(img/cool-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accueil h1 {
-    font-size: 120px;
-    margin-bottom: 450px;
-    text-align: center;
+  font-size: 120px;
+  margin-bottom: 450px;
+  text-align: center;
 }
 
 /* loader */
 
 .loader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lettre {
-    color: #484848;
-    font-size: 80px;
-    letter-spacing: 15px;
-    margin-bottom: 150px;
-    animation: flash 1.2s linear infinite;
+  color: #484848;
+  font-size: 80px;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+  animation: flash 1.2s linear infinite;
 }
 @keyframes flash {
-    0% {
-        color: #fff900;
-        text-shadow: 0 0 7px #fff900;
-    }
-    90% {
-        color: #484848;
-        text-shadow: none;
-    }
-    100% {
-        color: #fff900;
-        text-shadow: 0 0 7px #fff900;
-    }
+  0% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900;
+  }
+  90% {
+    color: #484848;
+    text-shadow: none;
+  }
+  100% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900;
+  }
 }
 
 .lettre:nth-child(1) {
@@ -81,23 +88,32 @@ body {
 .lettre:nth-child(7) {
   animation-delay: 0.7s;
 }
-.lettre:nth-child(8){
-    animation-delay: 0.8s;
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
 }
-.lettre:nth-child(9){
-    animation-delay: 0.9s;
+.lettre:nth-child(9) {
+  animation-delay: 0.9s;
 }
-.lettre:nth-child(10){
-    animation-delay: 1s;
+.lettre:nth-child(10) {
+  animation-delay: 1s;
 }
 
 .fondu-out {
-    opacity: 0;
-    transition: opacity 3.4s ease-out;
-    transition-duration: 3s;
+  opacity: 0;
+  transition: opacity 3.4s ease-out;
+  transition-duration: 3s;
 }
 
-#titre{
-    font-size: 50%;
-    font-family: Arial, Helvetica, sans-serif;
+#titre {
+  font-size: 200%;
+  font-family: "Lexend Deca";
+}
+
+#btn {
+  align-items: center;
+  size: 200%;
+}
+
+.accueil {
+  align-items: center;
 }
