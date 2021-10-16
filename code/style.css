@@ -27,10 +27,13 @@
 }
 
 header{
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   align-items: center;
   padding: 5px 5%;
+  background: linear-gradient(90deg, #0162c8, #91c1c9);
+  border-radius: 40px;
+  padding-top: 20px;
 
 }
 .logo{
@@ -202,6 +205,12 @@ input,
 label {
   margin: .4rem 0;
   size: 100%;
+}
+
+ul{
+  display: inline-block;
+  color:  #91c1c9 ;
+
 }
 
 
