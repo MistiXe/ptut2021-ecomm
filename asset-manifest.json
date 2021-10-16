@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MistiXe/ptut2021-ecomm.git/static/css/main.a617e044.chunk.css",
+    "main.js": "/MistiXe/ptut2021-ecomm.git/static/js/main.116cbc0b.chunk.js",
+    "main.js.map": "/MistiXe/ptut2021-ecomm.git/static/js/main.116cbc0b.chunk.js.map",
+    "runtime-main.js": "/MistiXe/ptut2021-ecomm.git/static/js/runtime-main.aef537f1.js",
+    "runtime-main.js.map": "/MistiXe/ptut2021-ecomm.git/static/js/runtime-main.aef537f1.js.map",
+    "static/js/2.8312baa0.chunk.js": "/MistiXe/ptut2021-ecomm.git/static/js/2.8312baa0.chunk.js",
+    "static/js/2.8312baa0.chunk.js.map": "/MistiXe/ptut2021-ecomm.git/static/js/2.8312baa0.chunk.js.map",
+    "static/js/3.143f55a5.chunk.js": "/MistiXe/ptut2021-ecomm.git/static/js/3.143f55a5.chunk.js",
+    "static/js/3.143f55a5.chunk.js.map": "/MistiXe/ptut2021-ecomm.git/static/js/3.143f55a5.chunk.js.map",
+    "index.html": "/MistiXe/ptut2021-ecomm.git/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/MistiXe/ptut2021-ecomm.git/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.8312baa0.chunk.js.LICENSE.txt": "/MistiXe/ptut2021-ecomm.git/static/js/2.8312baa0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/MistiXe/ptut2021-ecomm.git/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aef537f1.js",
+    "static/js/2.8312baa0.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.116cbc0b.chunk.js"
+  ]
+}
