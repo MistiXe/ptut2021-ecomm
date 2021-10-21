@@ -1,0 +1,24 @@
+.Page1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../image/cool-background.png");
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.P1-img {
+    height: 5vmin;
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+.TextHeader {
+    vertical-align: middle;
+
+
+}
