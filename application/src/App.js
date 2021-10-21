@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
+import createButton from "./Components/createButton";
+
+
 
 
 function App(){
@@ -13,6 +16,7 @@ function App(){
 
     }, 5000)
   }, [] )
+
   return (
       <div className="App">
         { loading ? (
@@ -25,6 +29,8 @@ function App(){
               <h1>E-COMM Launcher </h1>
               <button  onClick={() => alert("test")} className = "btn">Create a party </button>
               <button className = "btn">Join a party</button>
+              <button  className = "btn"  >Jouer </button>
+              <button  className = "btn" onClick={() =>createButton}>Créer une partie </button>
             </header>
         )
         }
@@ -32,4 +38,10 @@ function App(){
   );
 }
 
+
+
+
+
+
 export default App;
+
