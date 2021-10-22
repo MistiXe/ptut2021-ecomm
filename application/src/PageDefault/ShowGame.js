@@ -1,6 +1,8 @@
-import './ShowContext.css';
+import './showGame.css';
 
-const ShowPlayGame = ({ handleClose, show, children }) => {
+
+
+const ShowGame = ({ handleClose, show, children }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
 
     return (
@@ -14,5 +16,4 @@ const ShowPlayGame = ({ handleClose, show, children }) => {
         </div>
     );
 };
-
-export default ShowPlayGame;
+export default ShowGame;

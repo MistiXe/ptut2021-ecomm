@@ -1,42 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Component} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
-import createButton from "./Components/createButton";
-
-
+import BtnJouer from "./PageDefault/BtnJouer";
 
 
 function App(){
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+      const useState1 = useState(false);
+      const [loading, setLoading] = useState1;
+      useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+          setLoading(false)
 
-    }, 5000)
-  }, [] )
+        }, 5000)
+      }, [])
 
-  return (
-      <div className="App">
-        { loading ? (
+      return (
+          <div className="App">
+            {loading ? (
 
-            <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading} /><h1>Loading </h1></>
+                <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading}/><h1>Loading </h1></>
 
-        ) : (
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1>E-COMM Launcher </h1>
-              <button  onClick={() => alert("test")} className = "btn">Create a party </button>
-              <button className = "btn">Join a party</button>
-              <button  className = "btn"  >Jouer </button>
-              <button  className = "btn" onClick={() =>createButton}>Créer une partie </button>
-            </header>
-        )
-        }
-      </div>
-  );
-}
+            ) : (
+                <header className="App-header">
+                  <img src={logo} className="App-logo" alt="logo"/>
+                  <h1>E-COMM Launcher </h1>
+                  <div id ="Play" ><BtnJouer id = "lll"/>  <footer className= "footerVersion">E-COMM V_0.1</footer></div>
+                  <button id ="Play" onClick={() => alert("test")} className="btn">Create a party</button>
+
+
+
+
+
+                </header>
+
+            )
+            }
+          </div>
+      );
+    }
+
+
 
 
 

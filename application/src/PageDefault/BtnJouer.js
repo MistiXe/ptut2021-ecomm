@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ShowPlayGame from "./ShowPlayGame";
+import ShowGame from "./ShowGame.js";
 import qm from "../image/question-mark-on-a-circular-black-background.png";
 
-class playGame extends Component {
+class BtnJouer extends Component {
     constructor() {
         super();
         this.state = {
@@ -23,11 +23,11 @@ class playGame extends Component {
     render() {
         return (
             <main>
-                <ShowPlayGame show={this.state.show} handleClose={this.hideC}>
-                    <p>Jouer Solo</p>
-                </ShowPlayGame>
+                <ShowGame show={this.state.show} handleClose={this.hideC}>
+                    <p>Let'start</p>
+                </ShowGame>
                 <div onClick={this.showC} id="btnTC">
-                    <img className="P1-img" src={qm} alt="Play Solo"/><span className="TextHeader"> Play Solo</span>
+                   <btn>Jouer</btn>
                 </div>
             </main>
 
@@ -36,5 +36,4 @@ class playGame extends Component {
         );
     }
 }
-
-export default playGame;
+export default BtnJouer;
