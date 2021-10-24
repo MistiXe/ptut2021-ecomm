@@ -26,13 +26,8 @@ function App(){
                 <header className="App-header">
                   <img src={logo} className="App-logo" alt="logo"/>
                   <h1>E-COMM Launcher </h1>
-                  <div id ="Play" ><BtnJouer id = "lll"/>  <footer className= "footerVersion">E-COMM V_0.1</footer></div>
-                  <button id ="Play" onClick={() => alert("test")} className="btn">Create a party</button>
-
-
-
-
-
+                  <div id ="Play" ><BtnJouer />  </div>
+                  <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
                 </header>
 
             )
@@ -40,12 +35,6 @@ function App(){
           </div>
       );
     }
-
-
-
-
-
-
 
 
 export default App;

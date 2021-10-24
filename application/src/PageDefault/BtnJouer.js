@@ -24,10 +24,10 @@ class BtnJouer extends Component {
         return (
             <main>
                 <ShowGame show={this.state.show} handleClose={this.hideC}>
-                    <p>Let'start</p>
                 </ShowGame>
                 <div onClick={this.showC} id="btnTC">
-                   <btn>Jouer</btn>
+                   <btn>Jouer
+                       <footer className= "footerVersion">E-COMM V_0.1</footer></btn>
                 </div>
             </main>
 

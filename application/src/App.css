@@ -65,7 +65,7 @@
 }
 
 .btn:hover{
-  transform: translateY(-3px);
+  transform: translateX(3px);
 }
 
 .footerVersion{
