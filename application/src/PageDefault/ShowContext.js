@@ -1,4 +1,4 @@
-
+import './showGame.css'
 
 const ShowContext = ({ handleClose, show, children }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -7,8 +7,8 @@ const ShowContext = ({ handleClose, show, children }) => {
         <div className={showHideClassName}>
             <section className="main">
                 {children}
-                <button type="button" onClick={handleClose}>
-                    Close
+                <button id= "Play-btn" type="button" onClick={handleClose}>
+                    Suivant
                 </button>
             </section>
         </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ShowContext from "./ShowContext.js";
-import qm from "../image/question-mark-on-a-circular-black-background.png";
+
 
 class BtnContext extends Component {
     constructor() {

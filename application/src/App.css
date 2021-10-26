@@ -6,7 +6,7 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-image: url("image/cool-background.png");
+  background-color: #61df98;
   font-size: calc(10px + 2vmin);
   color: white;
 
