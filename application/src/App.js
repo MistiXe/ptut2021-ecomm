@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect, Component} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 import BtnJouer from "./inutile/BtnJouer";
-import Main from "./minimal";
+import Main from "./threadGame";
 
 
 function App(){

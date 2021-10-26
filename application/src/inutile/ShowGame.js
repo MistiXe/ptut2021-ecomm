@@ -1,5 +1,5 @@
 import './showGame.css';
-import Main from "../minimal";
+import Main from "../threadGame";
 import BtnContext from "../PageDefault/BtnContext";
 
 
@@ -41,7 +41,7 @@ const ShowGame = ({ handleClose, show, children }) => {
 
 
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
-                <center><header><div id = "zoneJoueur"></div></header></center>
+
 
             </section>
         </div>

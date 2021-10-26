@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-import App from "./App";
 import logo from "./logo.svg";
 import BtnContext from "./PageDefault/BtnContext";
 
@@ -61,7 +60,7 @@ function Main(props){
 
 
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
-                <center><header><div id = "zoneJoueur"></div></header></center>
+
 
             </section>
         </div>
@@ -139,7 +138,7 @@ function DevinerSuite(props){
   const btn = possible.map((txt)=>
   <btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn>);
   return(
-      <div className="tableauProp">{btn}</div>
+     <center> <div className="tableauProp">{btn}</div></center>
   )
 }
 
@@ -151,11 +150,11 @@ function Formulaire(props){
         }
     }
     return(
-       <div className= "formu"> <form name= "form">
+      <center> <div className= "formu"> <form name= "form">
             reponse : <input type = "text" name = "rep"/>
             <btn onClick={check}>Valider</btn>
 
-       </form></div>
+       </form></div></center>
     )
 
 }
