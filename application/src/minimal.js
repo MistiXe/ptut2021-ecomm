@@ -85,7 +85,7 @@ function DevinerSuite(props){
       }
   }
   const btn = possible.map((txt)=>
-  <btn onClick={() => check(txt)}>{txt}</btn>);
+  <btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn>);
   return(
       <div className="tableauProp">{btn}</div>
   )
