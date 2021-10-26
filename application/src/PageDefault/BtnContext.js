@@ -6,7 +6,7 @@ class BtnContext extends Component {
     constructor() {
         super();
         this.state = {
-            show: false
+            show: true
         };
         this.showC = this.showC.bind(this);
         this.hideC = this.hideC.bind(this);
@@ -26,9 +26,8 @@ class BtnContext extends Component {
                 <ShowContext show={this.state.show} handleClose={this.hideC}>
                     <p>Contexte de la partie</p>
                 </ShowContext>
-                <div onClick={this.showC} id="btnTC">
-                    <img className="P1-img" src={qm} alt="Tutorial / Context"/><span className="TextHeader">  Tutorial / Context</span>
-                </div>
+                <button id = "PlayRetour" type="button" onClick={this.showC}>Context
+                </button>
             </main>
 
 

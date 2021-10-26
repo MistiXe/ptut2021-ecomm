@@ -9,7 +9,7 @@ import React, {Component} from "react";
 
 //Components
 import BtnContext from "./BtnContext";
-
+import NumPage from "./IndexPage/NumPage"
 
 class PageDefault extends Component{
 
@@ -32,7 +32,7 @@ class PageDefault extends Component{
                         <img className="P1-img" src={tn} alt="Team Name"/><span className="TextHeader">  Team Name</span>
                     </div>
                     <div>
-
+                    <NumPage />
 
 
                 </div>

@@ -20,12 +20,12 @@ function App(){
           <div className="App">
             {loading ? (
 
-                <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading}/><h1>Loading </h1></>
+                <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading}/><h1>Loading...</h1></>
 
             ) : (
                 <header className="App-header">
                   <img src={logo} className="App-logo" alt="logo"/>
-                  <h1 id="titresite">E-COMM Launcher </h1>
+                  <h1>E-COMM Launcher </h1>
                   <BtnJouer />
                   <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
                 </header>

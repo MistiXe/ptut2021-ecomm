@@ -1,5 +1,6 @@
 import './showGame.css';
 import Main from "../minimal";
+import BtnContext from "./BtnContext";
 
 
 
@@ -16,6 +17,9 @@ const ShowGame = ({ handleClose, show, children }) => {
                         <h4>E-COMM</h4>
                     </div>
                     <ul className="nav-links">
+                        <li>
+                            <BtnContext />
+                        </li>
                         <li>
                             <button id = "playTuto" type="button" onClick={handleClose}>
                             </button>
