@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-import logo from "./logo.svg";
 import BtnContext from "./PageDefault/BtnContext";
 
 
@@ -9,24 +8,10 @@ function Main(props){
     let centre;
     if(etape===0) {
 
-        return(
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <h1>E-COMM Launcher </h1>
-                <btn id ="Play-btn" onClick={() => setEtape(1)} >
-                    Jouer
-                </btn>
-                <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
-            </header>
-        )
+        centre = <Accueil demarrer={()=> setEtape(1)} />
     }
-    else if(etape === 1){
-            centre = <Accueil demarrer={()=> setEtape(2)} />
-
-    }else{
-
-            centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
-
+    else {
+        centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
     }
     return (
         <div className="modal display-block">
@@ -59,22 +44,19 @@ function Main(props){
         </div>
     )
 
-    if(etape === 17){
 
-
-        }
 
 
 }
 
 function Accueil(props){
     return(
-      <>
-      <div className= "acc">
-            <h1>Bienvenue dans notre Jeu ! </h1>
-      </div>
-      <button className="btnJ" onClick={props.demarrer}>Jouer</button>
-      </>
+        <>
+            <div className= "acc">
+                <h1>Bienvenue dans notre Jeu ! </h1>
+            </div>
+            <button className="btnJ" onClick={props.demarrer}>Jouer</button>
+        </>
 
 
     )
@@ -84,21 +66,21 @@ function EtapeJeu(props){
     let jeu;
     if(props.etape === 2){
         jeu = (
-       <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
-                        possible={['a', 'b', 'c']}
-                          reponse={'b'} /> </div>)
+            <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
+                                           possible={['a', 'b', 'c']}
+                                           reponse={'b'} /> </div>)
     } else if(props.etape === 3){
         jeu = (
-          <Formulaire  suivante={props.suivante}
+            <Formulaire  suivante={props.suivante}
 
-                          reponse={'e'} />
+                         reponse={'e'} />
 
         )
     } else if(props.etape === 4){
-       jeu = (
-          <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                          possible={['a', 'b', 'c', 'd', 'e']}
-                              reponse={'e'} /></div>
+        jeu = (
+            <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
+                                             possible={['a', 'b', 'c', 'd', 'e']}
+                                             reponse={'e'} /></div>
 
         )
     } else {
@@ -112,26 +94,26 @@ function EtapeJeu(props){
     }
     return(
 
-    <div className = "acc">
-        <h1>Vous êtes à l'étape {props.etape-1}</h1>
-        {jeu}
-    </div>
+        <div className = "acc">
+            <h1>Vous êtes à l'étape {props.etape}</h1>
+            {jeu}
+        </div>
     )
 
 }
 
 function DevinerSuite(props){
-  const possible = props.possible;
-  function check(txt){
-      if ( props.reponse === txt){
-          props.suivante()
-      }
-  }
-  const btn = possible.map((txt)=>
-  <btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn>);
-  return(
-     <center> <div className="tableauProp">{btn}</div></center>
-  )
+    const possible = props.possible;
+    function check(txt){
+        if ( props.reponse === txt){
+            props.suivante()
+        }
+    }
+    const btn = possible.map((txt)=>
+        <btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn>);
+    return(
+        <center> <div className="tableauProp">{btn}</div></center>
+    )
 }
 
 function Formulaire(props){
@@ -142,11 +124,11 @@ function Formulaire(props){
         }
     }
     return(
-      <center> <div className= "formu"> <form name= "form">
+        <center> <div className= "formu"> <form name= "form">
             reponse : <input type = "text" name = "rep"/>
             <btn onClick={check}>Valider</btn>
 
-       </form></div></center>
+        </form></div></center>
     )
 
 }
