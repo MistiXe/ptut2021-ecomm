@@ -17,7 +17,7 @@ const ShowGame = ({ handleClose, show, children }) => {
                     </div>
                     <ul className="nav-links">
                         <li>
-                            <button id = "PlayRetour" type="button" onClick={handleClose}>  Tutorial
+                            <button id = "playTuto" type="button" onClick={handleClose}>
                             </button>
                         </li>
                         <li>

@@ -125,3 +125,12 @@ nav{
     border-radius: 40px;
 }
 
+#playTuto{
+    background-image: url("../image/tutobtnreel.png");
+    height: 31.5px;
+    width: 31.5px;
+    border-radius: 32px;
+    border: none;
+
+}
+
