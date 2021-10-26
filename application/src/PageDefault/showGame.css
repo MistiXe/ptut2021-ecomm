@@ -29,11 +29,17 @@
 
 .appletGame{
     background-color: white;
-    height: 450px;
+    height: 250px;
     width : 850px;
     border-radius: 40px;
+    align-items: center;
+    justify-content: center;
 
 
+}
+
+#jeu{
+    margin-top: 20px;
 }
 
 .header{
@@ -110,5 +116,12 @@ nav{
     border-radius: 40px;
     background: linear-gradient(90deg, #0162c8, #91c1c9);
     margin-top: 12px;
+}
+
+#zoneJoueur{
+    height: 150px;
+    width: 500px;
+    background: linear-gradient(90deg, #0292c8, #61df98);
+    border-radius: 40px;
 }
 

@@ -1,4 +1,5 @@
 import './showGame.css';
+import Main from "../minimal";
 
 
 
@@ -39,8 +40,9 @@ const ShowGame = ({ handleClose, show, children }) => {
 
 
 
-                <header> <h1 id = "DefaultText"> Team Name :  [ADMIN]</h1> <center> <div className= "appletGame"></div></center></header>
+                <header> <h1 id = "DefaultText"> Team Name :  [ADMIN]</h1> <center> <div className= "appletGame"><Main id ="jeu"/></div></center></header>
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
+                <center><header><div id = "zoneJoueur"></div></header></center>
 
             </section>
         </div>

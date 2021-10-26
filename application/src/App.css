@@ -76,5 +76,46 @@
 #titresite{
   margin-bottom: 20px;
 }
+.acc{
+  margin-top: 40px;
+  color: black;
+  padding: 10px 100px;
+}
 
 
+.playGame{
+  padding-bottom: 100px;
+}
+
+#suite{
+  bottom: 20px;
+
+}
+
+.btnJ{
+  position: center;
+  padding: 15px 36px;
+
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #0162c8, #91c1c9);
+  margin-top: 380px;
+
+}
+
+.tableauProp{
+  margin-top: 275px;
+
+
+}
+
+.formu{
+  margin-top: 275px;
+
+
+}

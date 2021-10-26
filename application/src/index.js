@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
+import PageDefault from "./PageDefault/PageDefault";
+import Main from "./minimal";
 
 ReactDOM.render(
   <React.StrictMode>

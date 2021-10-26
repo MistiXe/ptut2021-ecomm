@@ -33,8 +33,6 @@ class BtnJouer extends Component {
 
             </body>
 
-
-
         );
     }
 }
