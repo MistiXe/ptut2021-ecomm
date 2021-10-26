@@ -8,6 +8,7 @@ function Main(props){
     const[etape, setEtape] = useState(0);
     let centre;
     if(etape===0) {
+
         return(
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
@@ -20,7 +21,6 @@ function Main(props){
         )
     }
     else if(etape === 1){
-
             centre = <Accueil demarrer={()=> setEtape(2)} />
 
     }else{
@@ -48,16 +48,9 @@ function Main(props){
                             <button id = "PlayRetour" type="button">  Close
                             </button>
                         </li>
-
-
                     </ul>
-
-
-
                 </nav>
                 {centre}
-
-
 
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
 
@@ -76,13 +69,12 @@ function Main(props){
 
 function Accueil(props){
     return(
-        <>
+      <>
       <div className= "acc">
             <h1>Bienvenue dans notre Jeu ! </h1>
       </div>
-
-         <button className="btnJ" onClick={props.demarrer}>Jouer</button>
-            </>
+      <button className="btnJ" onClick={props.demarrer}>Jouer</button>
+      </>
 
 
     )
@@ -121,7 +113,7 @@ function EtapeJeu(props){
     return(
 
     <div className = "acc">
-        <h1>Vous êtes à l'étape {props.etape}</h1>
+        <h1>Vous êtes à l'étape {props.etape-1}</h1>
         {jeu}
     </div>
     )
