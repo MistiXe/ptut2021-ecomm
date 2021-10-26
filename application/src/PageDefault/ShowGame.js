@@ -20,10 +20,6 @@ const ShowGame = ({ handleClose, show, children }) => {
                             <button id = "playTuto" type="button" onClick={handleClose}>
                             </button>
                         </li>
-                        <li>
-                            <button id = "PlayRetour" type="button" onClick={handleClose}>  About us
-                            </button>
-                        </li>
 
                         <li>
                             <button id = "PlayRetour" type="button" onClick={handleClose}>  Close
