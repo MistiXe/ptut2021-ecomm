@@ -1,6 +1,6 @@
 import './showGame.css';
 import Main from "../minimal";
-import BtnContext from "./BtnContext";
+import BtnContext from "../PageDefault/BtnContext";
 
 
 
@@ -40,7 +40,6 @@ const ShowGame = ({ handleClose, show, children }) => {
 
 
 
-                <header> <center> <div className= "appletGame"><Main id ="jeu"/></div></center></header>
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
                 <center><header><div id = "zoneJoueur"></div></header></center>
 

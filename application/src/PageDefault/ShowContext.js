@@ -1,4 +1,4 @@
-import './showGame.css'
+import '../inutile/showGame.css'
 
 const ShowContext = ({ handleClose, show, children }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
