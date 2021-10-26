@@ -1,39 +1,29 @@
-import React, { Component } from "react";
-import ShowContext from "./ShowContext.js";
+import React, {Component, useState} from "react";
 
 
-class BtnContext extends Component {
-    constructor() {
-        super();
-        this.state = {
-            show: false
-        };
-        this.showC = this.showC.bind(this);
-        this.hideC = this.hideC.bind(this);
-    }
+function BtnContext(props) {
+    const[show, setShow] = useState(false)
 
-    showC = () => {
-        this.setState({ show: true });
-    };
-
-    hideC = () => {
-        this.setState({ show: false });
-    };
-
-    render() {
-        return (
-            <main>
-                <ShowContext show={this.state.show} handleClose={this.hideC}>
-                    <p>Contexte de la partie</p>
-                </ShowContext>
-                <button id = "PlayRetour" type="button" onClick={this.showC}>Context
+    if(show==false) {
+            return (<main>
+                <button id="PlayRetour" type="button" onClick={() => setShow(true)}>Context
                 </button>
-            </main>
+            </main>);
 
+    }else if(show==true){
 
-
-        );
+        return (<div className="modal display-block">
+            <section className="main">
+                <button id= "Play-btn" type="button" onClick={() => setShow(false)}>
+                    Suivant
+                </button>
+            </section>
+        </div>)
     }
+
+
 }
+
+//
 
 export default BtnContext;
