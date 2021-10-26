@@ -6,7 +6,7 @@ class BtnContext extends Component {
     constructor() {
         super();
         this.state = {
-            show: true
+            show: false
         };
         this.showC = this.showC.bind(this);
         this.hideC = this.hideC.bind(this);

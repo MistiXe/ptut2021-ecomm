@@ -1,20 +1,71 @@
 import React, {useState} from 'react';
 import './App.css';
 import App from "./App";
+import logo from "./logo.svg";
+import BtnContext from "./PageDefault/BtnContext";
 
 
 function Main(props){
     const[etape, setEtape] = useState(0);
-
-    if(etape === 0){
+    let centre;
+    if(etape===0) {
         return(
-            <Accueil demarrer={()=> setEtape(1)} />
-        )
-    }else{
-        return (
-            <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+                <h1>E-COMM Launcher </h1>
+                <btn id ="Play-btn" onClick={() => setEtape(1)} >
+                    Jouer
+                </btn>
+                <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
+            </header>
         )
     }
+    else if(etape === 1){
+
+            centre = <Accueil demarrer={()=> setEtape(2)} />
+
+    }else{
+
+            centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
+
+    }
+    return (
+        <div className="modal display-block">
+            <section className="main">
+                <nav>
+                    <div className= "logo">
+                        <h4>E-COMM</h4>
+                    </div>
+                    <ul className="nav-links">
+                        <li>
+                            <BtnContext />
+                        </li>
+                        <li>
+                            <button id = "playTuto" type="button">
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id = "PlayRetour" type="button">  Close
+                            </button>
+                        </li>
+
+
+                    </ul>
+
+
+
+                </nav>
+                {centre}
+
+
+
+                <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
+                <center><header><div id = "zoneJoueur"></div></header></center>
+
+            </section>
+        </div>
+    )
 
     if(etape === 17){
 
@@ -40,19 +91,19 @@ function Accueil(props){
 
 function EtapeJeu(props){
     let jeu;
-    if(props.etape === 1){
+    if(props.etape === 2){
         jeu = (
        <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
                         possible={['a', 'b', 'c']}
                           reponse={'b'} /> </div>)
-    } else if(props.etape === 2){
+    } else if(props.etape === 3){
         jeu = (
           <Formulaire  suivante={props.suivante}
 
                           reponse={'e'} />
 
         )
-    } else if(props.etape === 3){
+    } else if(props.etape === 4){
        jeu = (
           <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                           possible={['a', 'b', 'c', 'd', 'e']}
@@ -69,10 +120,11 @@ function EtapeJeu(props){
 
     }
     return(
-        <div className = "acc">
-            <h1>Vous êtes à l'étape {props.etape}</h1>
-            {jeu}
-        </div>
+
+    <div className = "acc">
+        <h1>Vous êtes à l'étape {props.etape}</h1>
+        {jeu}
+    </div>
     )
 
 }

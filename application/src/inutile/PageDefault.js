@@ -8,8 +8,8 @@ import tn from '../image/group.png';
 import React, {Component} from "react";
 
 //Components
-import BtnContext from "./BtnContext";
-import NumPage from "./IndexPage/NumPage"
+import BtnContext from "../PageDefault/BtnContext";
+import NumPage from "./NumPage"
 
 class PageDefault extends Component{
 

@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect, Component} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
-import BtnJouer from "./PageDefault/BtnJouer";
+import BtnJouer from "./inutile/BtnJouer";
+import Main from "./minimal";
 
 
 function App(){
@@ -23,12 +24,7 @@ function App(){
                 <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading}/><h1>Loading...</h1></>
 
             ) : (
-                <header className="App-header">
-                  <img src={logo} className="App-logo" alt="logo"/>
-                  <h1>E-COMM Launcher </h1>
-                  <BtnJouer />
-                  <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
-                </header>
+                <Main />
 
             )
             }
