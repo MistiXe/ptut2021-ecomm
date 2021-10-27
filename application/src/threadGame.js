@@ -54,7 +54,7 @@ function Accueil(props){
     return(
         <>
             <div className= "acc">
-                <h1>Bienvenue dans notre Jeu ! </h1>
+                <h1 >Bienvenue dans notre Jeu ! </h1>
             </div>
             <button className="btnJ" onClick={props.demarrer}>Jouer</button>
         </>
