@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-import logo from "./logo.svg";
 import BtnContext from "./PageDefault/BtnContext";
 
 
@@ -12,7 +11,7 @@ function Main(props){
         centre = <Accueil demarrer={()=> setEtape(1)} />
     }
     else {
-        centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
+        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} />
     }
     return (
         <div className="main-page">
@@ -65,34 +64,37 @@ function Accueil(props){
 
 function EtapeJeu(props){
     let jeu;
-    if(props.etape === 2){
+    if(props.etape === 1){
         jeu = (
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
                                            possible={['a', 'b', 'c']}
                                            reponse={'b'} /> </div>)
-    } else if(props.etape === 3){
+    } else if(props.etape === 2){
         jeu = (
             <Formulaire  suivante={props.suivante}
 
                          reponse={'e'} />
 
         )
-    } else if(props.etape === 4){
+    } else if(props.etape === 3){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                              possible={['a', 'b', 'c', 'd', 'e']}
                                              reponse={'e'} /></div>
 
         )
-    } else {
-        jeu =  <button className = "acc" onClick={props.suivante}>Etape Suivante</button>
     }
     if( props.etape === 17){
-        jeu = <h1>Victoire ! </h1>
-        jeu = props.suivante === 1
+        jeu = (<><h1>Victoire ! </h1>
+                <button id= "Play" onClick={props.suivante}>Retour à l'Accueil</button>
+               </>
+        )
 
 
+    } else {
+        jeu =  <button id= "Play" onClick={props.suivante}>Etape Suivante</button>
     }
+
     return(
 
         <div className = "acc">
