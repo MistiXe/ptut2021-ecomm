@@ -65,19 +65,19 @@ function Accueil(props){
 
 function EtapeJeu(props){
     let jeu;
-    if(props.etape === 2){
+    if(props.etape === 1){
         jeu = (
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
                                            possible={['a', 'b', 'c']}
                                            reponse={'b'} /> </div>)
-    } else if(props.etape === 3){
+    } else if(props.etape === 2){
         jeu = (
             <Formulaire  suivante={props.suivante}
 
                          reponse={'e'} />
 
         )
-    } else if(props.etape === 4){
+    } else if(props.etape === 3){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                              possible={['a', 'b', 'c', 'd', 'e']}
