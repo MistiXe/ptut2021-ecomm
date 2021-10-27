@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-import logo from "./logo.svg";
 import BtnContext from "./PageDefault/BtnContext";
 
 
@@ -12,7 +11,7 @@ function Main(props){
         centre = <Accueil demarrer={()=> setEtape(1)} />
     }
     else {
-        centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
+        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} />
     }
     return (
         <div className="main-page">
@@ -84,15 +83,18 @@ function EtapeJeu(props){
                                              reponse={'e'} /></div>
 
         )
-    } else {
-        jeu =  <button className = "acc" onClick={props.suivante}>Etape Suivante</button>
     }
     if( props.etape === 17){
-        jeu = <h1>Victoire ! </h1>
-        jeu = props.suivante === 1
+        jeu = (<><h1>Victoire ! </h1>
+                <button id= "Play" onClick={props.suivante}>Retour à l'Accueil</button>
+               </>
+        )
 
 
+    } else {
+        jeu =  <button id= "Play" onClick={props.suivante}>Etape Suivante</button>
     }
+
     return(
 
         <div className = "acc">
