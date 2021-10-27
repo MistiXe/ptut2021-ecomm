@@ -8,7 +8,7 @@
   height: 100vh;
   background-image: linear-gradient(
   to bottom right,
-  #61df98, #61dafb , #0162c8, #0292c8 100%
+  #ffffff, #f9f9f3 , #61dafb, #0292c8 100%
   );
   background-size: 200% 200%;
   animation: movingGradient 8s linear infinite alternate;
