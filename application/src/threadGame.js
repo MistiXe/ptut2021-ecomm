@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import BtnContext from "./PageDefault/BtnContext";
+import App from "./App";
+
+
 
 
 function Main(props){
@@ -29,10 +32,7 @@ function Main(props){
                             </button>
                         </li>
 
-                        <li>
-                            <button id = "PlayRetour" type="button">  Close
-                            </button>
-                        </li>
+
                     </ul>
                 </nav></center>
                 {centre}
@@ -113,10 +113,31 @@ function DevinerSuite(props){
         }
     }
     const btn = possible.map((txt)=>
-        <btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn>);
+        <center><btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn></center>);
     return(
-        <center> <div className="tableauProp">{btn}</div></center>
-    )
+        <>
+        <div className="card">
+            <div className= "container">
+
+            <p className="props">{btn[0]}</p>
+            </div>
+        </div>
+            <div className="card">
+                <div className= "container">
+
+                    <p className="props">{btn[1]}</p>
+                </div>
+            </div>
+            <div className="card">
+                <div className= "container">
+                    <center><p className="props">{btn[2]}</p></center>
+                </div>
+            </div>
+
+        </>
+
+
+)
 }
 
 function Formulaire(props){
