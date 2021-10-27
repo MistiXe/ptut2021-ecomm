@@ -84,7 +84,7 @@ function EtapeJeu(props){
 
         )
     }
-    if( props.etape === 17){
+    else if( props.etape === 17){
         jeu = (<><h1>Victoire ! </h1>
                 <button id= "Play" onClick={props.suivante}>Retour à l'Accueil</button>
                </>
