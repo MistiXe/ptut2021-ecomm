@@ -17,7 +17,7 @@ function Main(props){
     return (
         <div className="modal display-block">
             <section className="main">
-                <nav>
+               <center> <nav>
                     <div className= "logo">
                         <h4>E-COMM</h4>
                     </div>
@@ -35,7 +35,7 @@ function Main(props){
                             </button>
                         </li>
                     </ul>
-                </nav>
+                </nav></center>
                 {centre}
 
                 <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
