@@ -15,7 +15,7 @@ function Main(props){
         centre = <EtapeJeu etape ={etape} suivante={() => setEtape(etape+1)} />
     }
     return (
-        <div className="modal display-block">
+        <div className="main-page">
             <section className="main">
                <center> <nav>
                     <div className= "logo">
