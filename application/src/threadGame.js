@@ -132,6 +132,19 @@ function DevinerSuite(props){
                 <div className= "container">
                     <center><p className="props">{btn[2]}</p></center>
                 </div>
+
+            </div>
+            <div className="card">
+                <div className= "container">
+                    <center><p className="props">{btn[3]}</p></center>
+                </div>
+
+            </div>
+            <div className="card">
+                <div className= "container">
+                    <center><p className="props">{btn[4]}</p></center>
+                </div>
+
             </div>
 
         </>
