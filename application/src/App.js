@@ -24,7 +24,7 @@ function App(){
         page = (<header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
             <h1>E-COMM Launcher </h1>
-            <btn id ="Play-btn" onClick={() => setStart(true)} >
+            <btn id ="Play" onClick={() => setStart(true)} >
                 Jouer
             </btn>
             <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
