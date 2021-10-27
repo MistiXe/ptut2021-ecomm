@@ -22,7 +22,7 @@ function App(){
     }
     else if(!start){
         page = (<header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
+
             <h1>E-COMM Launcher </h1>
             <btn id ="Play" onClick={() => setStart(true)} >
                 Jouer

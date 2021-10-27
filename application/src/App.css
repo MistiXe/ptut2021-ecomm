@@ -77,7 +77,12 @@
 }
 
 .btn:hover{
-  transform: translateX(3px);
+  transform: translateY(-3px);
+}
+
+#Play:hover{
+  transform: translateY(-3px);
+
 }
 
 .footerVersion{
