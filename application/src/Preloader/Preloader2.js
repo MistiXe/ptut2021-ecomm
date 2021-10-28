@@ -51,12 +51,12 @@ function PreLoader2() {
                     {!loading ? (
                         <Lottie options={defaultOptions1} height={200} width={200} />
                     ) : (
-                        <Lottie options={defaultOptions2} height={100} width={100} />
+                        <Lottie options={defaultOptions2} height={200} width={200} />
                     )}
                 </>
             ) : (
                 <>
-                 <h1>Loading Successful</h1>
+                 <h1>Loading Successful ! </h1>
                 </>
             )}
         </>
