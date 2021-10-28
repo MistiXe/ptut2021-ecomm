@@ -3,6 +3,7 @@ import Lottie from "react-lottie";
 
 import  * as location from "../image/pre1.json";
 import  *  as success from  "../image/pre2.json";
+import App from "../App";
 
 const defaultOptions1 = {
     loop: true,
@@ -38,7 +39,7 @@ function PreLoader2() {
 
                     setTimeout(() => {
                         setcompleted(true);
-                    }, 1000);
+                    }, 2000);
                 });
         }, 2000);
     }, []);
@@ -55,20 +56,7 @@ function PreLoader2() {
                 </>
             ) : (
                 <>
-                    <h1>Your Data</h1>
-                    <br />
-                    <h6 style={{ position: "Absolute", right: "5rem", bottom: "0" }}>
-                        <a
-                            style={{ color: "white" }}
-                            href="https://lottiefiles.com/chrisgannon"
-                        >
-                            Earth Animation by Chris Gannon on LottieFiles
-                        </a>
-                        <br />
-                        <a style={{ color: "white" }} href="https://lottiefiles.com/darius">
-                            Success Animation by Chris Gannon on LottieFiles
-                        </a>
-                    </h6>
+                 <h1>Loading Successful</h1>
                 </>
             )}
         </>

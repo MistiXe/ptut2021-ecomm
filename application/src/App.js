@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect, Component} from 'react';
-import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 import Main from "./threadGame";
-import ReactLoading from 'react-loading';
+import PreLoader2 from "./Preloader/Preloader2";
+
+
 
 
 
@@ -17,14 +18,13 @@ function App(){
         setTimeout(() => {
             setLoading(false)
 
-        }, 2000)
+        }, 4500)
     }, [])
     let page;
     if(loading){
 
         page = <>
-           <h1>Ya rien pour l'instant ! </h1>
-            <ReactLoading type={"bars"} color={"green"} height={400} width={200}/>
+            <PreLoader2 />
 
         </>;
     }
