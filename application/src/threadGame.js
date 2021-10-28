@@ -92,13 +92,13 @@ function EtapeJeu(props){
 
 
     } else {
-        jeu =  <button id= "Play" onClick={props.suivante}>Etape Suivante</button>
+        jeu =  <button id= "Play" onClick={props.suivante}>Next Step</button>
     }
 
     return(
 
         <div className = "acc">
-            <h1>Vous êtes à l'étape {props.etape}</h1>
+            <h1>Actual Step :  {props.etape}</h1>
             {jeu}
         </div>
     )
@@ -138,7 +138,7 @@ function Formulaire(props){
     return(
         <center> <div className= "formu"> <form name= "form">
             reponse : <input type = "text" name = "rep"/>
-            <btn onClick={check}>Valider</btn>
+            <btn onClick={check}>Enter</btn>
 
         </form></div></center>
     )
