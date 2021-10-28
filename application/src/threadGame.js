@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import BtnContext from "./PageDefault/BtnContext";
-import App from "./App";
+
 
 
 
@@ -55,7 +55,7 @@ function Accueil(props){
             <div className= "acc">
                 <h1 >Bienvenue dans notre Jeu ! </h1>
             </div>
-            <button className="btnJ" onClick={props.demarrer}>Jouer</button>
+            <button id="Play" onClick={props.demarrer}>Jouer</button>
         </>
 
 
@@ -71,16 +71,16 @@ function EtapeJeu(props){
                                            reponse={'b'} /> </div>)
     } else if(props.etape === 2){
         jeu = (
-            <Formulaire  suivante={props.suivante}
+            <div id = "divformu"><Formulaire  suivante={props.suivante}
 
-                         reponse={'e'} />
+                         reponse={'e'} /></div>
 
         )
     } else if(props.etape === 3){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                             possible={['a', 'b', 'c', 'd', 'e']}
-                                             reponse={'e'} /></div>
+                                             possible={['a', 'b', 'c', 'd']}
+                                             reponse={'b'} /></div>
 
         )
     }

@@ -3,7 +3,7 @@ import Lottie from "react-lottie";
 
 import  * as location from "../image/pre1.json";
 import  *  as success from  "../image/pre2.json";
-import App from "../App";
+
 
 const defaultOptions1 = {
     loop: true,
