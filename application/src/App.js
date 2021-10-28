@@ -3,6 +3,7 @@ import './App.css';
 import React, {useState, useEffect, Component} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 import Main from "./threadGame";
+import './animation.scss';
 
 
 function App(){
@@ -18,11 +19,40 @@ function App(){
     }, [])
     let page;
     if(loading){
-        page = <><ClimbingBoxLoader size="30" color={"#36D7B7"} loading={loading}/><h1>Loading...</h1></>;
+        page = <>
+            <svg>
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="name"/>
+                        <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0
+                                                       0 1 0 0 0
+                                                       0 0 1 0 0
+                                                       0 0 0 15 -10" result="b"/>
+
+                        <feBlend in="SourceGraphic" in2="b"/>
+                    </filter>
+                </defs>
+            </svg>
+
+            <div className="wrapper">
+                <div id="container">
+                    <p className="text">Loading</p>
+                    <div className="drop"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </>;
     }
     else if(!start){
         page = (<header className="App-header">
-
+            <img src={logo} className="App-logo" alt="logo"/>
             <h1>E-COMM Launcher </h1>
             <btn id ="Play" onClick={() => setStart(true)} >
                 Jouer
