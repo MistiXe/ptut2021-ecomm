@@ -113,40 +113,15 @@ function DevinerSuite(props){
         }
     }
     const btn = possible.map((txt)=>
-        <center><btn className = "btnJ" onClick={() => check(txt)}>{txt}</btn></center>);
-    return(
-        <>
-        <div className="card">
+        <div className="card" onClick={() => check(txt)}>
             <div className= "container">
 
-            <p className="props">{btn[0]}</p>
+                <p className="props"><center><btn className = "btnJ">{txt}</btn></center></p>
             </div>
-        </div>
-            <div className="card">
-                <div className= "container">
-
-                    <p className="props">{btn[1]}</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className= "container">
-                    <center><p className="props">{btn[2]}</p></center>
-                </div>
-
-            </div>
-            <div className="card">
-                <div className= "container">
-                    <center><p className="props">{btn[3]}</p></center>
-                </div>
-
-            </div>
-            <div className="card">
-                <div className= "container">
-                    <center><p className="props">{btn[4]}</p></center>
-                </div>
-
-            </div>
-
+        </div>);
+    return(
+        <>
+            {btn}
         </>
 
 
