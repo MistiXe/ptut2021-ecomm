@@ -3,7 +3,9 @@ import './App.css';
 import React, {useState, useEffect, Component} from 'react';
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 import Main from "./threadGame";
-import './animation.scss';
+import ReactLoading from 'react-loading';
+
+
 
 
 function App(){
@@ -19,34 +21,10 @@ function App(){
     }, [])
     let page;
     if(loading){
+
         page = <>
-            <svg>
-                <defs>
-                    <filter id="goo">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="name"/>
-                        <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0
-                                                       0 1 0 0 0
-                                                       0 0 1 0 0
-                                                       0 0 0 15 -10" result="b"/>
-
-                        <feBlend in="SourceGraphic" in2="b"/>
-                    </filter>
-                </defs>
-            </svg>
-
-            <div className="wrapper">
-                <div id="container">
-                    <p className="text">Loading</p>
-                    <div className="drop"></div>
-                </div>
-            </div>
-
-
-
-
-
-
-
+           <h1>Ya rien pour l'instant ! </h1>
+            <ReactLoading type={"bars"} color={"green"} height={400} width={200}/>
 
         </>;
     }
