@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+import logo from './image/world.png';
 import './App.css';
-import React, {useState, useEffect, Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 
