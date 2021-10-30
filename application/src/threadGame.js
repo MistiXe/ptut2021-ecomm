@@ -55,7 +55,7 @@ function Accueil(props){
             <div className= "acc">
                 <h1 >Bienvenue dans notre Jeu ! </h1>
             </div>
-            <button id="Play" onClick={props.demarrer}>Jouer</button>
+            <button id="" onClick={props.demarrer}>Jouer</button>
         </>
 
 
@@ -67,20 +67,20 @@ function EtapeJeu(props){
     if(props.etape === 1){
         jeu = (
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
-                                           possible={['a', 'b', 'c']}
+                                           possible={['1', '2', '3']}
                                            reponse={'b'} /> </div>)
     } else if(props.etape === 2){
         jeu = (
             <div id = "divformu"><Formulaire  suivante={props.suivante}
 
-                         reponse={'e'} /></div>
+                         reponse={'3'} /></div>
 
         )
     } else if(props.etape === 3){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                             possible={['a', 'b', 'c', 'd']}
-                                             reponse={'b'} /></div>
+                                             possible={['1', '2', '3', '4']}
+                                             reponse={'1'} /></div>
 
         )
     }
@@ -113,11 +113,16 @@ function DevinerSuite(props){
         }
     }
     const btn = possible.map((txt)=>
-        <div className="card" onClick={() => check(txt)}>
-            <div className= "container">
 
-                <p className="props"><center><btn className = "btnJ">{txt}</btn></center></p>
-            </div>
+            <div className= "divcont"onClick={() => check(txt)}>
+                <div className="cards">
+                    <div className="cont">
+                        <h2>{txt}</h2>
+                        <h3>Card {txt}</h3>
+                        <p>Coming Soon...</p>
+                    </div>
+                </div>
+
         </div>);
     return(
         <>
