@@ -39,7 +39,9 @@ function App(){
                 Play
             </btn>
             <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
-        </header>)
+
+        </header>
+        )
     }
     else {
         page = <Main />
