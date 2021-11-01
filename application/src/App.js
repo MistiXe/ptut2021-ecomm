@@ -29,7 +29,6 @@ function App(){
         page = (<header className="App-header">
 
           <div className="contenuTxt">
-
               <h3>COMM</h3>
               <h3>COMM</h3>
               <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
