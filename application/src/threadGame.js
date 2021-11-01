@@ -48,7 +48,7 @@ function Main(props){
                 </nav></center>
                 {centre}
 
-                <footer id = "foot"> <h1> E-COMM V_0.1</h1> </footer>
+                <center><footer id = "foot"><Progress /></footer></center>
 
 
             </section>
@@ -177,6 +177,7 @@ function EtapeJeu(props){
 
                          reponse={'3'} /></div>
 
+
         )
     } else if(props.etape === 3){
         jeu = (
@@ -301,6 +302,29 @@ function Formulaire(props){
 
 }
 
+
+    function Progress({done}){
+        const [style, setStyle] = React.useState({});
+
+        setTimeout(() => {
+            const newStyle = {
+                opacity: 1,
+                width: `${done}%`
+            }
+
+            setStyle(newStyle);
+        }, 200);
+        return (
+            <>
+                <div><h2>E-COMM Time</h2></div>
+           <center> <div className="progress">
+                <div className="progress-done" style={style}>
+                </div>
+           </div></center>
+                </>
+        )
+
+}
 
 
 export default Main;
