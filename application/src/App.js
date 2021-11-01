@@ -1,8 +1,9 @@
-import logo from './image/world.png';
+
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
+
 
 
 function App(){
@@ -35,9 +36,12 @@ function App(){
               </div>
           </div>
            <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
+
+
             <btn id ="Play" onClick={() => setStart(true)} >
                 Play
             </btn>
+
             <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
 
         </header>
