@@ -28,7 +28,7 @@ function Main(props){
         centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} />
     }
     return (
-        <div className="main-page">
+       <center> <div className="main-page">
             <section className="main">
                <center> <nav>
                     <div className= "logo">
@@ -52,7 +52,7 @@ function Main(props){
 
 
             </section>
-        </div>
+       </div></center>
     )
 
 
@@ -82,12 +82,12 @@ function EtapeJeu(props){
     if(props.etape === -5){
         jeu = (
             <>
-            <div id="suite2">
+           <center> <div id="suite2">
 
                 <p  className="contenuEtape">April 20th: The Importer is called 123 Importing Company, 89 High Street, New York, NY 70036, USA.</p>
 
         </div>
-        <button id="next" onClick={props.suivante}>Next</button></>)
+               <button id="next" onClick={props.suivante}>Next</button></center></>)
     }else if(props.etape === -4){
         jeu = (
             <>
@@ -166,11 +166,11 @@ function EtapeJeu(props){
 
         jeu = (
             <>
-            <p>Choose the right step.</p>
+           <center> <p>Choose the right step.</p>
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
                                            possible={['1', '2', '3','4']}
                                            choixRep={[etapes[0]]}
-                                           reponse={'2'} /> </div> </>)
+                                           reponse={'2'} /> </div></center> </>)
     } else if(props.etape === 2){
         jeu = (
             <div id = "divformu"><Formulaire  suivante={props.suivante}
