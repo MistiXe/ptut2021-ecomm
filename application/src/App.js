@@ -7,6 +7,12 @@ import PreLoader2 from "./Preloader/Preloader2";
 
 
 function App(){
+
+
+
+
+
+
     const [start, setStart] = useState(false);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
@@ -26,9 +32,11 @@ function App(){
         </>;
     }
     else if(!start){
-        page = (<header className="App-header">
+        page = (<body id ="menu">
+            <header className="App-header">
 
-          <div className="contenuTxt">
+
+              <div className="contenuTxt">
               <h3>COMM</h3>
               <h3>COMM</h3>
               <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
@@ -43,7 +51,7 @@ function App(){
 
             <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
 
-        </header>
+        </header></body>
         )
     }
     else {
