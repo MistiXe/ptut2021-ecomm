@@ -32,7 +32,7 @@ function Main(props){
             <section className="main">
                 <nav className="navbar">
                     <ul className="navbar-nav">
-                    <li className="navbar-item" onClick={App}>
+                    <li className="navbar-item" >
                         <btn className="nav-link">
                             <svg
                                 aria-hidden="true"
@@ -87,7 +87,7 @@ function Main(props){
                                         ></path>
                                     </g>
                                 </svg>
-                                <h4 className="link-text">Rules</h4>
+                                <span className="link-text">Rules</span>
                             </btn>
                         </li>
 
@@ -120,7 +120,12 @@ function Main(props){
                             </btn>
                         </li>
 
+                    <p className="version">E-COMM V_0.3</p>
+
                     </ul>
+
+
+
                 </nav>
 
 
@@ -403,6 +408,11 @@ function Formulaire(props){
                 </>
         )
 
+}
+
+
+function Ping(props){
+    return <p>Ping : </p>
 }
 
 
