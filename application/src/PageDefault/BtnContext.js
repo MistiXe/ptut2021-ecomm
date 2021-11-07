@@ -6,8 +6,8 @@ function BtnContext(props) {
 
     if(show===false) {
             return (<main>
-                <button id="PlayRetour" type="button" onClick={() => setShow(true)}>Context
-                </button>
+                <span className="link-text" type="button" onClick={() => setShow(true)}>Context
+                </span>
             </main>);
 
     }else if(show===true){
