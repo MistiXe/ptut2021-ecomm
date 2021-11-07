@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import App from "./App";
+import BtnContext from "./PageDefault/BtnContext";
 
 
 
@@ -63,7 +64,8 @@ function Main(props){
 
 
                         <li className="nav-item">
-                            <btn className="nav-link">
+                            <div className="nav-link">
+
                                 <svg
                                     aria-hidden="true"
                                     focusable="false"
@@ -87,8 +89,9 @@ function Main(props){
                                         ></path>
                                     </g>
                                 </svg>
-                                <span className="link-text">Rules</span>
-                            </btn>
+                                <BtnContext />
+                            </div>
+
                         </li>
 
                         <li className="nav-item">
