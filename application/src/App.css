@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@700;900&display=swap');
+
 .App {
   text-align: center;
   display: flex;
@@ -22,6 +24,122 @@
   to {background-position: 100% 100%}
 
 }
+#next{
+  position: center;
+  padding: 15px 36px;
+
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 40px;
+  background-color: #6949F3;
+  margin-top: 10%;
+
+
+}
+
+.navbar{
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: #7a00ff;
+}
+
+.navbar-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-item{
+  width: 100%;
+}
+
+.version{
+  font-size: 10px;
+  margin-top: auto;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
+
+
+
+
+
+
+
 
 #Play{
 
@@ -35,9 +153,60 @@
   font-size: 18px;
   letter-spacing: 3px;
   border-radius: 40px;
-  background: linear-gradient(90deg, #0162c8, #91c1c9);
-  margin-top: 20px;
+  background-color: #6949F3;
+  margin-top: 10%;
+
+
 }
+
+#Play:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+#Play:active {
+  color: #7D3C98
+}
+
+#Play:active:after {
+  background: transparent;
+}
+
+#Play:hover:before {
+  opacity: 1;
+}
+
+#Play:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #7D3C98;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -174,27 +343,8 @@
 
 
 
-nav{
-  display:  flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: transparent;
-  border-radius: 40px;
-  width: 70%;
-}
 
-.nav-links{
-  display: flex;
-  justify-content: space-around;
 
-  width: 30%;
-
-}
-
-.nav-links li {
-  list-style: none;
-}
 
 
 #PlayRetour{
@@ -231,9 +381,10 @@ nav{
   font-size: 18px;
   letter-spacing: 3px;
   border-radius: 40px;
-  background: linear-gradient(90deg, #0162c8, #91c1c9);
+  background-color: #E8DAEF;
   margin-top: 12px;
 }
+
 
 
 
@@ -334,9 +485,175 @@ h1{
 }
 
 #suite{
-  margin: 20%;
+  margin: 5%;
 
 }
 
+#suite2{
+  margin: 5%;
+  background-color: white;
+  border-radius: 40px;
+  height: 200px;
+  width: 1000px;
+  font-size: 20px;
+  align-items: center;
+}
+
+#titresite{
+  font-family: Regular_400, "Bebas Neue";
+  font-size: 100px;
+  font-style: italic;
+}
+
+.contenuTxt{
+  position: center;
+  margin: 40%;
+
+
+}
+
+.contenuTxt h3{
+  position: absolute;
+  color: white;
+  transform: translate(-30%, -90%);
+  font-size: 100px;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 4px;
+  font-style: italic;
+
+}
+
+.contenuTxt h3:nth-child(1){
+  color: transparent;
+  -webkit-text-stroke: 2px #7D3C98 ;
+
+}
+
+.contenuTxt h3:nth-child(2){
+  color: #4A235A;
+  animation: animationTxt 4s ease-in-out infinite;
+
+}
+
+@keyframes animationTxt {
+
+  0%,100%{
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%,
+    54% 60%, 70% 61%, 84% 59%, 100% 52%,
+    100% 100%, 0% 100%);
+  }
+
+  50%{
+    clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+
+  }
+
+
+
+}
+
+.contenuTxt2 h3{
+  position: absolute;
+  color: white;
+  transform: translate(-210%, -90%);
+  font-size: 100px;
+
+}
+
+.textpresentation{
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 20%;
+
+}
+
+
+
+
+.divcont{
+  display: inline-block;
+
+  max-width: 500px;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin-bottom: 40px;
+
+}
+
+.divcont .cards{
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1) ;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+
+
+}
+
+.divcont .cards .cont{
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.divcont .cards .cont h2{
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255,0,0,0.05);
+  pointer-events: none;
+
+
+}
+
+.divcont .cards .cont p{
+  font-size: 10px;
+  color: white;
+  font-weight: 300;
+}
+
+.divcont .cards:hover .cont{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+.contenuEtape{
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  align-items: center;
+  height: 30px;
+  width: 1000px;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #F2709C, #FF9472);
+  box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
 
 

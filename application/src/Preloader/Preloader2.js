@@ -39,7 +39,7 @@ function PreLoader2() {
 
                     setTimeout(() => {
                         setcompleted(true);
-                    }, 2000);
+                    }, 4000);
                 });
         }, 2000);
     }, []);
@@ -49,9 +49,9 @@ function PreLoader2() {
             {!completed ? (
                 <>
                     {!loading ? (
-                        <Lottie options={defaultOptions1} height={200} width={200} />
+                        <Lottie options={defaultOptions1} height={300} width={300} />
                     ) : (
-                        <Lottie options={defaultOptions2} height={200} width={200} />
+                        <Lottie options={defaultOptions2} height={300} width={300} />
                     )}
                 </>
             ) : (

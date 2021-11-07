@@ -1,4 +1,4 @@
-import logo from './image/world.png';
+
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
@@ -29,14 +29,27 @@ function App(){
         </>;
     }
     else if(!start){
-        page = (<header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h1>E-COMM Launcher </h1>
+        page = (<body id ="menu">
+            <header className="App-header">
+
+
+              <div className="contenuTxt">
+              <h3>COMM</h3>
+              <h3>COMM</h3>
+              <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
+              </div>
+          </div>
+           <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
+
+
             <btn id ="Play" onClick={() => setStart(true)} >
-                Jouer
+                Play
             </btn>
+
             <button id ="Play" onClick={() => alert("<<Créer une partie >> is not available.")} className="btn">Create a party</button>
-        </header>)
+
+        </header></body>
+        )
     }
     else {
         page = <Main />
