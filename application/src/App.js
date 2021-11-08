@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
-import sound from "./jlb.mp3";
+import sound from "./Sound/persephone.mp3";
 
 
 function App(){
@@ -26,6 +26,8 @@ function App(){
         </>;
     }
     else if(!start){
+
+
         page = (<body id ="menu">
             <header className="App-header">
 
