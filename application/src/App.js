@@ -3,6 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
+import sound from "./jlb.mp3";
 
 
 function App(){
@@ -50,9 +51,8 @@ function App(){
     else {
         page = <Main returnMenuP = {() => setStart(false)} />
     }
-    let url = "https://swigg-classic-fr.ice.infomaniak.ch/swigg-classic-fr.mp3";
-    var audio = new Audio(url);
-    audio.volume = 0.2;
+    var audio = new Audio(sound);
+    audio.volume = 0.4;
     audio.play()
     return (
         <div className="App">
