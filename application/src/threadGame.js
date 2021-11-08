@@ -149,6 +149,10 @@ function Main(props){
 
 function Accueil(props){
     let txtIntro = "Bienvenue dans notre Jeu";
+    let url = "http://streaming.tdiradio.com:8000/house.mp3";
+    var audio = new Audio(url);
+    //audio.play()
+
     return(
 
         <>
@@ -255,8 +259,7 @@ function EtapeJeu(props){
             <>
            <center> <p>Choose the right step.</p>
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
-                                           possible={['1', '2', '3','4']}
-                                           choixRep={[etapes[0]]}
+                                           possible={[{id: 1, name: "Salut", text: "ça larche"},{id: 2, name: "Salut1", text: "ça lavdvfdrche"},{id: 3, name: "S2t", text: "ça leggdarche"},{id: 4, name: "Sa3ut", text: "ça largfdgdche"}]}
                                            reponse={'2'} /> </div></center> </>)
     } else if(props.etape === 2){
         jeu = (
@@ -338,25 +341,21 @@ function DevinerSuite(props){
 
 
 
-
-    const btn = possible.map((txt)=>
+    const btn = possible.map(
+        (txt)=>
 
             <>
 
-            <div className= "divcont"onClick={() => check(txt)}>
+            <div className= "divcont"onClick={() => check(txt.name)}>
                 <div className="cards">
                     <div className="cont">
-                        <h2>{txt}</h2>
-                        <h3>Card {txt}</h3>
-                        <p>Comming Soon...</p>
+                        <h2>{txt.id}</h2>
+                        <h3>Card {txt.name}</h3>
+                        <p>{txt.text}</p>
 
 
                     </div>
                 </div>
-
-
-
-
         </div></>);
     return(
         <>

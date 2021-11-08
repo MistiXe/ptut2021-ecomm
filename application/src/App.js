@@ -5,14 +5,7 @@ import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 
 
-
 function App(){
-
-
-
-
-
-
     const [start, setStart] = useState(false);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
