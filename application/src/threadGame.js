@@ -291,7 +291,7 @@ function EtapeJeu(props){
         if(props.etape < 0){
             return(
                 <div className="acc">
-                    <h1>Contexte</h1>
+                    <h1>Context</h1>
                     {jeu}
                 </div>
 
