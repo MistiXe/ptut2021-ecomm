@@ -48,7 +48,7 @@ function App(){
         )
     }
     else {
-        page = <Main />
+        page = <Main returnMenuP = {() => setStart(false)} />
     }
     return (
         <div className="App">
