@@ -135,10 +135,6 @@ function Main(props){
 
 function Accueil(props){
     let txtIntro = "Welcome in E-COMM !";
-    let url = "https://streaming.tdiradio.com:8000/house.mp3";
-    var audio = new Audio(url);
-    //audio.play()
-
     return(
 
         <>
@@ -402,6 +398,7 @@ function Formulaire(props){
 function Ping(props){
     return <p>Ping : </p>
 }
+
 
 
 export default Main;

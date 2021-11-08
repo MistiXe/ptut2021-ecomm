@@ -50,6 +50,10 @@ function App(){
     else {
         page = <Main returnMenuP = {() => setStart(false)} />
     }
+    let url = "https://swigg-classic-fr.ice.infomaniak.ch/swigg-classic-fr.mp3";
+    var audio = new Audio(url);
+    audio.volume = 0.2;
+    audio.play()
     return (
         <div className="App">
             {page}
