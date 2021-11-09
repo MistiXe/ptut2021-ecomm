@@ -11,15 +11,11 @@ function App(){
     const [start, setStart] = useState(false);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
-    const [playMusic, setPlayMusic] = useState(true);
-    var audio = new Audio(sound);
-    audio.volume = 0.05;
-    if(playMusic){
-        audio.play();
-    }else {
-        audio.pause();
-    }
 
+
+    const startGame = () => {
+        setStart(true);
+    }
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -49,7 +45,7 @@ function App(){
            <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
 
 
-            <btn id ="Play" onClick={() => setStart(true)} >
+            <btn id ="Play" onClick={startGame} >
                 Play
             </btn>
 
@@ -59,7 +55,7 @@ function App(){
         )
     }
     else {
-        page = <Main returnMenuP = {() => setStart(false)} stopMusic = {() => setPlayMusic(false)} />
+        page = <Main returnMenuP = {() => setStart(false)}/>
     }
 
     return (

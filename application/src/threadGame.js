@@ -2,21 +2,22 @@ import React, {useState} from 'react';
 import './App.css';
 import BtnContext from "./Components/BtnContext";
 import StepTxt from "./Components/StepTxt";
+import ProgressBar from "./Components/ProgressBar";
 
 
 
 
 function Main(props){
     const[etape, setEtape] = useState(0);
+    const[joursRestants, setJoursRestants] =useState(25);
     let centre;
-    props.stopMusic();
 
     if(etape===0) {
 
         centre = <Accueil demarrer={()=> setEtape(1)} />
     }
     else {
-        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} />
+        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
     }
     return (
        <center> <div className="main-page">
@@ -125,8 +126,6 @@ function Main(props){
 
                 {centre}
 
-                <center><footer id = "foot"></footer></center>
-
 
             </section>
        </div></center>
@@ -166,7 +165,7 @@ function EtapeJeu(props){
 
             <div id ="suite"><DevinerSuite className = "acc" suivante={props.suivante}
                                            possible={[{id: 1, text:  StepTxt[0]},{id: 2, text:  StepTxt[3]},{id: 3, text:  StepTxt[15]}]}
-                                           reponse={2} /> </div></center> </>)
+                                           reponse={2} erreur = {props.erreur}/> </div></center> </>)
     } else if(props.etape === 2){
         jeu = (
             <div id = "divformu"><Formulaire  suivante={props.suivante}
@@ -227,7 +226,7 @@ function EtapeJeu(props){
             return(
 
             <div className="acc">
-                <Progress  completed={25}/>
+                <ProgressBar completed={props.jrestant}/>
                 <h1>Actual Step : {props.etape}</h1>
                 {jeu}
             </div>
@@ -243,6 +242,9 @@ function DevinerSuite(props){
 
         if ( props.reponse === txt){
             props.suivante()
+        }
+        else {
+            props.erreur();
         }
     }
 
@@ -298,28 +300,6 @@ function Formulaire(props){
     )
 
 }
-
-
-    function Progress(props){
-        const {completed} = props;
-        const fillerStyles = {
-            width: `${completed}%`
-        };
-        return (
-            <div className="pBarContainerStyle">
-                <div className="pBarFillerStyle" style={fillerStyles}>
-                    <span className="pBarLabelStyles">{`${completed}%`}</span>
-                </div>
-            </div>
-        );
-
-}
-
-
-function Ping(props){
-    return <p>Ping : </p>
-}
-
 
 
 export default Main;
