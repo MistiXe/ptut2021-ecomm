@@ -169,8 +169,8 @@ function EtapeJeu(props){
     } else if(props.etape === 2){
         jeu = (
             <div id = "divformu"><Formulaire  suivante={props.suivante}
+                         reponse={'3'} erreur = {props.erreur} /></div>
 
-                         reponse={'3'} /></div>
 
 
         )
@@ -178,26 +178,26 @@ function EtapeJeu(props){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                              possible={[{id: 1, text: StepTxt[11]},{id: 2, text: StepTxt[7]},{id: 3, text: StepTxt[1]}]}
-                                             reponse={1} /></div>
+                                             reponse={1} erreur = {props.erreur} /></div>
 
         )
     }else if(props.etape === 4){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                              possible={[{id: 1, text: StepTxt[2]},{id: 2, text: StepTxt[0]},{id: 3, text: StepTxt[14]}]}
-                                             reponse={1} /></div>
+                                             reponse={1} erreur = {props.erreur} /></div>
 
         )}else if(props.etape === 5){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                              possible={[{id: 1, text: StepTxt[1]},{id: 2, text: StepTxt[1]},{id: 3, text: StepTxt[1]}]}
-                                             reponse={4} /></div>
+                                             reponse={4} erreur = {props.erreur} /></div>
 
         )}else if(props.etape === 6){
             jeu = (
                 <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
                                                  possible={[{id: 1,text: StepTxt[1]},{id: 2, text: StepTxt[1]},{id: 3, text: StepTxt[1]}]}
-                                                 reponse={3} /></div>
+                                                 reponse={3} erreur = {props.erreur} /></div>
 
             )}
     else if( props.etape === 17){
@@ -287,6 +287,9 @@ function Formulaire(props){
         let rep = document.forms["form"]["rep"].value
         if(rep === props.reponse){
             props.suivante()
+        }
+        else{
+            props.erreur()
         }
     }
     return(
