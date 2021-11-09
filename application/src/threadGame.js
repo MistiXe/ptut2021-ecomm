@@ -227,7 +227,7 @@ function EtapeJeu(props){
             return(
 
             <div className="acc">
-                <Progress />
+                <Progress  completed={25}/>
                 <h1>Actual Step : {props.etape}</h1>
                 {jeu}
             </div>
@@ -289,7 +289,9 @@ function Formulaire(props){
     }
     return(
         <center> <div className= "formu"> <form name= "form">
-            reponse : <input type = "text" name = "rep"/>
+            reponse : <input type = "text" name = "rep" onKeyPress={e => {
+            if (e.key === 'Enter') e.preventDefault();
+        }}/>
             <btn onClick={check}>Enter</btn>
 
         </form></div></center>
@@ -298,26 +300,18 @@ function Formulaire(props){
 }
 
 
-    function Progress({done}){
-        const [style, setStyle] = React.useState({});
-
-        setTimeout(() => {
-            const newStyle = {
-                opacity: 1,
-                width: `${done}%`
-            }
-
-            setStyle(newStyle);
-        }, 200);
+    function Progress(props){
+        const {completed} = props;
+        const fillerStyles = {
+            width: `${completed}%`
+        };
         return (
-            <>
-
-           <center> <div className="progress">
-                <div className="progress-done" style={style}>
+            <div className="pBarContainerStyle">
+                <div className="pBarFillerStyle" style={fillerStyles}>
+                    <span className="pBarLabelStyles">{`${completed}%`}</span>
                 </div>
-           </div></center>
-                </>
-        )
+            </div>
+        );
 
 }
 
