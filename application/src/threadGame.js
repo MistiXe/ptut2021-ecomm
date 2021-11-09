@@ -9,6 +9,7 @@ import StepTxt from "./Components/StepTxt";
 function Main(props){
     const[etape, setEtape] = useState(0);
     let centre;
+    props.stopMusic();
 
     if(etape===0) {
 

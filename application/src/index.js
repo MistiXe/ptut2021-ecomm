@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
+import sound from "./Sound/persephone.mp3";
+
 
 ReactDOM.render(
   <React.StrictMode>
