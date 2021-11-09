@@ -153,6 +153,12 @@ function Accueil(props){
     )
 }
 
+/**
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function EtapeJeu(props){
     let jeu;
 
