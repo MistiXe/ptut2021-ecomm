@@ -7,13 +7,23 @@ import sound from "./Sound/persephone.mp3";
 
 
 function App(){
+
     const [start, setStart] = useState(false);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
+    const [playMusic, setPlayMusic] = useState(true);
+    var audio = new Audio(sound);
+    audio.volume = 0.05;
+    if(playMusic){
+        audio.play();
+    }else {
+        audio.pause();
+    }
+
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
-            setLoading(false)
+            setLoading(false);
 
         }, 4500)
     }, [])
@@ -22,11 +32,9 @@ function App(){
 
         page = <>
             <PreLoader2 />
-
         </>;
     }
     else if(!start){
-
 
         page = (<body id ="menu">
             <header className="App-header">
@@ -51,12 +59,11 @@ function App(){
         )
     }
     else {
-        page = <Main returnMenuP = {() => setStart(false)} />
+        page = <Main returnMenuP = {() => setStart(false)} stopMusic = {() => setPlayMusic(false)} />
     }
-    var audio = new Audio(sound);
-    audio.volume = 0.4;
-    audio.play()
+
     return (
+
         <div className="App">
             {page}
         </div>

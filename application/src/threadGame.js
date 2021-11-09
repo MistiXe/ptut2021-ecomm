@@ -6,6 +6,7 @@ import BtnContext from "./Components/BtnContext";
 function Main(props){
     const[etape, setEtape] = useState(-5);
     let centre;
+    props.stopMusic();
 
     if(etape===0) {
 
