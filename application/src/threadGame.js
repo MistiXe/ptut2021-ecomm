@@ -178,26 +178,26 @@ function EtapeJeu(props){
     } else if(props.etape === 3){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                             possible={[{id: 1, text: "je suis la première carte"},{id: 2, text: "je suis la deuxième carte"},{id: 3, text: "je suis la troisième carte"},{id: 4, text: "je suis la quatrième quatre"}]}
+                                             possible={[{id: 1, text: StepTxt[11]},{id: 2, text: StepTxt[7]},{id: 3, text: StepTxt[1]}]}
                                              reponse={1} /></div>
 
         )
     }else if(props.etape === 4){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                             possible={[{id: 1, text: "je suis la première carte"},{id: 2, text: "je suis la deuxième carte"},{id: 3, text: "je suis la troisième carte"},{id: 4, text: "je suis la quatrième quatre"}]}
+                                             possible={[{id: 1, text: StepTxt[2]},{id: 2, text: StepTxt[0]},{id: 3, text: StepTxt[14]}]}
                                              reponse={1} /></div>
 
         )}else if(props.etape === 5){
         jeu = (
             <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                             possible={[{id: 1, text: "je suis la première carte"},{id: 2, text: "je suis la deuxième carte"},{id: 3, text: "je suis la troisième carte"},{id: 4, text: "je suis la quatrième quatre"}]}
+                                             possible={[{id: 1, text: StepTxt[1]},{id: 2, text: StepTxt[1]},{id: 3, text: StepTxt[1]}]}
                                              reponse={4} /></div>
 
         )}else if(props.etape === 6){
             jeu = (
                 <div id = "suite"> <DevinerSuite className = "acc" suivante={props.suivante}
-                                                 possible={[{id: 1, text: "je suis la première carte"},{id: 2, text: "je suis la deuxième carte"},{id: 3, text: "je suis la troisième carte"},{id: 4, text: "je suis la quatrième quatre"}]}
+                                                 possible={[{id: 1,text: StepTxt[1]},{id: 2, text: StepTxt[1]},{id: 3, text: StepTxt[1]}]}
                                                  reponse={3} /></div>
 
             )}
@@ -216,6 +216,7 @@ function EtapeJeu(props){
             return(
                 <div className="acc">
                     <h1>Context</h1>
+
                     {jeu}
                 </div>
 
@@ -257,7 +258,9 @@ function DevinerSuite(props){
                 <div className="cards">
                     <div className="cont">
                         <h2>{txt.id}</h2>
-                        <p>{txt.text}</p>
+                        <h3>Card {txt.id}</h3>
+
+                        <h5>{txt.text}</h5>
 
 
                     </div>
