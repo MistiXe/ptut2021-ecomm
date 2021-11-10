@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
-function createParty(){
-    return (
-        <div> Créer une partie</div>
-    )
+
+function createParty(props) {
+   return(
+
+       <button>rrrrr</button>
+   )
+
+
 }
+
+//
+
 
 export default createParty;
