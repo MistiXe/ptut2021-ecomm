@@ -5,11 +5,15 @@ import PreLoader2 from "./Preloader/Preloader2";
 import sound from "./Sound/persephone.mp3";
 
 
+
 function App(){
 
     const [start, setStart] = useState(false);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
+
+
+
 
 
     const startGame = () => {
@@ -25,11 +29,13 @@ function App(){
     let page;
     if(loading){
 
+
         page = <>
             <PreLoader2 />
         </>;
     }
     else if(!start){
+
 
         page = (<body id ="menu">
             <header className="App-header">
