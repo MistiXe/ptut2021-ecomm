@@ -56,7 +56,7 @@ function PreLoader2() {
                 </>
             ) : (
                 <>
-                 <h1>Loading Successful ! </h1>
+                    <h1>Loading Successful ! </h1>
                 </>
             )}
         </>

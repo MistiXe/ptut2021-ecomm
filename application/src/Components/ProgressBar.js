@@ -1,3 +1,5 @@
+import React from "react";
+
 function ProgressBar(props){
     const {completed} = props;
     const fillerStyles = {
