@@ -21,7 +21,7 @@ University of Toulouse 2 - Jean Jaurès
 
 IUT of Blagnac
 
-DUT INFO S3/MPA Module
+DUT INFO S3 
 
 == Context
 
