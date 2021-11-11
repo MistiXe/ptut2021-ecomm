@@ -20,7 +20,7 @@ function Music(props) {
 
     return (
         <div>
-            <audio ref={audioPlayer} src="https://start-adofm.ice.infomaniak.ch/start-adofm-high.mp3" preload="metadata"/>
+            <audio ref={audioPlayer} src={props.src} preload="metadata"/>
         <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill /> : <BsVolumeMuteFill />}</btn>
         </div>
 

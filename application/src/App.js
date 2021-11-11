@@ -42,7 +42,7 @@ function App(){
         page = (<body id ="menu">
             <header className="App-header">
 
-                <Music />
+                <Music src = "https://start-adofm.ice.infomaniak.ch/start-adofm-high.mp3"/>
                 <div className="contenuTxt">
                     <h3>COMM</h3>
                     <h3>COMM</h3>
