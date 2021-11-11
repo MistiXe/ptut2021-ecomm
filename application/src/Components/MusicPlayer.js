@@ -20,7 +20,7 @@ function Music(props) {
 
     return (
         <div>
-            <audio ref={audioPlayer} src="http://streaming.tdiradio.com:8000/house.mp3" preload="metadata"></audio>
+            <audio ref={audioPlayer} src="http://streaming.tdiradio.com:8000/house.mp3" preload="metadata"/>
         <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill /> : <BsVolumeMuteFill />}</btn>
         </div>
 
