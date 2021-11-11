@@ -135,7 +135,7 @@ function Main(props){
                             </btn>
                         </li>
 
-                        <p className="version">E-COMM V_0.3</p>
+                        <p className="version">E-COMM V_0.2</p>
 
                     </ul>
 
