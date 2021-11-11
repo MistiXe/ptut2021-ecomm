@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import sound from "./Sound/persephone.mp3";
+import { motion } from 'framer-motion';
+
 
 
 
@@ -48,8 +50,7 @@ function App(){
                     </div>
                 </div>
                 <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
-
-
+                <image href="ima"></image>
                 <btn id ="Play" onClick={startGame} >
                     Play
                 </btn>
