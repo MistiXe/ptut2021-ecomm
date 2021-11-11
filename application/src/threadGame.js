@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
+import Music from "./Components/MusicPlayer"
 
 
 
@@ -26,10 +27,17 @@ function Main(props){
         centre = <div>
             <div>Context</div>
             <btn onClick={() => setEtape(lastEtape)}>Return</btn>
+            </div>
+
+    }
+    else if(etape===-10) {
+        centre = <div>
+            <div>Context</div>
+            <btn onClick={() => setEtape(lastEtape)}>Return</btn>
         </div>
     }
     else {
-        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
+        centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%19)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
     }
     return (
         <center> <div className="main-page">

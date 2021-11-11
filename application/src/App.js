@@ -6,22 +6,18 @@ import sound from "./Sound/persephone.mp3";
 
 
 
-
 function App(){
 
-    const [start, setStart] = useState(false);
-    const [startCreate, setStartCreate] = useState(false);
+    const [start, setStart] = useState(0);
     const useState1 = useState(false);
     const [loading, setLoading] = useState1;
 
 
-
-    const createParty = () => {
-        setStartCreate(true);
-    }
-
     const startGame = () => {
-        setStart(true);
+        setStart(1);
+    }
+    const createPartie = () => {
+        setStart(2);
     }
     useEffect(() => {
         setLoading(true)
@@ -38,7 +34,7 @@ function App(){
             <PreLoader2 />
         </>;
     }
-    else if(!start){
+    else if(start===0){
 
 
         page = (<body id ="menu">
@@ -58,13 +54,16 @@ function App(){
                     Play
                 </btn>
 
-                <button id ="Play" onClick={createParty} className="btn">Create a party</button>
+                <button id ="Play" onClick={createPartie} className="btn">Create a party</button>
 
             </header></body>
         )
     }
-    else {
-        page = <Main returnMenuP = {() => setStart(false)}/>
+    else if(start===1) {
+        page = <Main returnMenuP = {() => setStart(0)}/>
+    }
+    else if(start===2) {
+        page = (<div>Salut</div>);
     }
 
     return (
