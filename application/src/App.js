@@ -2,6 +2,8 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
+import { motion } from 'framer-motion';
+
 import Music from "./Components/MusicPlayer";
 
 
