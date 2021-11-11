@@ -34,6 +34,7 @@ function Main(props){
         centre = <div>
             <div>Context</div>
             <btn onClick={() => setEtape(lastEtape)}>Return</btn>
+            <Music />
         </div>
     }
     else {
