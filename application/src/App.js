@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
+import '../src/Sound/persephone.mp3';
 
 
 
@@ -41,8 +42,8 @@ function App(){
 
         page = (<body id ="menu">
             <header className="App-header">
+                <Music src = "../src/Sound/persephone.mp3"/>
 
-                <Music src = "https://start-adofm.ice.infomaniak.ch/start-adofm-high.mp3"/>
                 <div className="contenuTxt">
                     <h3>COMM</h3>
                     <h3>COMM</h3>
