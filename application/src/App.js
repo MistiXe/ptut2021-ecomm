@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
-import sound from "./Sound/persephone.mp3";
+import Music from "./Components/MusicPlayer";
 
 
 
@@ -39,7 +39,7 @@ function App(){
 
         page = (<body id ="menu">
             <header className="App-header">
-
+                <Music />
 
                 <div className="contenuTxt">
                     <h3>COMM</h3>
