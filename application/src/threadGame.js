@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.css';
-import BtnContext from "./Components/BtnContext";
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
 
@@ -10,11 +9,24 @@ import ProgressBar from "./Components/ProgressBar";
 function Main(props){
     const[etape, setEtape] = useState(0);
     const[joursRestants, setJoursRestants] =useState(25);
+    const[lastEtape, setLastEtape] = useState(0);
     let centre;
+
+    const putContext = () => {
+        setLastEtape(etape);
+        setEtape(-10);
+    }
+
 
     if(etape===0) {
 
         centre = <Accueil demarrer={()=> setEtape(1)} />
+    }
+    else if(etape===-10) {
+        centre = <div>
+            <div>Context</div>
+            <btn onClick={() => setEtape(lastEtape)}>Return</btn>
+        </div>
     }
     else {
         centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%18)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
@@ -80,7 +92,7 @@ function Main(props){
                                         />
                                     </g>
                                 </svg>
-                                <BtnContext />
+                                <span className="link-text" onClick={putContext}>Context</span>
                             </div>
 
                         </li>
