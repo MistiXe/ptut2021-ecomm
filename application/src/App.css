@@ -610,3 +610,11 @@ h1{
 ;
 }
 
+.pBarFillerStyle{
+  height: 100%;
+  background-color: red;
+  border-radius: inherit;
+  text-align: right;
+  margin-right: 100%;
+}
+
