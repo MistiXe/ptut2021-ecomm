@@ -1,0 +1,41 @@
+= PTUT pour le jeu e-comm
+
+:icons: font
+:toc: auto
+
+// Specific to GitHub
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:graduation-icon: :mortar_board:
+:cogs-icon: :writing_hand:
+endif::[]
+
+
+image:logoIUT.png[Logo]
+
+University of Toulouse 2 - Jean Jaurès
+
+IUT of Blagnac
+
+DUT INFO S3/MPA Module
+
+== Context
+
+Ce projet est réalisé dans le cadre du projet tutoré (PTUT) du troisième semestre du DUT informatique. Le but est de réaliser un projet donné par un client. +
+Notre cliente, Mme Gilbert est professeur d’anglais universitaire. Ses cours portent majoritairement sur le commerce international. Elle souhaiterait avoir à sa disposition un jeu sur le commerce international qu’elle pourrait proposer à ses étudiants de Bachelor (BAC+3) de Responsable Transport Multimodal (RTM).
+
+
+== Team
+ - Florent Gerber
+ - Théo Dedaele
+ - Hodheyfa Mahdjoub
+
+== Files
+ 
+ - `application` Contient le code du site ainsi ses les médias.
+
+
