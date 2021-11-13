@@ -3,6 +3,8 @@ import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
 import PageContext from "./Components/PageContext";
+import { confirmAlert } from 'react-confirm-alert';
+import "./Components/ConfirmDialog.css";
 
 
 
@@ -29,13 +31,31 @@ function Main(props){
     else {
         centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%19)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
     }
+
     return (
         <center> <div className="main-page">
             <section className="main">
                 <nav className="navbar">
                     <ul className="navbar-nav">
                         <li className="navbar-item" >
-                            <btn className="nav-link" onClick = {props.returnMenuP}>
+                            <btn className="nav-link" onClick = {() => {
+                                confirmAlert({
+                                    title: 'Warning !',
+                                    message: 'Do you really want to return to the Menu?' +
+                                        '   Your progress will be lost',
+                                    buttons: [
+                                        {
+                                            label: 'Yes',
+                                            onClick: () => {props.returnMenuP()}
+                                        },
+                                        {
+                                            label: 'No'
+                                        }
+                                    ],
+                                    closeOnEscape: true,
+                                    closeOnClickOutside: true,
+                                })
+                            }}>
                                 <svg
                                     aria-hidden="true"
                                     focusable="false"
@@ -399,8 +419,6 @@ function DevinerSuite(props){
 
     )
 }
-
-
 
 
 
