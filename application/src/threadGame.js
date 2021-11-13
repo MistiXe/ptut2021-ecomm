@@ -88,7 +88,7 @@ function Main(props){
 
 
                         <li className="nav-item">
-                            <div className="nav-link">
+                            <div className="nav-link" onClick={putContext}>
 
                                 <svg
                                     aria-hidden="true"
@@ -113,7 +113,7 @@ function Main(props){
                                         />
                                     </g>
                                 </svg>
-                                <span className="link-text" onClick={putContext}>Context</span>
+                                <span className="link-text" >Context</span>
                             </div>
 
                         </li>

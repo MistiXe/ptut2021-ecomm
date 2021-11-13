@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {FiChevronRight} from "react-icons/fi";
 import {BsCircleFill, BsCircle} from "react-icons/bs";
 import {AiFillRightCircle} from "react-icons/ai"
 
@@ -10,7 +9,6 @@ function PageContext(props){
        return (
            <div>
                <div>Context page 1</div>
-               <FiChevronRight onClick={() => setPage((page+1)%3)}/>
                <AiFillRightCircle onClick={() => setPage((page+1)%3)}/>
                <br/>
                <btn onClick={props.retour}>Return</btn>
@@ -26,7 +24,6 @@ function PageContext(props){
        return (
            <div>
                <div>Context page 2</div>
-               <FiChevronRight onClick={() => setPage((page+1)%3)}/>
                <AiFillRightCircle onClick={() => setPage((page+1)%3)}/>
                <br/>
                <btn onClick={props.retour}>Return</btn>
@@ -42,7 +39,6 @@ function PageContext(props){
        return (
            <div>
                <div>Context page 3</div>
-               <FiChevronRight onClick={() => setPage((page+1)%3)}/>
                <AiFillRightCircle onClick={() => setPage((page+1)%3)}/>
                <br/>
                <btn onClick={props.retour}>Return</btn>

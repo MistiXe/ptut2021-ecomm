@@ -79,6 +79,10 @@ body.react-confirm-alert-body-element {
     cursor: pointer;
 }
 
+h1 {
+    color: black;
+}
+
 @-webkit-keyframes react-confirm-alert-fadeIn {
     from {
         opacity: 0;
