@@ -3,8 +3,7 @@ body.react-confirm-alert-body-element {
 }
 
 .react-confirm-alert-blur {
-    filter: url(#gaussian-blur);
-    filter: blur(2px);
+    filter: url(#gaussian-blur) blur(2px);
     -webkit-filter: blur(2px);
 }
 
