@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
+import VanillaTilt from "vanilla-tilt";
+
+
 import PageContext from "./Components/PageContext";
 import { confirmAlert } from 'react-confirm-alert';
 import "./Components/ConfirmDialog.css";

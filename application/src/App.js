@@ -10,6 +10,8 @@ import cdlc from "./Sound/chinoisdelacalle.mp3";
 
 
 
+
+
 function App(){
 
     const [start, setStart] = useState(0);
@@ -40,25 +42,50 @@ function App(){
     }
     else if(start===0){
 
-        page = (<body id ="menu">
-            <header className="App-header">
-                <Music src ={cdlc}/>
+   page =(
 
-                <div className="contenuTxt">
-                    <h3>COMM</h3>
-                    <h3>COMM</h3>
-                    <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
-                    </div>
-                </div>
-                <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
-                <btn id ="Play" onClick={startGame} >
-                    Play
-                </btn>
 
-                <button id ="Play" onClick={createPartie} className="btn">Create a party</button>
 
-            </header></body>
-        )
+       <body className="App-header">
+
+       <Music src ={cdlc}/>
+           <div className="contenuTxt">
+               <h3>COMM</h3>
+               <h3>COMM</h3>
+               <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
+               </div>
+           </div>
+
+           <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
+           <btn id="Play3" onClick={startGame} >
+               Play
+           </btn>
+
+           <button id="Play3" onClick={createPartie} >Create a party</button>
+
+       <div className="wrapper">
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+           <div><span className="dot"></span></div>
+       </div>
+
+
+       </body>
+
+
+    )
     }
     else if(start===1) {
         page = <Main returnMenuP = {() => setStart(0)}/>
