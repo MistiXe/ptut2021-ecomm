@@ -3,16 +3,10 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
-import sound from '../src/Sound/persephone.mp3';
 import cdlc from "./Sound/chinoisdelacalle.mp3";
 
 
-
-
-
-
-
-function App(){
+function App() {
 
     const [start, setStart] = useState(0);
     const useState1 = useState(false);
@@ -33,64 +27,60 @@ function App(){
         }, 4500)
     }, [])
     let page;
-    if(loading){
+    if (loading) {
 
 
         page = <>
-            <PreLoader2 />
+            <PreLoader2/>
         </>;
-    }
-    else if(start===0){
+    } else if (start === 0) {
 
-   page =(
-
+        page = (
 
 
-       <body className="App-header">
+            <body className="App-header">
 
-       <Music src ={cdlc}/>
-           <div className="contenuTxt">
-               <h3>COMM</h3>
-               <h3>COMM</h3>
-               <div className= "contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
-               </div>
-           </div>
+            <Music src={cdlc}/>
+            <div className="contenuTxt">
+                <h3>COMM</h3>
+                <h3>COMM</h3>
+                <div className="contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
+                </div>
+            </div>
 
-           <div className="textpresentation"> <p>You want to practice ? This game is for you :)</p></div>
-           <btn id="Play3" onClick={startGame} >
-               Play
-           </btn>
+            <div className="textpresentation"><p>You want to practice ? This game is for you :)</p></div>
+            <btn id="Play3" onClick={startGame}>
+                Play
+            </btn>
 
-           <button id="Play3" onClick={createPartie} >Create a party</button>
+            <button id="Play3" onClick={createPartie}>Create a party</button>
 
-       <div className="wrapper">
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-           <div><span className="dot"></span></div>
-       </div>
-
-
-       </body>
+            <div className="wrapper">
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
+            </div>
 
 
-    )
-    }
-    else if(start===1) {
-        page = <Main returnMenuP = {() => setStart(0)}/>
-    }
-    else if(start===2) {
+            </body>
+
+
+        )
+    } else if (start === 1) {
+        page = <Main returnMenuP={() => setStart(0)}/>
+    } else if (start === 2) {
         page = (<div onClick={() => setStart(0)}>Salut</div>);
     }
 

@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, from "react";
 
 
-function createParty(props) {
-   return(
+function createParty() {
+    return (
 
-       <button>rrrrr</button>
-   )
+        <button>rrrrr</button>
+    )
 
 
 }

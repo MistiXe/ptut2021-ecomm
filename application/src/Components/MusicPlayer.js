@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useState, useRef} from "react";
 import {BsVolumeDownFill, BsVolumeMuteFill} from "react-icons/bs"
 
 function Music(props) {
@@ -10,10 +10,9 @@ function Music(props) {
         setIsPlaying(!isPlaying);
         audioPlayer.current.volume = 0.05;
 
-        if(!isPlaying) {
+        if (!isPlaying) {
             audioPlayer.current.play();
-        }
-        else  {
+        } else {
             audioPlayer.current.pause();
         }
     }
@@ -21,7 +20,8 @@ function Music(props) {
     return (
         <div>
             <audio ref={audioPlayer} src={props.src} preload="metadata"/>
-            <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill /> : <><BsVolumeMuteFill /><p>Activez le son.</p></>}</btn>
+            <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill/> : <><BsVolumeMuteFill/><p>Activez le
+                son.</p></>}</btn>
 
         </div>
 

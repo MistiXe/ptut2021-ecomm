@@ -14,12 +14,9 @@ const StepTxt = ["Upon receiving a Purchase Order from 123 Importing, the export
     "The exporter (Zen Export) reviews all the conditions listed on the letter of credit.",
 
 
-
-
     "Zen Export contacts its freight forwarder to confirm that the goods can be shipped prior to the expiration date. If Zen Export is not able to comply with one or more of the conditions, it will alert the importer (123) immediately, with a request to have the letter of credit amended.",
 
     "The exporter (Zen Export) arranges with the freight forwarder to deliver the goods to the appropriate port of shipment.",
-
 
 
     "When transferring the cargo to the international freight forwarder, the exporter will usually prepare the shipper's letter of instructions instructing the freight forwarder on how and where to send the export shipment (transportation and documentation instructions).",

@@ -7,13 +7,13 @@ function ProgressBar(props) {
     };
 
 
-       return (
-           <div className="pBarContainerStyle">
-               <div className="pBarFillerStyle" style={fillerStyles}>
-                   <span className="pBarLabelStyles">{`${completed} days left`}</span>
-               </div>
-           </div>
-       );
+    return (
+        <div className="pBarContainerStyle">
+            <div className="pBarFillerStyle" style={fillerStyles}>
+                <span className="pBarLabelStyles">{`${completed} days left`}</span>
+            </div>
+        </div>
+    );
 
 
 }
