@@ -3,7 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
-import '../src/Sound/persephone.mp3';
+import sound from '../src/Sound/persephone.mp3';
+import cdlc from "./Sound/chinoisdelacalle.mp3";
 
 
 
@@ -39,10 +40,9 @@ function App(){
     }
     else if(start===0){
 
-
         page = (<body id ="menu">
             <header className="App-header">
-                <Music src = "../src/Sound/persephone.mp3"/>
+                <Music src ={cdlc}/>
 
                 <div className="contenuTxt">
                     <h3>COMM</h3>
@@ -64,7 +64,7 @@ function App(){
         page = <Main returnMenuP = {() => setStart(0)}/>
     }
     else if(start===2) {
-        page = (<div>Salut</div>);
+        page = (<div onClick={() => setStart(0)}>Salut</div>);
     }
 
     return (

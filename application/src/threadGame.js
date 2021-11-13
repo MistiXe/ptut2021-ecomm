@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
-
-
+import PageContext from "./Components/PageContext";
 
 
 
@@ -23,18 +22,9 @@ function Main(props){
 
         centre = <Accueil demarrer={()=> setEtape(1)} />
     }
-    else if(etape===-10) {
-        centre = <div>
-            <div>Context</div>
-            <btn onClick={() => setEtape(lastEtape)}>Return</btn>
-            </div>
 
-    }
     else if(etape===-10) {
-        centre = <div>
-            <div>Context</div>
-            <btn onClick={() => setEtape(lastEtape)}>Return</btn>
-        </div>
+        centre = <PageContext retour={() => setEtape(lastEtape)}/>
     }
     else {
         centre = <EtapeJeu etape ={etape} suivante={() => setEtape((etape+1)%19)} jrestant={joursRestants} erreur={() => setJoursRestants(joursRestants-1)}/>
