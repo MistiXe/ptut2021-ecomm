@@ -44,7 +44,7 @@ function Main(props) {
             setEtape(etape + 1)
         }}>Show Results</div>
     } else if (etape === 24) {
-        centre = (<div>Victory Time :{seconds}</div>);
+        centre = (<div>Victory Time :{seconds}<br/>Days Left: {joursRestants}</div>);
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1) % 25)} jrestant={joursRestants}
                            erreur={() => setJoursRestants(joursRestants - 1)}/>
@@ -178,7 +178,7 @@ function Main(props) {
 
                     {centre}
 
-                    <div>{seconds}</div>
+                    {etape!==24?<div>{seconds}</div>:<div/>}
                 </section>
             </div>
         </center>
@@ -434,7 +434,7 @@ function EtapeJeu(props) {
         return (
 
             <div className="acc">
-                <ProgressBar completed={props.jrestant}/>
+                <ProgressBar completed={props.jrestant>0?props.jrestant:0}/>
                 <h1>Actual Step : {props.etape}</h1>
                 {jeu}
             </div>
