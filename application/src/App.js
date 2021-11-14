@@ -4,6 +4,7 @@ import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
 import cdlc from "./Sound/chinoisdelacalle.mp3";
+import avion from "./image/piece-en-euro.png";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
 
             <body className="App-header">
 
+
             <Music src={cdlc}/>
             <div className="contenuTxt">
                 <h3>COMM</h3>
@@ -56,6 +58,9 @@ function App() {
             <button id="Play3" onClick={createPartie}>Create a party</button>
 
             <div className="wrapper">
+
+                <div><span className="dot"/></div>
+                <div><span className="dot"/></div>
                 <div><span className="dot"/></div>
                 <div><span className="dot"/></div>
                 <div><span className="dot"/></div>

@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
+import musiP from "./Sound/persephone.mp3";
 
 
 import PageContext from "./Components/PageContext";
 import {confirmAlert} from 'react-confirm-alert';
 import "./Components/ConfirmDialog.css";
+import Music from "./Components/MusicPlayer";
+import cdlc from "./Sound/chinoisdelacalle.mp3";
 
 
 function Main(props) {
@@ -164,9 +167,11 @@ function Main(props) {
                                             />
                                         </g>
                                     </svg>
-                                    <span className="link-text">User</span>
+                                    {etape!==24?<div><h5> Chrono : {seconds}</h5></div>:<div/>}
                                 </btn>
                             </li>
+
+                            <div className="debile"> <Music src={musiP} /></div>
 
                             <p className="version">E-COMM V_0.2</p>
 
@@ -178,7 +183,7 @@ function Main(props) {
 
                     {centre}
 
-                    {etape!==24?<div>{seconds}</div>:<div/>}
+
                 </section>
             </div>
         </center>
