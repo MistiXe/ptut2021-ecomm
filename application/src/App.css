@@ -466,10 +466,11 @@ h1 {
     position: absolute;
     color: white;
     transform: translate(-30%, -90%);
-    font-size: 100px;
+    font-size: 200px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 4px;
     font-style: italic;
+    margin-top: 5%;
 
 }
 
@@ -505,7 +506,8 @@ h1 {
     position: absolute;
     color: white;
     transform: translate(-210%, -90%);
-    font-size: 100px;
+    font-size: 200px;
+    margin-top: 5%;
 
 }
 

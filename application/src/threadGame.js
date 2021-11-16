@@ -2,21 +2,20 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
-import musiP from "./Sound/persephone.mp3";
+import Score from "./Components/CalculScore";
 
 
 import PageContext from "./Components/PageContext";
 import {confirmAlert} from 'react-confirm-alert';
 import "./Components/ConfirmDialog.css";
 import Music from "./Components/MusicPlayer";
-import cdlc from "./Sound/chinoisdelacalle.mp3";
-
+import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
     const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
-    const [seconds, setSeconds] = useState(0);
+    const [seconds, setSeconds] = useState(1000);
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -47,10 +46,10 @@ function Main(props) {
             setEtape(etape + 1)
         }}>Show Results</div>
     } else if (etape === 24) {
-        centre = (<div>Victory Time :{seconds}<br/>Days Left: {joursRestants}</div>);
+        centre = (<div>Victory <br/> Time :{seconds}<br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/></div>);
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1) % 25)} jrestant={joursRestants}
-                           erreur={() => setJoursRestants(joursRestants - 1)}/>
+                           erreur={() => {if(joursRestants!=0){setJoursRestants(joursRestants - 1)}}}/>
     }
 
     return (
