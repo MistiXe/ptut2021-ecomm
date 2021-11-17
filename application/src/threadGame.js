@@ -33,23 +33,26 @@ function Main(props) {
 
     let centre;
     if (etape === 0) {
-
         centre = <Accueil demarrer={() => {
             setEtape(1);
             setIsActive(true)
         }}/>
+
     } else if (etape === -10) {
         centre = <PageContext retour={() => setEtape(lastEtape)}/>
+
     } else if (etape === 23) {
         centre = <div onClick={() => {
             setIsActive(false);
             setEtape(etape + 1)
         }}>Show Results</div>
+
     } else if (etape === 24) {
         centre = (<div>Victory <br/> Time :{seconds}<br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/></div>);
+
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1) % 25)} jrestant={joursRestants}
-                           erreur={() => {if(joursRestants!=0){setJoursRestants(joursRestants - 1)}}}/>
+                           erreur={() => {if(joursRestants!==0){setJoursRestants(joursRestants - 1)}}}/>
     }
 
     return (
