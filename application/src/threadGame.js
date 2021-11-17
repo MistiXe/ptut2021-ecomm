@@ -10,12 +10,13 @@ import {confirmAlert} from 'react-confirm-alert';
 import "./Components/ConfirmDialog.css";
 import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
+import Time from "./Components/Time";
 
 function Main(props) {
     const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
-    const [seconds, setSeconds] = useState(1000);
+    const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -48,7 +49,7 @@ function Main(props) {
         }}>Show Results</div>
 
     } else if (etape === 24) {
-        centre = (<div>Victory <br/> Time :{seconds}<br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/></div>);
+        centre = (<div>Victory <br/> Time :<Time seconds={seconds}/><br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/></div>);
 
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1) % 25)} jrestant={joursRestants}
@@ -111,11 +112,7 @@ function Main(props) {
 
 
                             <li className="nav-item">
-                                <div className="nav-link" onClick={() => {
-                                    setLastEtape(etape);
-                                    setEtape(-10)
-                                }}>
-
+                                <div className="nav-link" onClick={() => {if(etape!==-10){setLastEtape(etape);setEtape(-10)}}}>
                                     <svg
                                         aria-hidden="true"
                                         focusable="false"
@@ -169,7 +166,7 @@ function Main(props) {
                                             />
                                         </g>
                                     </svg>
-                                    <div><span className="link-text"> Chrono : {seconds}</span></div>
+                                    <div><span className="link-text"> Time : <Time seconds={seconds}/></span></div>
                                 </btn>
                             </li>
 
