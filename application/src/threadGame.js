@@ -228,14 +228,14 @@ function EtapeJeu(props) {
                                                   possible={[{id: 1, text: StepTxt[0]}, {
                                                       id: 2,
                                                       text: StepTxt[3]
-                                                  }, {id: 3, text: StepTxt[15]}, {id: 2, text: StepTxt[7]}]}
+                                                  }, {id: 3, text: StepTxt[15]}, {id: 4, text: StepTxt[7]}]}
                                                   reponse={1} erreur={props.erreur}/></div>
                 </center>
             </>)
     } else if (props.etape === 2) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[11]}, {id: 2, text: StepTxt[7]}, {id: 3, text: StepTxt[1]}, {id: 2, text: StepTxt[7]} ]}
+                                          possible={[{id: 1, text: StepTxt[11]}, {id: 2, text: StepTxt[7]}, {id: 3, text: StepTxt[1]}, {id: 4, text: StepTxt[7]} ]}
                                           reponse={3} erreur={props.erreur}/></div>
 
 
@@ -246,7 +246,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
                                               id: 3,
                                               text: StepTxt[14]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
 
 
@@ -257,7 +257,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[3]}, {
                                               id: 3,
                                               text: StepTxt[14]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
 
 
@@ -268,7 +268,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
                                               id: 3,
                                               text: StepTxt[4]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={3} erreur={props.erreur}/></div>
 
         )
@@ -278,7 +278,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[5]}, {id: 2, text: StepTxt[1]}, {
                                               id: 3,
                                               text: StepTxt[1]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
 
         )
@@ -288,7 +288,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
                                               id: 3,
                                               text: StepTxt[6]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={3} erreur={props.erreur}/></div>
 
         )
@@ -298,7 +298,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
                                               id: 3,
                                               text: StepTxt[7]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={3} erreur={props.erreur}/></div>
 
         )
@@ -310,7 +310,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[14]}, {
                                               id: 3,
                                               text: StepTxt[11]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
 
         )
@@ -322,7 +322,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[9]}, {
                                               id: 3,
                                               text: StepTxt[6]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
 
         )
@@ -334,7 +334,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[10]}, {id: 2, text: StepTxt[0]}, {
                                               id: 3,
                                               text: StepTxt[9]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
 
         )
@@ -346,7 +346,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[3]}, {id: 2, text: StepTxt[13]}, {
                                               id: 3,
                                               text: StepTxt[11]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={3} erreur={props.erreur}/></div>
 
         )
@@ -358,7 +358,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[12]}, {
                                               id: 3,
                                               text: StepTxt[2]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
 
         )
@@ -370,7 +370,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[14]}, {
                                               id: 3,
                                               text: StepTxt[16]
-                                          },{id: 2, text: StepTxt[7]}]}
+                                          },{id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
 
         )
@@ -382,7 +382,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[9]}, {id: 2, text: StepTxt[14]}, {
                                               id: 3,
                                               text: StepTxt[8]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
 
         )
@@ -394,7 +394,7 @@ function EtapeJeu(props) {
                                           possible={[{id: 1, text: StepTxt[15]}, {id: 2, text: StepTxt[12]}, {
                                               id: 3,
                                               text: StepTxt[11]
-                                          }, {id: 2, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
 
         )
@@ -405,7 +405,7 @@ function EtapeJeu(props) {
                                              possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[0]}, {
                                                  id: 3,
                                                  text: StepTxt[16]
-                                             },{id: 2, text: StepTxt[7]}]}
+                                             },{id: 4, text: StepTxt[7]}]}
                                              reponse={3} erreur={props.erreur}/></div>)
 
 
