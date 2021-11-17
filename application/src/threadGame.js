@@ -38,6 +38,9 @@ function Main(props) {
             setEtape(1);
             setIsActive(true)
         }}/>
+    }else if(etape===-9) {
+        centre = (<><h1>About Us</h1><div onClick={() => setEtape(lastEtape)}>Return</div></>);
+
 
     } else if (etape === -10) {
         centre = <PageContext retour={() => setEtape(lastEtape)}/>
@@ -172,7 +175,7 @@ function Main(props) {
 
                             <div className="debile"> <Music src={musiP} /></div>
 
-                            <p className="version">E-COMM V_0.2</p>
+                            <p className="version" onClick={() => {if(etape!==-9){setLastEtape(etape);setEtape(-9)}}}>E-COMM V_0.2</p>
 
                         </ul>
 
