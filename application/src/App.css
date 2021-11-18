@@ -916,4 +916,9 @@ div .dot {
 .musicIcon{
     height: 40px;
     width: 40px;
+    margin-bottom: 75%;
+}
+
+.musicDiv{
+    margin-top: 20px;
 }
