@@ -70,7 +70,7 @@ function Main(props) {
                                     confirmAlert({
                                         title: 'Warning !',
                                         message: 'Do you really want to return to the Menu?' +
-                                            '   Your progress will be lost',
+                                            'Your progress will be lost.',
                                         buttons: [
                                             {
                                                 label: 'Yes',

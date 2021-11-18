@@ -87,7 +87,7 @@ function App() {
     } else if (start === 1) {
         page = <Main returnMenuP={() => setStart(0)}/>
     } else if (start === 2) {
-        page = <CreateParty />;
+        page = <CreateParty returnMenuP={() => setStart(0)}/>;
     }
 
     return (
