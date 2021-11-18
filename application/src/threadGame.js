@@ -36,7 +36,7 @@ function Main(props) {
     if (etape === 0) {
         centre = <Accueil demarrer={() => {
             setEtape(1);
-            setIsActive(true)
+            setIsActive(false)
         }}/>
     }else if(etape===-9) {
         centre = (<><h1>About Us</h1><div onClick={() => setEtape(lastEtape)}>Return</div></>);
@@ -47,15 +47,15 @@ function Main(props) {
 
     } else if (etape === 23) {
         centre = <div onClick={() => {
-            setIsActive(false);
+            setIsActive(true);
             setEtape(etape + 1)
         }}>Show Results</div>
 
     } else if (etape === 24) {
-        centre = (<div>Victory <br/> Time :<Time seconds={seconds}/><br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/></div>);
+        centre = (<div>Victory <br/> Time :<Time seconds={seconds}/><br/>Days Left: {joursRestants}<Score dl={joursRestants} time={seconds}/><br/><btn onClick={props.returnMenuP}>Return</btn></div>);
 
     } else {
-        centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1) % 25)} jrestant={joursRestants}
+        centre = <EtapeJeu etape={etape} suivante={() => setEtape((etape + 1))} jrestant={joursRestants}
                            erreur={() => {if(joursRestants!==0){setJoursRestants(joursRestants - 1)}}}/>
     }
 
