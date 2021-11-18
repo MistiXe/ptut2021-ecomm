@@ -837,6 +837,85 @@ div .dot {
     font-weight: 600;
 }
 
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.1);
+    animation: animateLog 10s linear infinite;
+    animation-delay: inherit ;
+
+}
+
+@keyframes animateLog {
+
+    0%,100%
+    {
+        transform: translateY(-30px);
+    }
+    50%
+    {
+        transform: translateY(40px);
+    }
+
+}
+
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    z-index: 2;
+}
+.box .square:nth-child(3){
+    bottom: 50px;
+   right: -60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    z-index: 2;
+}
+.box .square:nth-child(4){
+    bottom: -30px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+
+
+}
+
+.box .square:nth-child(5){
+   top: -70px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+}
+
+.btnReturn{
+    border-radius: 60%;
+    height: 100px;
+    width: 100px;
+    margin-right: 90%;
+
+    border: none;
+}
+
+
+
 
 
 
