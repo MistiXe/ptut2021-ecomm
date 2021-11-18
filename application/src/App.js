@@ -4,7 +4,7 @@ import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
 import cdlc from "./Sound/chinoisdelacalle.mp3";
-import avion from "./image/piece-en-euro.png";
+
 import CreateParty from "./Server/CreateParty.";
 
 
