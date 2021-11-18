@@ -5,6 +5,7 @@ import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
 import cdlc from "./Sound/chinoisdelacalle.mp3";
 import avion from "./image/piece-en-euro.png";
+import CreateParty from "./Server/CreateParty.";
 
 
 function App() {
@@ -86,7 +87,7 @@ function App() {
     } else if (start === 1) {
         page = <Main returnMenuP={() => setStart(0)}/>
     } else if (start === 2) {
-        page = (<div onClick={() => setStart(0)}>Salut</div>);
+        page = <CreateParty />;
     }
 
     return (
