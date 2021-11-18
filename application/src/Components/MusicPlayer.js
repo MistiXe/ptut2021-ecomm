@@ -22,8 +22,7 @@ function Music(props) {
     return (
         <div>
             <audio ref={audioPlayer} src={props.src} preload="metadata"/>
-            <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill/> : <><BsVolumeMuteFill/><p>
-               Music</p></>}</btn>
+            <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
 
         </div>
 

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {BsCircleFill, BsCircle} from "react-icons/bs";
-import {AiFillRightCircle} from "react-icons/ai"
+import {AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai"
 import imageContext from "../image/imgContext.jpg";
 
 
@@ -47,13 +47,14 @@ function PageContext(props) {
                     Goods to be collected in port of destination by DML USA (VAT NUMBER: 3939392), Address New York,
                     New York 2001, USA. Traller number: TYT 2001 JKP
                 </div>
+                <AiFillLeftCircle onClick={() => setPage(2)}/>
                 <AiFillRightCircle onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
                 <btn onClick={props.retour}>Return</btn>
                 <footer>
                     <BsCircleFill/>
-                    <BsCircle/>
-                    <BsCircle/>
+                    <BsCircle onClick={() => setPage(1)}/>
+                    <BsCircle onClick={() => setPage(2)}/>
                 </footer>
             </div>
         );
@@ -64,13 +65,14 @@ function PageContext(props) {
                 <div>
                     <img src={imageContext} alt="Image Context"/>
                 </div>
+                <AiFillLeftCircle onClick={() => setPage((page - 1) % 3)}/>
                 <AiFillRightCircle onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
                 <btn onClick={props.retour}>Return</btn>
                 <footer>
-                    <BsCircle/>
+                    <BsCircle onClick={() => setPage(0)}/>
                     <BsCircleFill/>
-                    <BsCircle/>
+                    <BsCircle onClick={() => setPage(2)}/>
                 </footer>
             </div>
         );
@@ -79,12 +81,13 @@ function PageContext(props) {
             <div>
                 <h1>Tutorial</h1>
                 <h3>How to play ?</h3>
+                <AiFillLeftCircle onClick={() => setPage((page - 1) % 3)}/>
                 <AiFillRightCircle onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
                 <btn onClick={props.retour}>Return</btn>
                 <footer>
-                    <BsCircle/>
-                    <BsCircle/>
+                    <BsCircle onClick={() => setPage(0)}/>
+                    <BsCircle onClick={() => setPage(1)}/>
                     <BsCircleFill/>
                 </footer>
             </div>
