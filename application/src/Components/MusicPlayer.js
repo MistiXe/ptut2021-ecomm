@@ -10,12 +10,14 @@ function Music(props) {
         setIsPlaying(!isPlaying);
         audioPlayer.current.volume = 0.05;
 
+
         if (!isPlaying) {
             audioPlayer.current.play();
         } else {
             audioPlayer.current.pause();
         }
     }
+
 
     return (
         <div>
