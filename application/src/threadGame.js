@@ -11,6 +11,7 @@ import "./Components/ConfirmDialog.css";
 import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 import Time from "./Components/Time";
+import Formulaire from "./Components/Formulaire";
 
 function Main(props) {
     const [etape, setEtape] = useState(0);
@@ -555,31 +556,7 @@ function DevinerSuite(props) {
 }
 
 
-function Formulaire(props) {
-    function check() {
-        let rep = document.forms["form"]["rep"].value
-        if (rep === props.reponse) {
-            props.suivante()
-        } else {
-            props.erreur()
-        }
-    }
 
-    return (
-        <center>
-            <div className="formu">
-                <form name="form">
-                    reponse : <input type="text" name="rep" onKeyPress={e => {
-                    if (e.key === 'Enter') e.preventDefault();
-                }}/>
-                    <btn onClick={check}>Enter</btn>
-
-                </form>
-            </div>
-        </center>
-    )
-
-}
 
 
 export default Main;
