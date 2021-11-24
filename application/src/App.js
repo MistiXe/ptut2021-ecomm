@@ -44,6 +44,7 @@ function App() {
 
 
             <Music src={cdlc}/>
+
             <div className="contenuTxt">
                 <h3>COMM</h3>
                 <h3>COMM</h3>

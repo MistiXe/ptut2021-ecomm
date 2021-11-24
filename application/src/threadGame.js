@@ -173,7 +173,7 @@ function Main(props) {
                                 </btn>
                             </li>
 
-                            <div className="debile"> <Music src={musiP} /></div>
+                            <div className="musicTG"> <Music src={musiP} /></div>
 
                             <p className="version" onClick={() => {if(etape!==-9){setLastEtape(etape);setEtape(-9)}}}>E-COMM V_0.2</p>
 
