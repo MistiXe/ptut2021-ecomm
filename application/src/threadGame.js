@@ -236,6 +236,18 @@ function EtapeJeu(props) {
                 </center>
             </>)
     } else if (props.etape === 2) {
+    jeu = (
+        <div id="suite"><Formulaire /></div>
+
+
+    )
+}
+
+
+
+
+
+else if (props.etape === 3) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[11]}, {id: 2, text: StepTxt[7]}, {id: 3, text: StepTxt[1]}, {id: 4, text: StepTxt[7]} ]}
@@ -243,29 +255,40 @@ function EtapeJeu(props) {
 
 
         )
-    } else if (props.etape === 3) {
+    }else if (props.etape === 4) {
+    jeu = (
+        <div id="suite"><Formulaire /></div>
+
+
+    )
+}
+
+
+
+
+
+else if (props.etape === 5) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
-                                              id: 3,
-                                              text: StepTxt[14]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={1} erreur={props.erreur}/></div>
+            <div id="suite"><Formulaire /></div>
 
 
         )
-    } else if (props.etape === 4) {
+
+// 6 =3
+    }else if (props.etape === 6) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[3]}, {
+                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
                                               id: 3,
-                                              text: StepTxt[14]
+                                              text: StepTxt[4]
                                           }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={2} erreur={props.erreur}/></div>
+                                          reponse={3} erreur={props.erreur}/></div>
+
+
 
 
         )
-    } else if (props.etape === 5) {
+    } else if (props.etape === 7) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
@@ -275,7 +298,7 @@ function EtapeJeu(props) {
                                           reponse={3} erreur={props.erreur}/></div>
 
         )
-    } else if (props.etape === 6) {
+    } else if (props.etape === 8) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[5]}, {id: 2, text: StepTxt[1]}, {
@@ -285,17 +308,10 @@ function EtapeJeu(props) {
                                           reponse={1} erreur={props.erreur}/></div>
 
         )
-    } else if (props.etape === 7) {
-        jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
-                                              id: 3,
-                                              text: StepTxt[6]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={3} erreur={props.erreur}/></div>
 
-        )
-    } else if (props.etape === 8) {
+        //9 = 7
+
+    } else if (props.etape === 9) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
@@ -306,8 +322,8 @@ function EtapeJeu(props) {
 
         )
 
-
-    } else if (props.etape === 9) {
+// 11 =8
+    } else if (props.etape ===10) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[14]}, {
@@ -319,7 +335,19 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 10) {
+    } else if (props.etape === 11) {
+        jeu = (
+            <div id="suite"><Formulaire/></div>
+
+
+        )
+
+    }
+
+
+
+//12 = 9
+else if (props.etape === 12) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[9]}, {
@@ -331,7 +359,26 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 11) {
+    }else if (props.etape ===   13) {
+        jeu = (
+            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                          possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
+                                              id: 3,
+                                              text: StepTxt[14]
+                                          }, {id: 4, text: StepTxt[7]}]}
+                                          reponse={1} erreur={props.erreur}/></div>
+
+
+        )
+
+// 13 = 10
+    } else if (props.etape === 14) {
+            jeu = (
+                <div id="suite"><Formulaire /></div>
+
+
+            )
+}  else if (props.etape === 15) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[10]}, {id: 2, text: StepTxt[0]}, {
@@ -343,7 +390,7 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 12) {
+    } else if (props.etape === 16) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[3]}, {id: 2, text: StepTxt[13]}, {
@@ -355,7 +402,26 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 13) {
+
+
+    }  else if (props.etape === 17) {
+    jeu = (
+        <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                      possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
+                                          id: 3,
+                                          text: StepTxt[14]
+                                      }, {id: 4, text: StepTxt[7]}]}
+                                      reponse={1} erreur={props.erreur}/></div>
+
+
+    )
+}
+
+
+
+
+
+else if (props.etape === 18) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[12]}, {
@@ -367,7 +433,7 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 14) {
+    } else if (props.etape === 19) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[14]}, {
@@ -379,7 +445,7 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 15) {
+    } else if (props.etape === 20) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[9]}, {id: 2, text: StepTxt[14]}, {
@@ -391,7 +457,7 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 16) {
+    } else if (props.etape === 21) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[15]}, {id: 2, text: StepTxt[12]}, {
@@ -403,7 +469,7 @@ function EtapeJeu(props) {
         )
 
 
-    } else if (props.etape === 17) {
+    } else if (props.etape === 22) {
         jeu = (<div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                              possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[0]}, {
                                                  id: 3,
@@ -412,7 +478,7 @@ function EtapeJeu(props) {
                                              reponse={3} erreur={props.erreur}/></div>)
 
 
-    } else if (props.etape === 18) {
+    } else if (props.etape === 23) {
         jeu = (<div id="suite"><h2>Good Job ! </h2>
             <div onClick={props.suivante}>Test fin</div>
 
