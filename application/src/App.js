@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
-import cdlc from "./Sound/chinoisdelacalle.mp3";
+import cdlc from "./Sound/optheme.mp3";
 
 import CreateParty from "./Server/CreateParty.";
 
