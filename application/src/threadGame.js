@@ -12,6 +12,7 @@ import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 import Time from "./Components/Time";
 import Formulaire from "./Components/Formulaire";
+import imageicon from "./image/ultimateback.jpg";
 
 function Main(props) {
     const [etape, setEtape] = useState(0);
@@ -223,22 +224,22 @@ function Accueil(props) {
             <h3>Don't forget objectives ! </h3>
 
 
+
+            <div className="cardsF" >
+               <img src={imageicon}/>
+
+                <div className="debile"><h3 className="h3Txt">E-</h3><h3>E-</h3>
+                </div>
+                <div className="contenuTxtT">
+                    <h3>E-COMM</h3>
+                    <h3>E-COMM</h3>
+
+                </div>
+
+            </div>
             <div className="outro" >
-                <div className="cardsF" >
-                    <img src="image/poker-cards.png"/>
-                    <div className="info">
-                        <p>Time</p>
 
 
-                    </div>
-
-
-
-                </div>
-                <div className="cardsM" >
-                    <p>Document</p>
-
-                </div>
                 <div className="cardsM" >
                     <p>Step Cards</p>
 
@@ -255,7 +256,7 @@ function Accueil(props) {
 
             </div>
 
-            <button id="next" onClick={props.demarrer}>Play</button>
+            <button id="next2" onClick={props.demarrer}>Play</button>
         </>
 
 

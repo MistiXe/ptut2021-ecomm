@@ -52,7 +52,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="textpresentation"><p>You want to practice ? This game is for you :)</p></div>
+            <div className="textpresentation"><p>Do you want to practice ? This game is for you :)</p></div>
             <btn id="Play3" onClick={startGame}>
                 Play
             </btn>
