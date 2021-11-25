@@ -200,11 +200,41 @@ function Accueil(props) {
     return (
 
         <>
-            <div className="acc">
-                <h1>{txtIntro}</h1>
+            <h3>Don't forget objectives ! </h3>
+
+
+            <div className="outro" >
+                <div className="cardsF" >
+                    <img src="image/poker-cards.png"/>
+                    <div className="info">
+                        <p>Time</p>
+
+
+                    </div>
+
+
+
+                </div>
+                <div className="cardsM" >
+                    <p>Document</p>
+
+                </div>
+                <div className="cardsM" >
+                    <p>Step Cards</p>
+
+                </div>
+
+                <div className="cardsM" >
+                    <p>Document</p>
+
+                </div>
+                <div className="cardsM" >
+                    <p>Step Cards</p>
+
+                </div>
 
             </div>
-            <div id="suite">Are you ready ?</div>
+
             <button id="next" onClick={props.demarrer}>Play</button>
         </>
 
