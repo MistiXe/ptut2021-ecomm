@@ -3,6 +3,7 @@ import './App.css';
 import StepTxt from "./Components/data/StepTxt";
 import ProgressBar from "./Components/ProgressBar";
 import Score from "./Components/CalculScore";
+import ultimatecard from "./image/ultimatecard.jpg";
 
 
 import PageContext from "./Components/PageContext";
@@ -116,7 +117,7 @@ function Main(props) {
 function Accueil(props) {
     return (
         <>
-            <h3>Don't forget objectives ! </h3>
+
 
 
             <div className="cardsF">
@@ -130,21 +131,46 @@ function Accueil(props) {
 
                 </div>
 
+                <div className="info">Version V_0.2
+                    <h1>What's news ?</h1>
+
+                    <p>
+                        New Cards
+                        Cookies added
+                        Music and more !
+                    </p>
+                </div>
+
+
             </div>
             <div className="outro">
 
 
-                <div className="cardsM">
-                    <p>Step Cards</p>
+
+                <div className="cards2">
+
+                    <h1>Switch</h1>
+
+                    <div className="info2">
+
+                    <h3>Step Cards</h3>
+                    <p>Choose the right card to choose the right step.</p>
+                    </div>
 
                 </div>
 
-                <div className="cardsM">
+                <div className="cards2">
+                    <div className="info2">
                     <p>Document</p>
+                    <p>Many steps have a document to complete.</p>
+                    </div>
 
                 </div>
-                <div className="cardsM">
-                    <p>Step Cards</p>
+                <div className="cards2">
+                    <div className="info2">
+                    <h3>Time</h3>
+                    <p>Warning ! Time is money !</p>
+                    </div>
 
                 </div>
 
