@@ -4,7 +4,7 @@ import React from "react";
 function Formulaire(props) {
     function check() {
         let rep = document.forms["form"]["rep"].value
-        if (rep === props.reponse) {
+        if (rep === 3) {
             props.suivante()
         } else {
             props.erreur()
