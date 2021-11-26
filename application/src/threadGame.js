@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import StepTxt from "./Components/data/StepTxt";
+
 import ProgressBar from "./Components/ProgressBar";
 import Score from "./Components/CalculScore";
-import ultimatecard from "./image/ultimatecard.jpg";
-
 
 import PageContext from "./Components/PageContext";
 import Time from "./Components/Time";
@@ -227,13 +226,13 @@ function EtapeJeu(props) {
     } else if (props.etape === 4) {
         //Email exercice
         jeu = (
-            <div id="suite" onClick={props.suivante}>Next</div>
+            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur} etape={props.etape} /></div>
 
 
         )
     } else if (props.etape === 5) {
         jeu = (
-            <div id="suite"><Formulaire/></div>
+            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
 
 
         )
@@ -310,7 +309,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 12) {
         jeu = (
-            <div id="suite"><Formulaire/></div>
+            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
 
 
         )
@@ -341,7 +340,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 15) {
         jeu = (
-            <div id="suite"><Formulaire/></div>
+            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
 
 
         )
