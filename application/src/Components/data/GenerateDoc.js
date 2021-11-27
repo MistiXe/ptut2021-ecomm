@@ -37,9 +37,29 @@ import bolf3 from '../../image/docs/bol/Bill_of_lading_3.png';
 import bolf4 from '../../image/docs/bol/Bill_of_lading_4.png';
 
 //Creating arrays for each document
-const tabCI = [{id: 1,type:'e',img:cie1},{id: 2,type:'e',img:cie2},{id: 3,type:'f',img:cif1},{id: 4,type:'f',img:cif2},{id: 5,type:'f',img:cif3},{id: 6,type:'f',img:cif4}];
-const tabAFS = [{id: 1,type:'e',img:afse1},{id: 2,type:'e',img:afse2},{id: 3,type:'e',img:afse3},{id: 4,type:'e',img:afse4},{id: 5,type:'f',img:afsf1},{id: 6,type:'f',img:afsf2},{id: 7,type:'f',img:afsf3},{id: 8,type:'f',img:afsf4},{id: 9,type:'f',img:afsf5}];
-const tabSLI = [{id: 1,type:'e',img:slie1},{id: 2,type:'e',img:slie2},{id: 3,type:'f',img:slif1},{id: 4,type:'f',img:slif2},{id: 5,type:'f',img:slif3},{id: 6,type:'f',img:slif4}]
-const tabBOL = [{id: 1,type:'e',img:bole1},{id: 2,type:'e',img:bole2},{id: 3,type:'f',img:bolf1},{id: 4,type:'f',img:bolf2},{id: 5,type:'f',img:bolf3},{id: 6,type:'f',img:bolf4}]
+const tabCI = [{img:cie1},{img:cie2},
+    {img:cif1,nbRep:5 ,correctReps:[2,4,3,0,1],reps:["FOB","Commercial","04/20/XX","7689/7690","3879"]},
+    {img:cif2, nbRep: 4, reps: ["31 Hinga","Zen Export International", "Japan", "Tokyo"], correctReps: [1,0,3,2]},
+    {img:cif3, nbRep: 5, reps: ["New York","USA", "123 Importing Company", "89 High Street","70036"], correctReps: [2,3,0,0,4,1]},
+    {img:cif4, nbRep: 9, reps: ["1000 x S, 1000 x M, 1000 x L men's shirt", "30,000 US $", "1 May", "Asia Freigth", "Japan", "12 Boxes", "VAT 3,000 US $","33,000 US $", "2400 kgs"], correctReps: [5,0,4,1,1,6,7,5,8,3,2]}];
+
+const tabAFS = [{img:afse1},{img:afse2},{img:afse3},{img:afse4},
+    {img:afsf1},
+    {img:afsf2},
+    {img:afsf3},
+    {img:afsf4},
+    {img:afsf5}];
+
+const tabSLI = [{img:slie1},{img:slie2},
+    {img:slif1},
+    {img:slif2},
+    {img:slif3},
+    {img:slif4}];
+
+const tabBOL = [{img:bole1},{img:bole2},
+    {img:bolf1},
+    {img:bolf2},
+    {img:bolf3},
+    {img:bolf4}];
 
 export default {tabCI, tabAFS, tabSLI, tabBOL};
