@@ -563,6 +563,10 @@ h1 {
     transition: 0.5s;
 }
 
+.cards:hover{
+    transform: translateY(20px);
+}
+
 .divcont .cards .cont h2 {
     position: absolute;
     top: 60px;
