@@ -11,6 +11,7 @@ function PageContext(props) {
         return (
             <>
             <div>
+
                 <div className="contStep">
                 <div className="cardsE">
 
@@ -18,10 +19,12 @@ function PageContext(props) {
                     <div className="debile">
                     </div>
                     <div className="contenuTxtT">
-                        <h3>1>></h3>
-                        <h3>1>></h3>
+                        <h3>The Beginning.</h3>
+                        <h3>The Beginning.</h3>
+
 
                     </div>
+
 
                     <div className="info">
                         <h1>The Beginning...</h1>
