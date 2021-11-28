@@ -125,8 +125,8 @@ function Accueil(props) {
                 <div className="debile"><h3 className="h3Txt">E-</h3><h3>E-</h3>
                 </div>
                 <div className="contenuTxtT">
-                    <h3>E-COMM</h3>
-                    <h3>E-COMM</h3>
+                    <h3>V.0 >></h3>
+                    <h3>V.0 >></h3>
 
                 </div>
 
@@ -142,13 +142,14 @@ function Accueil(props) {
 
 
             </div>
+            <button id="next2" onClick={props.demarrer}>Play</button>
             <div className="outro">
 
 
 
                 <div className="cards2">
 
-                    <h1>Switch</h1>
+
 
                     <div className="info2">
 
@@ -160,7 +161,7 @@ function Accueil(props) {
 
                 <div className="cards2">
                     <div className="info2">
-                    <p>Document</p>
+                    <h3>Document</h3>
                     <p>Many steps have a document to complete.</p>
                     </div>
 
@@ -175,7 +176,7 @@ function Accueil(props) {
 
             </div>
 
-            <button id="next2" onClick={props.demarrer}>Play</button>
+
         </>
 
 
@@ -207,7 +208,9 @@ function EtapeJeu(props) {
             </>)
     } else if (props.etape === 2) {
         jeu = (
-            <div id="suite" onClick={props.suivante}>Next</div>
+
+            <Formulaire etape={props.etape} />
+
 
 
         )

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import GenerateDoc from "./data/GenerateDoc";
 
 
 
