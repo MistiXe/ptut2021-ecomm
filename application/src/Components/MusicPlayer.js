@@ -16,6 +16,7 @@ function Music(props) {
                     url={props.src}
                     playStatus={Sound.status.PLAYING}
                     loop={true}
+                    volume={20}
 
                 />
                 <btn onClick={() => setIsPlaying(false)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
@@ -30,6 +31,7 @@ function Music(props) {
                     url={props.src}
                     playStatus={false}
                     loop={true}
+                    volume={20}
                 />
                 <btn onClick={() => setIsPlaying(true)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
 
