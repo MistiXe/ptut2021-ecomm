@@ -4,37 +4,28 @@ import GenerateDoc from "./data/GenerateDoc";
 
 
 function Formulaire(props) {
+    const [pageFormu, setPageFormu] = useState(0);//Faut utiliser ça pour changer de morceaux de formulaire
+    if(props.etape===4){
+        //email exercice
+        return (
+            <div onClick={props.suivante}>Next</div>
+        );
 
-    let formuInst;
-    if(props.etape === 2){
-
-        formuInst = ( <>
-                <body className="bodyForm">
-            <div className="box">
-                <div className="container">
-                    <div className="form">
-                        <h1>Commercial invoice</h1>
-                        <img className="imgformu" src={GenerateDoc.tabCI[0].img}/>
-
-
-                    </div>
-                </div>
-            </div>
-
-                </body>
-
-            </>
-
-        )
     }
+    else if(props.etape===5){
+        //Application for issuing Letter of Credit (document super long et donc differents des autres)
+        return (
+            <div onClick={props.suivante}>Next</div>
+        );
 
-return (
-    <>
-        {formuInst}
-    <div onClick={props.suivante}>Next</div>
-    </>
+    }
+    else {
+        //Les autres documents qu'on peut normalement traiter de la même manière
+        return (
+            <div onClick={props.suivante}>Next</div>
+        );
 
-);
+    }
 
 
 }

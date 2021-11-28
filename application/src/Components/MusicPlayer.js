@@ -1,32 +1,44 @@
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import {BsVolumeDownFill, BsVolumeMuteFill} from "react-icons/bs"
+import Sound from 'react-sound';
 
 function Music(props) {
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const audioPlayer = useRef();
-
-    const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
-        audioPlayer.current.volume = 0.05;
+    const [isPlaying, setIsPlaying] = useState(true);
 
 
-        if (!isPlaying) {
-            audioPlayer.current.play();
-        } else {
-            audioPlayer.current.pause();
-        }
+
+
+
+    if(isPlaying){
+        return (
+            <div className="musicDiv">
+                <Sound
+                    url={props.src}
+                    playStatus={Sound.status.PLAYING}
+                    loop={true}
+
+                />
+                <btn onClick={() => setIsPlaying(false)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
+
+            </div>
+
+        );
+    }else {
+        return (
+            <div className="musicDiv">
+                <Sound
+                    url={props.src}
+                    playStatus={false}
+                    loop={true}
+                />
+                <btn onClick={() => setIsPlaying(true)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
+
+
+            </div>
+
+        )
     }
 
-
-    return (
-        <div className="musicDiv">
-            <audio ref={audioPlayer} src={props.src} preload="metadata"/>
-            <btn onClick={togglePlayPause}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
-
-        </div>
-
-    );
 
 
 }
