@@ -1,4 +1,5 @@
 import './App.css';
+
 import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
@@ -59,7 +60,9 @@ function App() {
                     <div className="plane">
 
                         <Music src={cdlc}/>
-                      <p>E-COMM</p>
+
+                        <p className="rien">E-COMM</p>
+
                     <img src="https://i.ibb.co/SPpRcJz/airplane.png">
                     </img>
 

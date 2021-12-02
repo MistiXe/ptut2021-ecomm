@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@700;900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Righteous);
 
 .App {
     text-align: center;
@@ -940,7 +942,7 @@ div .dot {
 }
 
 .musicDiv{
-    margin-top: -100px;
+    margin-top: -150px;
 }
 
 .textCt{
@@ -1366,3 +1368,16 @@ div .dot {
         transform: translateX(0%);
     }
 }
+
+
+
+.rien{
+    color: #6949F3;
+    font-family: 'Righteous', serif;
+    font-style: italic;
+    font-size: 5em;
+
+
+}
+
+
