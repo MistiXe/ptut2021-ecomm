@@ -208,8 +208,10 @@ function EtapeJeu(props) {
             </>)
     } else if (props.etape === 2) {
         jeu = (
-
+            <>
             <Formulaire etape={props.etape} />
+            <button id="next2" onClick={NextFrag}> Complete the Document </button>
+                </>
 
 
 
@@ -483,6 +485,12 @@ function DevinerSuite(props) {
         </>
 
 
+    )
+}
+
+function NextFrag(props){
+    return(
+        <div> Rien est disponible pour l'instant</div>
     )
 }
 

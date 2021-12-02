@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
-//import cdlc from "./Sound/optheme.mp3";
+import cdlc from "./Sound/optheme.mp3";
 import calv from "./Sound/Billy - Calvitie.mp3"
 
 import CreateParty from "./Server/CreateParty.";
@@ -44,7 +44,7 @@ function App() {
             <body className="App-header">
 
 
-            <Music src={calv}/>
+            <Music src={cdlc}/>
 
             <div className="contenuTxt">
                 <h3>COMM</h3>
