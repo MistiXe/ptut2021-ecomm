@@ -8,7 +8,7 @@ import Score from "./Components/CalculScore";
 import PageContext from "./Components/PageContext";
 import Time from "./Components/Time";
 import Formulaire from "./Components/Formulaire";
-import imageicon from "./image/ultimateback.jpg";
+import imageicon from "./image/commercee.jpg";
 import {useCookies} from "react-cookie";
 import NavBar from "./Components/NavBar";
 

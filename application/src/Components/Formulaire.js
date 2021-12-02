@@ -12,7 +12,7 @@ function Formulaire(props) {
             <>
 
             <h3>Formulaire de l'étape 1</h3>
-                <div><img className="divForm1" src={GenerateDoc.tabCI[0].img}/> </div>
+                <div><img onClick={Form1} className="divForm1" src={GenerateDoc.tabCI[0].img}/> </div>
 
                 </>
         );
@@ -21,14 +21,16 @@ function Formulaire(props) {
     else if(props.etape===4){
         //email exercice
         return (
-            <div onClick={props.suivante}>Next</div>
+            <div><img onClick={Form1} className="divForm1" src={GenerateDoc.tabCI[0].img}/> </div>
+
         );
 
     }
     else if(props.etape===5){
         //Application for issuing Letter of Credit (document super long et donc differents des autres)
         return (
-            <div onClick={props.suivante}>Next</div>
+            <div><img onClick={Form1} className="divForm1" src={GenerateDoc.tabAFS[0].img}/> </div>
+
         );
 
     }

@@ -39,50 +39,51 @@ function App() {
     } else if (start === 0) {
 
         page = (
+            <>
 
 
-            <body className="App-header">
+
+            <div className="sky">
 
 
-            <Music src={cdlc}/>
+                <div className="clouds"></div>
 
-            <div className="contenuTxt">
-                <h3>COMM</h3>
-                <h3>COMM</h3>
-                <div className="contenuTxt2"><h3 className="h3Txt">E-</h3><h3>E-</h3>
+
+
+
+
+                <div className="airplane">
+
+
+
+                    <div className="plane">
+
+                        <Music src={cdlc}/>
+                      <p>E-COMM</p>
+                    <img src="https://i.ibb.co/SPpRcJz/airplane.png">
+                    </img>
+
+                        <div className="flame"></div>
+                        <div className="flame flame2"></div>
+
+
+
+                    <btn id="Play3" onClick={startGame}>
+                        Play
+                    </btn>
+                    <div>
+                        <button id="Play3" onClick={createPartie}>Create a party</button></div>
                 </div>
+                </div>
+
+
+
+                <div className="mountains"></div>
             </div>
-
-            <div className="textpresentation"><p>Do you want to practice ? This game is for you :)</p></div>
-            <btn id="Play3" onClick={startGame}>
-                Play
-            </btn>
-
-            <button id="Play3" onClick={createPartie}>Create a party</button>
-
-            <div className="wrapper">
-
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-                <div><span className="dot"/></div>
-            </div>
+                </>
 
 
-            </body>
+
 
 
         )

@@ -2,7 +2,7 @@ import React from "react";
 import {confirmAlert} from "react-confirm-alert";
 import Time from "./Time";
 import Music from "./MusicPlayer";
-//import musiP from "../Sound/persephone.mp3";
+import musiP from "../Sound/persephone.mp3";
 import calv from "../Sound/Billy - Calvitie.mp3"
 import "./ConfirmDialog.css";
 
@@ -122,7 +122,7 @@ function NavBar(props) {
                             </btn>
                         </li>
 
-                        <div className="musicTG"><Music src={calv}/></div>
+                        <div className="musicTG"><Music src={musiP}/></div>
 
                         <p className="version" onClick={props.aboutus}>E-COMM V_0.2</p>
 
