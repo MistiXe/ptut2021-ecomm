@@ -122,9 +122,9 @@ function NavBar(props) {
                             </btn>
                         </li>
 
-                        <div className="musicTG"><Music src={musiP}/></div>
+                        <div className="musicTG"><Music src={musiP}/>
 
-                        <p className="version" onClick={props.aboutus}>E-COMM V_0.2</p>
+                        <p className="version" onClick={props.aboutus}>E-COMM V_0.3</p></div>
 
                     </ul>
 
