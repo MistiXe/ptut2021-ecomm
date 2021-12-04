@@ -43,50 +43,41 @@ function App() {
             <>
 
 
-
-            <div className="sky">
-
-
-                <div className="clouds"></div>
+                <div className="sky">
 
 
+                    <div className="clouds"></div>
 
 
-
-                <div className="airplane">
-
+                    <div className="airplane">
 
 
-                    <div className="plane">
+                        <div className="plane">
 
-                        <Music src={cdlc}/>
+                            <Music src={cdlc}/>
 
-                        <p className="rien">E-COMM</p>
+                            <p className="rien">E-COMM</p>
 
-                    <img src="https://i.ibb.co/SPpRcJz/airplane.png">
-                    </img>
+                            <img src="https://i.ibb.co/SPpRcJz/airplane.png">
+                            </img>
 
-                        <div className="flame"></div>
-                        <div className="flame flame2"></div>
+                            <div className="flame"></div>
+                            <div className="flame flame2"></div>
 
 
+                            <btn id="Play3" onClick={startGame}>
+                                Play
+                            </btn>
+                            <div>
+                                <button id="Play3" onClick={createPartie}>Create a party</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <btn id="Play3" onClick={startGame}>
-                        Play
-                    </btn>
-                    <div>
-                        <button id="Play3" onClick={createPartie}>Create a party</button></div>
+
+                    <div className="mountains"></div>
                 </div>
-                </div>
-
-
-
-                <div className="mountains"></div>
-            </div>
-                </>
-
-
-
+            </>
 
 
         )

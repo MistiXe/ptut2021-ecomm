@@ -953,8 +953,8 @@ div .dot {
 }
 
 .cards2{
-    width: 250px;
-    height: 350px;
+    width: 150px;
+    height: 250px;
     padding: 2rem 1rem;
     background: #fff;
     position: relative;
@@ -1368,10 +1368,11 @@ div .dot {
 
 
 .rien{
-    color: #6949F3;
+    color:#F4D03F;
     font-family: 'Righteous', serif;
     font-style: italic;
     font-size: 5em;
+
 
 
 }
@@ -1410,5 +1411,15 @@ div .dot {
 .musicTG{
     position: relative;
     bottom: -80%;
+}
+
+.avionicon{
+    height:30px;
+    width: 30px;
+}
+
+.divForm1{
+    height: 300px;
+    width: 200px;
 }
 

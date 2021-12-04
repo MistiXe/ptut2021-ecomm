@@ -5,29 +5,22 @@ import ProgressBar from "./ProgressBar";
 
 function Music(props) {
     const [isPlaying, setIsPlaying] = useState(true);
-
-
-
-
-
-    if(isPlaying){
+    if (isPlaying) {
         return (
             <div className="musicDiv">
                 <Sound
                     url={props.src}
                     playStatus={Sound.status.PLAYING}
                     loop={true}
-                    volume={20}
-
-                />
-                <btn onClick={() => setIsPlaying(false)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
+                    volume={20} />
+                <btn onClick={() => setIsPlaying(false)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <>
+                    <BsVolumeMuteFill className="musicIcon"/></>}</btn>
 
             </div>
 
-            
 
         );
-    }else {
+    } else {
         return (
             <div className="musicDiv">
                 <Sound
@@ -36,14 +29,14 @@ function Music(props) {
                     loop={true}
                     volume={20}
                 />
-                <btn onClick={() => setIsPlaying(true)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <><BsVolumeMuteFill className="musicIcon"/></>}</btn>
+                <btn onClick={() => setIsPlaying(true)}>{isPlaying ? <BsVolumeDownFill className="musicIcon"/> : <>
+                    <BsVolumeMuteFill className="musicIcon"/></>}</btn>
 
 
             </div>
 
         )
     }
-
 
 
 }

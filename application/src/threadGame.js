@@ -210,7 +210,6 @@ function EtapeJeu(props) {
         jeu = (
             <>
             <Formulaire etape={props.etape} />
-            <button id="next2" onClick={NextFrag}> Complete the Document </button>
                 </>
 
 
