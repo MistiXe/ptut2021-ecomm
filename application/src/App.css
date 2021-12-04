@@ -482,7 +482,6 @@ h1 {
     letter-spacing: 4px;
     font-style: italic;
     margin-top: 5%;
-    right: -20%;
 
 }
 
@@ -752,6 +751,10 @@ div .dot {
     }
 }
 
+.musicTG{
+    margin-top:550%;
+
+}
 
 .box{
     padding: -10%;

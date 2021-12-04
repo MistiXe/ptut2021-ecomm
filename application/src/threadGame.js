@@ -11,6 +11,7 @@ import Formulaire from "./Components/Formulaire";
 import imageicon from "./image/commercee.jpg";
 import {useCookies} from "react-cookie";
 import NavBar from "./Components/NavBar";
+import Results from "./Components/Results";
 
 function Main(props) {
     const [etape, setEtape] = useState(0);
@@ -65,15 +66,11 @@ function Main(props) {
         }}>Show Results</div>
 
     } else if (etape === 24) {
-        centre = (
-            <div>Victory <br/> Time :<Time seconds={seconds}/><br/>Days Left: {joursRestants}<Score dl={joursRestants}
-                                                                                                    time={seconds}/><br/>
-                <btn onClick={() => {
-                    setCookie('etape', 0);
-                    props.returnMenuP()
-                }}>Return
-                </btn>
-            </div>);
+        centre = (<Results  return={() => {
+                setCookie('etape', 0);
+                props.returnMenuP()
+            }} seconds={seconds} jrestant={joursRestants} />
+            );
 
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => {
@@ -484,12 +481,6 @@ function DevinerSuite(props) {
         </>
 
 
-    )
-}
-
-function NextFrag(props){
-    return(
-        <div> Rien est disponible pour l'instant</div>
     )
 }
 
