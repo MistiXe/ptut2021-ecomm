@@ -28,7 +28,7 @@ function Formulaire(props) {
                                 estJuste = false
                                 setTabMR((prevMR) => [
                                     ...prevMR,
-                                    [i.toString()]
+                                    [(i+1).toString()]
                                 ]);
 
                             }
