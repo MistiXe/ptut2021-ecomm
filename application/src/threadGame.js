@@ -3,10 +3,8 @@ import './App.css';
 import StepTxt from "./Components/data/StepTxt";
 
 import ProgressBar from "./Components/ProgressBar";
-import Score from "./Components/CalculScore";
 
 import PageContext from "./Components/PageContext";
-import Time from "./Components/Time";
 import Formulaire from "./Components/Formulaire";
 import imageicon from "./image/commercee.jpg";
 import {useCookies} from "react-cookie";
@@ -206,7 +204,7 @@ function EtapeJeu(props) {
     } else if (props.etape === 2) {
         jeu = (
             <>
-            <Formulaire etape={props.etape} />
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
                 </>
 
 

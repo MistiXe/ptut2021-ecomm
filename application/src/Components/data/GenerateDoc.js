@@ -38,7 +38,7 @@ import bolf4 from '../../image/docs/bol/Bill_of_lading_4.png';
 
 //Creating arrays for each document
 const tabCI = [{img:cie1},{img:cie2},
-    {img:cif1,nbRep:5 ,correctReps:[2,4,3,0,1],reps:["FOB","Commercial","04/20/XX","7689/7690","3879"]},
+    {img:cif1,nbRep:5 ,correctReps:["04/20/XX","3879","7689/7690","FOB","Commercial"],reps:shuffle(["FOB","Commercial","04/20/XX","7689/7690","3879"])},
     {img:cif2, nbRep: 4, reps: ["31 Hinga","Zen Export International", "Japan", "Tokyo"], correctReps: [1,0,3,2]},
     {img:cif3, nbRep: 5, reps: ["New York","USA", "123 Importing Company", "89 High Street","70036"], correctReps: [2,3,0,0,4,1]},
     {img:cif4, nbRep: 9, reps: ["1000 x S, 1000 x M, 1000 x L men's shirt", "30,000 US $", "1 May", "Asia Freigth", "Japan", "12 Boxes", "VAT 3,000 US $","33,000 US $", "2400 kgs"], correctReps: [5,0,4,1,1,6,7,5,8,3,2]}];
@@ -61,5 +61,16 @@ const tabBOL = [{img:bole1},{img:bole2},
     {img:bolf2},
     {img:bolf3},
     {img:bolf4}];
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 
 export default {tabCI, tabAFS, tabSLI, tabBOL};
