@@ -465,7 +465,7 @@ h1 {
 .contenuTxt{
     position: center;
     height: 350px;
-   width: 350px;
+    width: 350px;
 
     margin-bottom: -90%;
 
@@ -897,7 +897,7 @@ div .dot {
 }
 .box .square:nth-child(3){
     bottom: 50px;
-   right: -60px;
+    right: -60px;
     width: 80px;
     height: 80px;
     border-radius: 10px;
@@ -914,7 +914,7 @@ div .dot {
 }
 
 .box .square:nth-child(5){
-   top: -70px;
+    top: -70px;
     left: 140px;
     width: 60px;
     height: 60px;
@@ -1386,7 +1386,7 @@ div .dot {
 
 
 .rectbtn{
-   display: inline-block;
+    display: inline-block;
     align-items: center;
     justify-content: center;
 
@@ -1413,7 +1413,7 @@ div .dot {
 
 .musicTG{
     position: relative;
-    bottom: -15%;
+    margin-bottom: -15%;
 }
 
 .avionicon{
