@@ -1411,9 +1411,12 @@ div .dot {
 
 }
 
-.musicTG{
-    position: relative;
-    margin-bottom: -15%;
+@media only screen and (max-width: 600px) {
+    .musicTG {
+
+        position: relative;
+        margin-bottom: -15%;
+    }
 }
 
 .avionicon{
