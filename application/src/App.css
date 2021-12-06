@@ -1468,5 +1468,9 @@ select{
     height:1rem;
 }
 
+select option {
+    font-size: 10px;
+}
+
 
 
