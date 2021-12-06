@@ -1474,5 +1474,16 @@ select option {
     font-size: 10px;
 }
 
+.divBadRP{
+    display: inline-block;
+    background: red;
+    border-radius: 40px;
+    letter-spacing: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: white;
+}
+
 
 

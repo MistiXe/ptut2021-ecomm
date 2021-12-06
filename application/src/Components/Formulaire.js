@@ -43,6 +43,15 @@ function Formulaire(props) {
                     [(i + 1).toString()]
                 ]);
             }
+                for (let i = 0; i < GenerateDoc.tabCI[fragment].nbRep; i++) {
+                    if (tabRep[i] !== GenerateDoc.tabCI[fragment].correctReps[i]) {
+                        estJuste = false
+                        setTabMR((prevMR) => [
+                            ...prevMR,
+                            [<div className="divBadRP">{(i + 1).toString()}</div>]
+                        ]);
+                    }
+                }
         }
         if (estJuste) {
             if (lastPage) {
@@ -1085,14 +1094,25 @@ function Formulaire(props) {
             );
         } else if (pageFormu === 4) {
             return (<>
-                <div>Not implemented yet !</div>
+                <div>
+                    <input type="radio" id="huey" name="drone" value="huey"
+                           checked>
+                        <label htmlFor="huey">Huey</label>
+                    </input>
+                </div>
                 <div>{pageFormu}</div>
                 <bouton onClick={() => setPageFormu(5)}>Next</bouton>
             </>);
         } else if (pageFormu === 5) {
             return (<>
                 <div>{pageFormu}</div>
-                <div>Not implemented yet !</div>
+                <div>
+                    <div>
+                        <input type="radio" id="huey" name="drone" value="huey"
+                               checked>
+                            <label htmlFor="huey">Huey</label>
+                        </input>
+                    </div></div>
                 <bouton onClick={() => props.suivante()}>Next</bouton>
             </>);
         }
