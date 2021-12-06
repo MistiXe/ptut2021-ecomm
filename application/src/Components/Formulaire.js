@@ -19,18 +19,30 @@ function Formulaire(props) {
 
     function check(tabRep, formulaire, fragment, lastPage) {
         let estJuste = true;
+        let doc;
         switch (formulaire) {
             case "CI":
+                doc = GenerateDoc.tabCI
+                break;
+            case "AFS":
+                doc = GenerateDoc.tabAFS
+                break;
+            case "SLI":
+                doc = GenerateDoc.tabSLI
+                break;
+            case "BOL":
+                doc = GenerateDoc.tabBOL
+                break;
 
-                for (let i = 0; i < GenerateDoc.tabCI[fragment].nbRep; i++) {
-                    if (tabRep[i] !== GenerateDoc.tabCI[fragment].correctReps[i]) {
-                        estJuste = false
-                        setTabMR((prevMR) => [
-                            ...prevMR,
-                            [(i + 1).toString()]
-                        ]);
-                    }
-                }
+        }
+        for (let i = 0; i < doc[fragment].nbRep; i++) {
+            if (tabRep[i] !== doc[fragment].correctReps[i]) {
+                estJuste = false
+                setTabMR((prevMR) => [
+                    ...prevMR,
+                    [(i + 1).toString()]
+                ]);
+            }
         }
         if (estJuste) {
             if (lastPage) {
@@ -58,7 +70,7 @@ function Formulaire(props) {
             );
 
         } else if (pageFormu === 2) {
-            let reps = GenerateDoc.tabCI[4].reps
+            let reps = GenerateDoc.tabCI[2].reps
             choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
@@ -440,7 +452,7 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
-                        let tabRep = [box1, box2, box3, box4, box5,box6, box7, box8, box9, box10,box11];
+                        let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
                         check(tabRep, "CI", 5, true);
                     }}>Check
                     </button>
@@ -452,7 +464,7 @@ function Formulaire(props) {
 
 
     } else if (props.etape === 4) {
-       //Email exercice
+        //Email exercice
 
     } else if (props.etape === 5) {
         if (pageFormu === 0) {
@@ -463,12 +475,12 @@ function Formulaire(props) {
                         <img className="form1Init" src={GenerateDoc.tabAFS[0].img} alt="img"/>
                         <img className="form1Init" src={GenerateDoc.tabAFS[1].img} alt="img"/>
                     </div>
-                    <button id="next2" onClick={() => setPageFormu(5)}> Complete the Document</button>
+                    <button id="next2" onClick={() => setPageFormu(4)}> Complete the Document</button>
                 </>
             );
 
-        } else if (pageFormu === 5) {
-            let reps = GenerateDoc.tabAFS[5].reps
+        } else if (pageFormu === 4) {
+            let reps = GenerateDoc.tabAFS[4].reps
             choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
@@ -531,30 +543,858 @@ function Formulaire(props) {
                         {choix}
 
                     </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        7<select
+                        className="custom-select"
+                        value={box7}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox7(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        8<select
+                        className="custom-select"
+                        value={box8}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox8(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        9<select
+                        className="custom-select"
+                        value={box9}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox9(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
 
                     </div>
                     <div>
 
-                        <img className="form1Frag1" src={GenerateDoc.tabCI[2].img} alt="img"/>
+                        <img className="form1Frag1" src={GenerateDoc.tabAFS[4].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
+                        check(tabRep, "AFS", 4, false);
+                    }}>Check
+                    </button>
+                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                </>
+            );
+        } else if (pageFormu === 5) {
+            let reps = GenerateDoc.tabAFS[5].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabAFS[5].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3];
+                        check(tabRep, "AFS", 5, false);
+                    }}>Check
+                    </button>
+                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                </>
+            );
+        } else if (pageFormu === 6) {
+            let reps = GenerateDoc.tabAFS[6].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabAFS[6].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4];
+                        check(tabRep, "AFS", 6, false);
+                    }}>Check
+                    </button>
+                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                </>
+            );
+        } else if (pageFormu === 7) {
+            let reps = GenerateDoc.tabAFS[7].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabAFS[7].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
-                        check(tabRep, "CI", 2, false);
+                        check(tabRep, "AFS", 7, false);
+                    }}>Check
+                    </button>
+                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                </>
+            );
+        } else if (pageFormu === 8) {
+            let reps = GenerateDoc.tabAFS[8].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabAFS[8].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4];
+                        check(tabRep, "AFS", 8, true);
+                    }}>Check
+                    </button>
+                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                </>
+            );
+        }
+    } else if (props.etape === 12) {
+        if (pageFormu === 0) {
+            return (
+                <>
+                    <div>
+
+                        <img className="form1Init" src={GenerateDoc.tabSLI[0].img} alt="img"/>
+                    </div>
+                    <button id="next2" onClick={() => setPageFormu(2)}> Complete the Document</button>
+                </>
+            );
+        } else if (pageFormu === 2) {
+            let reps = GenerateDoc.tabSLI[2].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabSLI[2].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5, box6];
+                        check(tabRep, "SLI", 2, false);
                     }}>Check
                     </button>
                     <div><p>Bad answers are : </p>{tabMR}</div>
                 </>
             );
-        }
-    } else if (props.etape ===12) {
-        //Les autres documents qu'on peut normalement traiter de la même manière
-        return (
-            <div onClick={props.suivante}>Next</div>
-        );
+        } else if (pageFormu === 3) {
+            let reps = GenerateDoc.tabSLI[3].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
 
-    } else if(props.etape===15){
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        7<select
+                        className="custom-select"
+                        value={box7}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox7(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabSLI[3].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5, box6, box7];
+                        check(tabRep, "SLI", 3, false);
+                    }}>Check
+                    </button>
+                    <div><p>Bad answers are : </p>{tabMR}</div>
+                </>
+            );
+        } else if (pageFormu === 4) {
+            return (<>
+                <div>Not implemented yet !</div>
+                <div>{pageFormu}</div>
+                <bouton onClick={() => setPageFormu(5)}>Next</bouton>
+            </>);
+        } else if (pageFormu === 5) {
+            return (<>
+                <div>{pageFormu}</div>
+                <div>Not implemented yet !</div>
+                <bouton onClick={() => props.suivante()}>Next</bouton>
+            </>);
+        }
+
+    } else if (props.etape === 15) {
+        if (pageFormu === 0) {
+            return (
+                <>
+                    <div>
+
+                        <img className="form1Init" src={GenerateDoc.tabBOL[0].img} alt="img"/>
+                    </div>
+                    <button id="next2" onClick={() => setPageFormu(2)}> Complete the Document</button>
+                </>
+            );
+        } else if (pageFormu === 2) {
+            let reps = GenerateDoc.tabBOL[2].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        7<select
+                        className="custom-select"
+                        value={box7}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox7(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        8<select
+                        className="custom-select"
+                        value={box8}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox8(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        9<select
+                        className="custom-select"
+                        value={box9}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox9(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        10<select
+                        className="custom-select"
+                        value={box10}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox10(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        11<select
+                        className="custom-select"
+                        value={box11}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox11(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabBOL[2].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
+                        check(tabRep, "BOL", 2, false);
+                    }}>Check
+                    </button>
+                    <div><p>Bad answers are : </p>{tabMR}</div>
+                </>
+            );
+        } else if (pageFormu === 3) {
+            let reps = GenerateDoc.tabBOL[3].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        7<select
+                        className="custom-select"
+                        value={box7}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox7(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        8<select
+                        className="custom-select"
+                        value={box8}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox8(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        9<select
+                        className="custom-select"
+                        value={box9}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox9(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabBOL[3].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
+                        check(tabRep, "BOL", 3, false);
+                    }}>Check
+                    </button>
+                    <div><p>Bad answers are : </p>{tabMR}</div>
+                </>
+            );
+        } else if (pageFormu === 4) {
+            return (<>
+                <div>Not implemented yet !</div>
+                <div>{pageFormu}</div>
+                <bouton onClick={() => setPageFormu(5)}>Next</bouton>
+            </>);
+        } else if (pageFormu === 5) {
+            return (<>
+                <div>Not implemented yet !</div>
+                <div>{pageFormu}</div>
+                <bouton onClick={() => props.suivante()}>Next</bouton>
+            </>);
+        }
 
     }
 
