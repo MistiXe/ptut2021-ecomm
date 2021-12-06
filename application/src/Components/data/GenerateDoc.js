@@ -44,23 +44,23 @@ const tabCI = [{img:cie1},{img:cie2},
     {img:cif4, nbRep:   11, reps: shuffle(["1000 x S, 1000 x M, 1000 x L men's shirt", "30,000 US $", "1 May", "Asia Freigth", "Japan", "12 Boxes", "VAT 3,000 US $","33,000 US $", "2400 kgs"]), correctReps: ["12 Boxes","1000 x S, 1000 x M, 1000 x L men's shirt","Japan","30,000 US $","30,000 US $","VAT 3,000 US $","33,000 US $","12 Boxes","2400 kgs","Asia Freigth","1 May"]}];
 
 const tabAFS = [{img:afse1},{img:afse2},{img:afse3},{img:afse4},
-    {img:afsf1},
-    {img:afsf2},
-    {img:afsf3},
-    {img:afsf4},
-    {img:afsf5}];
+    {img:afsf1, nbRep:9, reps: shuffle([])},
+    {img:afsf2, nbRep:3},
+    {img:afsf3, nbRep:4},
+    {img:afsf4, nbRep:5},
+    {img:afsf5, nbRep:4}];
 
 const tabSLI = [{img:slie1},{img:slie2},
-    {img:slif1},
-    {img:slif2},
-    {img:slif3},
-    {img:slif4}];
+    {img:slif1, nbRep:6},
+    {img:slif2, nbRep:7},
+    {img:slif3, nbRep:7},
+    {img:slif4, nbRep:6}];
 
 const tabBOL = [{img:bole1},{img:bole2},
-    {img:bolf1},
-    {img:bolf2},
-    {img:bolf3},
-    {img:bolf4}];
+    {img:bolf1, nbRep:11},
+    {img:bolf2, nbRep:9},
+    {img:bolf3,nbRep:1},
+    {img:bolf4, nbRep:2}];
 
 function shuffle(a) {
     var j, x, i;

@@ -3,7 +3,7 @@ import GenerateDoc from "./data/GenerateDoc";
 
 
 function Formulaire(props) {
-    const [pageFormu, setPageFormu] = useState(5);//Faut utiliser ça pour changer de morceaux de formulaire
+    const [pageFormu, setPageFormu] = useState(0);//Faut utiliser ça pour changer de morceaux de formulaire
     const [tabMR, setTabMR] = useState([]);
     const [box1, setBox1] = useState("");
     const [box2, setBox2] = useState("");
@@ -452,24 +452,109 @@ function Formulaire(props) {
 
 
     } else if (props.etape === 4) {
-        //email exercice
-        return (
-            <div><img className="divForm1" alt="img" src={GenerateDoc.tabCI[0].img}/></div>
-
-        );
+       //Email exercice
 
     } else if (props.etape === 5) {
-        //Application for issuing Letter of Credit (document super long et donc differents des autres)
-        return (
-            <div><img className="divForm1" alt="img" src={GenerateDoc.tabAFS[0].img}/></div>
+        if (pageFormu === 0) {
+            return (
+                <>
+                    <div>
 
-        );
+                        <img className="form1Init" src={GenerateDoc.tabAFS[0].img} alt="img"/>
+                        <img className="form1Init" src={GenerateDoc.tabAFS[1].img} alt="img"/>
+                    </div>
+                    <button id="next2" onClick={() => setPageFormu(5)}> Complete the Document</button>
+                </>
+            );
 
-    } else {
+        } else if (pageFormu === 5) {
+            let reps = GenerateDoc.tabAFS[5].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            return (
+                <>
+
+                    <div>
+                        1<select
+                        className="custom-select"
+                        value={box1}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox1(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        2<select
+                        className="custom-select"
+                        value={box2}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox2(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        3<select
+                        className="custom-select"
+                        value={box3}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox3(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        4<select
+                        className="custom-select"
+                        value={box4}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox4(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        5<select
+                        className="custom-select"
+                        value={box5}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+
+                    </div>
+                    <div>
+
+                        <img className="form1Frag1" src={GenerateDoc.tabCI[2].img} alt="img"/>
+
+                    </div>
+                    <button id="next2" onClick={() => {
+                        setTabMR([]);
+                        let tabRep = [box1, box2, box3, box4, box5];
+                        check(tabRep, "CI", 2, false);
+                    }}>Check
+                    </button>
+                    <div><p>Bad answers are : </p>{tabMR}</div>
+                </>
+            );
+        }
+    } else if (props.etape ===12) {
         //Les autres documents qu'on peut normalement traiter de la même manière
         return (
             <div onClick={props.suivante}>Next</div>
         );
+
+    } else if(props.etape===15){
 
     }
 
