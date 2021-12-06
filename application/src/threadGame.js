@@ -229,13 +229,14 @@ function EtapeJeu(props) {
     } else if (props.etape === 4) {
         //Email exercice
         jeu = (
-            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur} etape={props.etape} /></div>
+            <div onClick={props.suivante}>Next</div>
+
 
 
         )
     } else if (props.etape === 5) {
         jeu = (
-            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
 
 
         )
@@ -312,7 +313,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 12) {
         jeu = (
-            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
 
 
         )
@@ -343,7 +344,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 15) {
         jeu = (
-            <div id="suite"><Formulaire suivante={props.suivante} erreur={props.erreur}/></div>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
 
 
         )

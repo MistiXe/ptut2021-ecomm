@@ -3,7 +3,7 @@ import GenerateDoc from "./data/GenerateDoc";
 
 
 function Formulaire(props) {
-    const [pageFormu, setPageFormu] = useState(0);//Faut utiliser ça pour changer de morceaux de formulaire
+    const [pageFormu, setPageFormu] = useState(5);//Faut utiliser ça pour changer de morceaux de formulaire
     const [tabMR, setTabMR] = useState([]);
     const [box1, setBox1] = useState("");
     const [box2, setBox2] = useState("");
@@ -21,21 +21,16 @@ function Formulaire(props) {
         let estJuste = true;
         switch (formulaire) {
             case "CI":
-                switch (fragment) {
-                    case 2:
-                        for (let i = 0; i < GenerateDoc.tabCI[2].nbRep; i++) {
-                            if (tabRep[i] !== GenerateDoc.tabCI[2].correctReps[i]) {
-                                estJuste = false
-                                setTabMR((prevMR) => [
-                                    ...prevMR,
-                                    [(i+1).toString()]
-                                ]);
 
-                            }
-                        }
-
+                for (let i = 0; i < GenerateDoc.tabCI[fragment].nbRep; i++) {
+                    if (tabRep[i] !== GenerateDoc.tabCI[fragment].correctReps[i]) {
+                        estJuste = false
+                        setTabMR((prevMR) => [
+                            ...prevMR,
+                            [(i + 1).toString()]
+                        ]);
+                    }
                 }
-
         }
         if (estJuste) {
             if (lastPage) {
@@ -49,6 +44,7 @@ function Formulaire(props) {
         }
     }
 
+    let choix
     if (props.etape === 2) {
         if (pageFormu === 0) {
             return (
@@ -62,8 +58,8 @@ function Formulaire(props) {
             );
 
         } else if (pageFormu === 2) {
-            let reps = GenerateDoc.tabCI[2].reps
-            let choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            let reps = GenerateDoc.tabCI[4].reps
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
 
@@ -143,7 +139,7 @@ function Formulaire(props) {
             );
         } else if (pageFormu === 3) {
             let reps = GenerateDoc.tabCI[3].reps
-            let choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
 
@@ -193,19 +189,6 @@ function Formulaire(props) {
                         <option value=""/>
                         {choix}
                     </select>
-                        5<select
-                        className="custom-select"
-                        value={box5}
-                        onChange={(e) => {
-                            const selectedE = e.target.value;
-                            setBox5(selectedE);
-                        }}
-                    >
-                        <option value=""/>
-                        {choix}
-
-                    </select>
-
                     </div>
                     <div>
 
@@ -214,8 +197,8 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
-                        let tabRep = [box1, box2, box3, box4, box5];
-                        check(tabRep, "CI", 2, false);
+                        let tabRep = [box1, box2, box3, box4];
+                        check(tabRep, "CI", 3, false);
                     }}>Check
                     </button>
                     <div><p>Bad answers are : </p>{tabMR}</div>
@@ -224,7 +207,7 @@ function Formulaire(props) {
 
         } else if (pageFormu === 4) {
             let reps = GenerateDoc.tabCI[4].reps
-            let choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
 
@@ -280,6 +263,18 @@ function Formulaire(props) {
                         onChange={(e) => {
                             const selectedE = e.target.value;
                             setBox5(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
                         }}
                     >
                         <option value=""/>
@@ -295,8 +290,8 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
-                        let tabRep = [box1, box2, box3, box4, box5];
-                        check(tabRep, "CI", 2, false);
+                        let tabRep = [box1, box2, box3, box4, box5, box6];
+                        check(tabRep, "CI", 4, false);
                     }}>Check
                     </button>
                     <div><p>Bad answers are : </p>{tabMR}</div>
@@ -305,7 +300,7 @@ function Formulaire(props) {
         } else if (pageFormu === 5) {
 
             let reps = GenerateDoc.tabCI[5].reps
-            let choix = reps.map((txt) => <option value={txt}>{txt}</option>);
+            choix = reps.map((txt) => <option value={txt}>{txt}</option>);
             return (
                 <>
 
@@ -367,6 +362,75 @@ function Formulaire(props) {
                         {choix}
 
                     </select>
+                        6<select
+                        className="custom-select"
+                        value={box6}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox6(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        7<select
+                        className="custom-select"
+                        value={box7}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox7(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        8<select
+                        className="custom-select"
+                        value={box8}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox8(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        9<select
+                        className="custom-select"
+                        value={box9}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox9(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+                    </select>
+                        10<select
+                        className="custom-select"
+                        value={box10}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox10(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
+                        11<select
+                        className="custom-select"
+                        value={box11}
+                        onChange={(e) => {
+                            const selectedE = e.target.value;
+                            setBox11(selectedE);
+                        }}
+                    >
+                        <option value=""/>
+                        {choix}
+
+                    </select>
 
                     </div>
                     <div>
@@ -376,8 +440,8 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
-                        let tabRep = [box1, box2, box3, box4, box5];
-                        check(tabRep, "CI", 2, false);
+                        let tabRep = [box1, box2, box3, box4, box5,box6, box7, box8, box9, box10,box11];
+                        check(tabRep, "CI", 5, true);
                     }}>Check
                     </button>
                     <div><p>Bad answers are : </p>{tabMR}</div>
