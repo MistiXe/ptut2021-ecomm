@@ -50,7 +50,11 @@ function Main(props) {
 
     } else if (etape === -9) {
         centre = (<><h1>About Us</h1>
-            <div onClick={() => setEtape(lastEtape)}>Return</div>
+            <h3>Group F of PTUT 2021-2022 </h3>
+            <p>Enginers Software : Hodheyfa Mahdjoub, Florent Gerber the ultimate turbo ferrarim v10 max</p>
+            <p>Writters : Théo Dedaele, Dan Vovc </p>
+
+            <button id="Play4" onClick={props.retour}>Return</button>
         </>);
 
 

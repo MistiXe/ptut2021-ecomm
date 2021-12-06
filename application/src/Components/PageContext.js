@@ -12,7 +12,7 @@ function PageContext(props) {
     if (page === 0) {
         if (mContext === 0) {
             morceauContext =  <>
-                <p>Context</p>
+                <h1>Context</h1>
 
 
                 <div className="cardsE">
@@ -37,13 +37,13 @@ function PageContext(props) {
                 </div>
 
 
-                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
             </div></>
         } else if (mContext === 1) {
             morceauContext = <>
-                <p>Context</p>
+                <h1>Context</h1>
                 <div className="cardsE">
 
 
@@ -64,14 +64,14 @@ function PageContext(props) {
                         the applicant; the exporter in Japan, Zen Export International, is called the beneficiary.</div>
 
                 </div>
-                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
 
             </div></>
         } else if (mContext === 2) {
             morceauContext = <>
-                <p>Context</p>
+                <h1>Context</h1>
                 <div className="cardsE">
 
 
@@ -89,7 +89,7 @@ function PageContext(props) {
                         for presentation of documents at the bank in New York is May 15th.</div>
 
                 </div>
-                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
 
@@ -97,7 +97,7 @@ function PageContext(props) {
         } else if (mContext === 3) {
             morceauContext = <>
 
-                <p>Context</p>
+                <h1>Context</h1>
                 <div className="cardsE">
 
 
@@ -118,7 +118,7 @@ function PageContext(props) {
                         Japan</div>
 
                 </div>
-                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
 
@@ -126,7 +126,7 @@ function PageContext(props) {
         } else if (mContext === 4) {
             morceauContext = <>
 
-                <p>Context</p>
+                <h1>Context</h1>
                 <div className="cardsE">
 
 
@@ -151,14 +151,14 @@ function PageContext(props) {
                         Asia Freight is responsible for loading boxes on trailer.</div>
 
                 </div>
-                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
 
             </div></>
         } else if (mContext === 5) {
             morceauContext = <>
-                <p>Context</p>
+                <h1>Context</h1>
                 <div className="cardsE">
 
 
@@ -178,7 +178,7 @@ function PageContext(props) {
                             New York 2001, USA. Traller number: TYT 2001 JKP.</div>
 
                     </div>
-                    <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/> Next Part </div>
+                    <div className="info"><BsFillArrowRightSquareFill className="btnrect2" onClick={() => setMContext((mContext + 1) % 6)}/>  </div>
 
 
 
@@ -197,18 +197,12 @@ function PageContext(props) {
 
                 <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
                     <p>Navigation</p>
+                    <button id="Play4" onClick={props.retour}>Return</button>
 
                 <br/>
                 </div>
-                <btn onClick={props.retour}>Return</btn>
-                <footer>
-                    <div className="btnswitchRules">
-                    <BsCircleFill/>
-                    <BsCircle onClick={() => setPage(1)}/>
 
-                    <BsCircle onClick={() => setPage(2)}/>
-                    </div>
-                </footer>
+
             </div>
 
                 </>
@@ -225,12 +219,8 @@ function PageContext(props) {
                     <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
 
-                <btn onClick={props.retour}>Return</btn>
-                <footer>
-                    <BsCircle onClick={() => setPage(0)}/>
-                    <BsCircleFill/>
-                    <BsCircle onClick={() => setPage(2)}/>
-                </footer>
+                <button id="Play4" onClick={props.retour}>Return</button>
+
             </div>
         );
     } else if (page === 2) {
@@ -238,15 +228,22 @@ function PageContext(props) {
             <div>
                 <h1>Tutorial</h1>
                 <h3>How to play ?</h3>
+                <div>
+                    <div>
+                        <h1>Instructions :</h1>
+
+                        <p>Put the following 17-step procedure into the correct order and complete the necessary
+                            documentation where needed by clicking on the different cards.</p>
+                    </div>
+
+
+
+                </div>
                 <AiFillLeftCircle className="circleBtn" onClick={() => setPage((page - 1) % 3)}/>
                 <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
-                <btn onClick={props.retour}>Return</btn>
-                <footer>
-                    <BsCircle onClick={() => setPage(0)}/>
-                    <BsCircle onClick={() => setPage(1)}/>
-                    <BsCircleFill/>
-                </footer>
+                <button id="Play4" onClick={props.retour}>Return</button>
+
             </div>
         );
     }
