@@ -68,9 +68,7 @@ function App() {
                             <btn id="Play3" onClick={startGame}>
                                 Play
                             </btn>
-                            <div>
-                                <button id="Play3" onClick={createPartie}>Create a party</button>
-                            </div>
+
                         </div>
                     </div>
 

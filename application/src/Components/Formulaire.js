@@ -3,7 +3,7 @@ import GenerateDoc from "./data/GenerateDoc";
 
 
 function Formulaire(props) {
-    const [pageFormu, setPageFormu] = useState(0);//Faut utiliser ça pour changer de morceaux de formulaire
+    const [pageFormu, setPageFormu] = useState(4);//Faut utiliser ça pour changer de morceaux de formulaire
     const [tabMR, setTabMR] = useState([]);
     const [box1, setBox1] = useState("");
     const [box2, setBox2] = useState("");
