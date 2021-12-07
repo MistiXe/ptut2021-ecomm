@@ -1095,10 +1095,9 @@ function Formulaire(props) {
         } else if (pageFormu === 4) {
             return (<>
                 <div>
-                    <input type="radio" id="huey" name="drone" value="huey"
-                           checked>
-                        <label htmlFor="huey">Huey</label>
-                    </input>
+                    <input type="radio" value="Male" name="gender" /> Male
+                    <input type="radio" value="Female" name="gender" /> Female
+                    <input type="radio" value="Other" name="gender" /> Other
                 </div>
                 <div>{pageFormu}</div>
                 <bouton onClick={() => setPageFormu(5)}>Next</bouton>
@@ -1107,12 +1106,10 @@ function Formulaire(props) {
             return (<>
                 <div>{pageFormu}</div>
                 <div>
-                    <div>
-                        <input type="radio" id="huey" name="drone" value="huey"
-                               checked>
-                            <label htmlFor="huey">Huey</label>
-                        </input>
-                    </div></div>
+                    <input type="radio" value="Male" name="gender" /> Male
+                    <input type="radio" value="Female" name="gender" /> Female
+                    <input type="radio" value="Other" name="gender" /> Other
+                    </div>
                 <bouton onClick={() => props.suivante()}>Next</bouton>
             </>);
         }
