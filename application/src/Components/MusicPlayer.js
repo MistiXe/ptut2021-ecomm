@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {BsVolumeDownFill, BsVolumeMuteFill} from "react-icons/bs"
 import Sound from 'react-sound';
-import ProgressBar from "./ProgressBar";
 
 function Music(props) {
     const [isPlaying, setIsPlaying] = useState(true);

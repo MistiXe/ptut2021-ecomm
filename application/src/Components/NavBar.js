@@ -109,7 +109,7 @@ function NavBar(props) {
 
                         <li className="nav-item">
                             <btn className="nav-link">
-                                <img className="avionicon" src={ultavion}/>
+                                <img className="avionicon" src={ultavion} alt="img"/>
                                 <div><span className="link-text"> Time : <Time seconds={props.seconds}/></span></div>
                             </btn>
                         </li>

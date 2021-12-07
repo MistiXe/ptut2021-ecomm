@@ -15,9 +15,9 @@ function Main(props) {
     const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
-    const [seconds, setSeconds] = useState(0);
+    const [seconds, setSeconds] = useState(100);
     const [isActive, setIsActive] = useState(false);
-    const [cookies, setCookie, removeCookie] = useCookies(['etape', 'time', 'dleft']);
+    const [cookies, setCookie] = useCookies(['etape', 'time', 'dleft']);
 
     useEffect(() => {
         window.addEventListener("beforeunload", (e) => {
@@ -43,7 +43,11 @@ function Main(props) {
                 setJoursRestants(parseInt(cookies.dleft))
                 setSeconds(parseInt(cookies.time))
             } else {
-                setEtape(1);
+
+                if (etape !== -10) {
+                    setLastEtape(1);
+                    setEtape(-10)
+                }
             }
             setIsActive(true)
         }}/>
@@ -62,16 +66,10 @@ function Main(props) {
         centre = <PageContext retour={() => setEtape(lastEtape)}/>
 
     } else if (etape === 23) {
-        centre = <div onClick={() => {
-            setIsActive(false);
-            setEtape(etape + 1)
-        }}>Show Results</div>
-
-    } else if (etape === 24) {
-        centre = (<Results  return={() => {
+        centre = (<Results return={() => {
                 setCookie('etape', 0);
                 props.returnMenuP()
-            }} seconds={seconds} jrestant={joursRestants} />
+            }} seconds={seconds} jrestant={joursRestants}/>
         );
 
     } else {
@@ -85,7 +83,9 @@ function Main(props) {
                                if (joursRestants !== 0) {
                                    setJoursRestants(joursRestants - 1)
                                }
-                           }}/>
+                           }} fin={() => {
+            setIsActive(false);
+            setEtape(etape + 1)}}/>
     }
 
     return (
@@ -117,7 +117,6 @@ function Accueil(props) {
         <>
 
 
-
             <div className="cardsF">
                 <img src={imageicon} alt="img"/>
 
@@ -145,9 +144,7 @@ function Accueil(props) {
             <div className="outro">
 
 
-
                 <div className="cards2">
-
 
 
                     <div className="info2">
@@ -208,9 +205,8 @@ function EtapeJeu(props) {
     } else if (props.etape === 2) {
         jeu = (
             <>
-                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
+                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
             </>
-
 
 
         )
@@ -232,11 +228,10 @@ function EtapeJeu(props) {
             <div onClick={props.suivante}>Next</div>
 
 
-
         )
     } else if (props.etape === 5) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
 
 
         )
@@ -313,7 +308,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 12) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
 
 
         )
@@ -344,7 +339,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 15) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
 
 
         )
@@ -423,7 +418,7 @@ function EtapeJeu(props) {
 
 
     } else if (props.etape === 22) {
-        jeu = (<div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+        jeu = (<div id="suite"><DevinerSuite className="acc" suivante={props.fin}
                                              possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[0]}, {
                                                  id: 3,
                                                  text: StepTxt[16]

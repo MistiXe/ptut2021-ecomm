@@ -3,7 +3,7 @@ import GenerateDoc from "./data/GenerateDoc";
 
 
 function Formulaire(props) {
-    const [pageFormu, setPageFormu] = useState(4);//Faut utiliser ça pour changer de morceaux de formulaire
+    const [pageFormu, setPageFormu] = useState(0);//Faut utiliser ça pour changer de morceaux de formulaire
     const [tabMR, setTabMR] = useState([]);
     const [box1, setBox1] = useState("");
     const [box2, setBox2] = useState("");
@@ -147,7 +147,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 2, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -214,7 +214,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 3, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
 
@@ -307,7 +307,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 4, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -457,7 +457,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 5, true);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
 
@@ -977,7 +977,7 @@ function Formulaire(props) {
                         check(tabRep, "SLI", 2, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -1081,16 +1081,13 @@ function Formulaire(props) {
                         check(tabRep, "SLI", 3, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 4) {
             return (<>
                 <div>
-                    <input type="radio" id="huey" name="drone" value="huey"
-                           checked>
-                        <label htmlFor="huey">Huey</label>
-                    </input>
+                    Form page 4, not implemented yet
                 </div>
                 <div>{pageFormu}</div>
                 <bouton onClick={() => setPageFormu(5)}>Next</bouton>
@@ -1099,6 +1096,7 @@ function Formulaire(props) {
             return (<>
                 <div>{pageFormu}</div>
                 <div>
+                    not implemented yet<br/>
                     <input type="radio" value="Male" name="gender" /> Male
                     <input type="radio" value="Female" name="gender" /> Female
                     <input type="radio" value="Other" name="gender" /> Other
@@ -1264,7 +1262,7 @@ function Formulaire(props) {
                         check(tabRep, "BOL", 2, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -1389,7 +1387,7 @@ function Formulaire(props) {
                         check(tabRep, "BOL", 3, false);
                     }}>Check
                     </button>
-                    <div><p>Bad answers are : </p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 4) {

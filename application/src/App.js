@@ -5,7 +5,6 @@ import Main from "./threadGame";
 import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
 import cdlc from "./Sound/optheme.mp3";
-import calv from "./Sound/Billy - Calvitie.mp3"
 
 import CreateParty from "./Server/CreateParty.";
 
@@ -17,12 +16,6 @@ function App() {
     const [loading, setLoading] = useState1;
 
 
-    const startGame = () => {
-        setStart(1);
-    }
-    const createPartie = () => {
-        setStart(2);
-    }
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -46,7 +39,7 @@ function App() {
                 <div className="sky">
 
 
-                    <div className="clouds"></div>
+                    <div className="clouds"/>
 
 
                     <div className="airplane">
@@ -58,14 +51,15 @@ function App() {
 
                             <p className="rien">E-COMM</p>
 
-                            <img src="https://i.ibb.co/SPpRcJz/airplane.png">
+                            <img src="https://i.ibb.co/SPpRcJz/airplane.png" alt="img">
                             </img>
 
-                            <div className="flame"></div>
-                            <div className="flame flame2"></div>
+                            <div className="flame"/>
+                            <div className="flame flame2"/>
 
 
-                            <btn id="Play3" onClick={startGame}>
+                            <btn id="Play3" onClick={() =>
+                                setStart(1)}>
                                 Play
                             </btn>
 
@@ -73,7 +67,7 @@ function App() {
                     </div>
 
 
-                    <div className="mountains"></div>
+                    <div className="mountains"/>
                 </div>
             </>
 

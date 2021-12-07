@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {BsCircleFill, BsCircle, BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill} from "react-icons/bs";
-import {AiFillCaretDown, AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai"
+import {BsFillArrowRightSquareFill} from "react-icons/bs";
+import {AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai"
 import imageContext from "../image/imgContext.jpg";
 
 
@@ -196,8 +196,8 @@ function PageContext(props) {
                 <AiFillLeftCircle className="circleBtn" onClick={() => setPage(2)}/>
 
                 <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
-                    <p>Navigation</p>
-                    <button id="Play4" onClick={props.retour}>Return</button>
+                    <br/>
+                    <button id="Play4" onClick={props.retour}>Play</button>
 
                 <br/>
                 </div>
@@ -219,7 +219,7 @@ function PageContext(props) {
                     <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
 
-                <button id="Play4" onClick={props.retour}>Return</button>
+                <button id="Play4" onClick={props.retour}>Play</button>
 
             </div>
         );
@@ -242,7 +242,7 @@ function PageContext(props) {
                 <AiFillLeftCircle className="circleBtn" onClick={() => setPage((page - 1) % 3)}/>
                 <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 3)}/>
                 <br/>
-                <button id="Play4" onClick={props.retour}>Return</button>
+                <button id="Play4" onClick={props.retour}>Play</button>
 
             </div>
         );
