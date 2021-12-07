@@ -12,7 +12,7 @@ import NavBar from "./Components/NavBar";
 import Results from "./Components/Results";
 
 function Main(props) {
-    const [etape, setEtape] = useState(12);
+    const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
     const [seconds, setSeconds] = useState(0);
@@ -41,7 +41,7 @@ function Main(props) {
             if (cookies.etape && cookies.etape !== "0") {
                 setEtape(parseInt(cookies.etape))
                 setJoursRestants(parseInt(cookies.dleft))
-                    setSeconds(parseInt(cookies.time))
+                setSeconds(parseInt(cookies.time))
             } else {
                 setEtape(1);
             }
@@ -72,7 +72,7 @@ function Main(props) {
                 setCookie('etape', 0);
                 props.returnMenuP()
             }} seconds={seconds} jrestant={joursRestants} />
-            );
+        );
 
     } else {
         centre = <EtapeJeu etape={etape} suivante={() => {
@@ -91,16 +91,16 @@ function Main(props) {
     return (
         <NavBar returnM={() => {
 
-                            setCookie('etape', 0)
-                            props.returnMenuP()
-                        }}
+            setCookie('etape', 0)
+            props.returnMenuP()
+        }}
 
-         context={() => {
-            if (etape !== -10) {
-                setLastEtape(etape);
-                setEtape(-10)
-            }
-        }} aboutus={() => {
+                context={() => {
+                    if (etape !== -10) {
+                        setLastEtape(etape);
+                        setEtape(-10)
+                    }
+                }} aboutus={() => {
             if (etape !== -9) {
                 setLastEtape(etape);
                 setEtape(-9)
@@ -152,23 +152,23 @@ function Accueil(props) {
 
                     <div className="info2">
 
-                    <h3>Step Cards</h3>
-                    <p>Choose the right card to choose the right step.</p>
+                        <h3>Step Cards</h3>
+                        <p>Choose the right card to choose the right step.</p>
                     </div>
 
                 </div>
 
                 <div className="cards2">
                     <div className="info2">
-                    <h3>Document</h3>
-                    <p>Many steps have a document to complete.</p>
+                        <h3>Document</h3>
+                        <p>Many steps have a document to complete.</p>
                     </div>
 
                 </div>
                 <div className="cards2">
                     <div className="info2">
-                    <h3>Time</h3>
-                    <p>Warning ! Time is money !</p>
+                        <h3>Time</h3>
+                        <p>Warning ! Time is money !</p>
                     </div>
 
                 </div>
@@ -208,8 +208,8 @@ function EtapeJeu(props) {
     } else if (props.etape === 2) {
         jeu = (
             <>
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
-                </>
+                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} />
+            </>
 
 
 
