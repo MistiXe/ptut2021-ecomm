@@ -12,7 +12,7 @@ import NavBar from "./Components/NavBar";
 import Results from "./Components/Results";
 
 function Main(props) {
-    const [etape, setEtape] = useState(0);
+    const [etape, setEtape] = useState(12);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
     const [seconds, setSeconds] = useState(0);
@@ -54,7 +54,7 @@ function Main(props) {
             <p>Enginers Software : Hodheyfa Mahdjoub, Florent Gerber the ultimate turbo ferrarim v10 max</p>
             <p>Writters : Théo Dedaele, Dan Vovc </p>
 
-            <button id="Play4" onClick={props.retour}>Return</button>
+            <button id="Play4" onClick={() => setEtape(lastEtape)}>Return</button>
         </>);
 
 
