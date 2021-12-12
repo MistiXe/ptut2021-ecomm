@@ -1466,8 +1466,8 @@ div .dot {
 select{
     box-shadow: 0 10px rgba(0,0,0, 0.2);
     font-size: 10px;
-    background: #4d5061;
-    color: white;
+    background: #ffffff;
+    color: black;
     border: 0;
     border-radius: 40px;
     height: 13px;
@@ -1495,5 +1495,17 @@ select option {
     color: black;
 }
 
+.vict{
+    font-family: Impact;
+    font-size: 50px;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.div_resultats{
+
+
+
+}
 
 

@@ -435,6 +435,7 @@ function EtapeJeu(props) {
 
         <div className="acc">
             <ProgressBar completed={props.jrestant > 0 ? props.jrestant : 0}/>
+            <h1>Actual Step : {props.etape} </h1>
             <h1>Actual Step : {props.etape} {intitule}</h1>
             {jeu}
         </div>
