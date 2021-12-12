@@ -53,14 +53,18 @@ const tabAFS = [{img:afse1},{img:afse2},{img:afse3},{img:afse4},
 const tabSLI = [{img:slie1},{img:slie2},
     {img:slif1, nbRep:6, correctReps:["Asia Freight", "P.O.Box 9853, 8 Marunouchi 5-Chrome","Tokyo","100","Japan","Tokyo"], reps:shuffle(["Asia Freight", "P.O.Box 9853, 8 Marunouchi 5-Chrome","Tokyo","100","Japan"])},
     {img:slif2, nbRep:7, correctReps:["123 Importing","89 High Street","New York","New York","70036","USA","New York"], reps:shuffle(["123 Importing","89 High Street","70036","USA","New York"]) },
-    {img:slif3, nbRep:7, correctReps: [""], reps:shuffle([])},
-    {img:slif4, nbRep:6}];
+    {img:slif3, nbRep:7, correctReps: ["Ocean Freight Service","Freight Collect","$30,000", "$30,000","Yes","839217/10","No"], reps:shuffle(["$30,000","839217/10"]), reps1:shuffle(["Express Air Service (GCX)","Regular Air Service (STD)","Small Package Service (SPS)","Ocean Freight Service"]), reps2:shuffle(["Check","Credit Card","Freight Prepaid","Freight Collect","On Account"])},
+    {img:slif4, nbRep:6, correctReps: ["12 boxes","3000 men's shirt","2400 kg","No","yes","No"], reps:shuffle(["12 boxes","3000 men's shirt","2400 kg"])}];
 
 const tabBOL = [{img:bole1},{img:bole2},
     {img:bolf1, nbRep:11, correctReps:["**/**","9965","Asia Freight","P.O.Box 9853, 8 Marunouchi 5-Chrome","Tokyo 100 Japan","123 Importing Company","89 High Street","New York, New York 70036, USA","DML USA, New York, New York 2001, USA","TYT 2001 JKP","3939392"], reps:shuffle(["**/**","9965","Asia Freight","P.O.Box 9853, 8 Marunouchi 5-Chrome","Tokyo 100 Japan","123 Importing Company","89 High Street","New York, New York 70036, USA","DML USA, New York, New York 2001, USA","TYT 2001 JKP","3939392"])},
     {img:bolf2, nbRep:9, correctReps: ["7689 / 7690","12","2400 kgs","shirts to be sorted per size and model and packed in plastic bags","12","12","boxes","2400 kgs","3000 men's shirts"], reps:shuffle(["7689 / 7690","12","2400 kgs","shirts to be sorted per size and model and packed in plastic bags","boxes","3000 men's shirts"])},
-    {img:bolf3,nbRep:1},
-    {img:bolf4, nbRep:2}];
+    {img:bolf3,nbRep:1, correctReps: ["Collect"], reps: shuffle(["Collect","Prepaid"])},
+    {img:bolf4, nbRep:2, correctReps: ["By Shipper", "By Shipper"], reps1: shuffle(["By Shipper", "By driver"]), reps2: shuffle(["By Shipper","By Driver/pallets paid to contain","By Driver/Prices"])}];
+
+const tabMail = [{nbRep:5, correctReps:["v.gilbert@123importinginternational.com","worldwidebank@newyork.com","04/20/XX","Application for issuing letter of credit","Application for issuing letter of credit"], reps: shuffle(["v.gilbert@123importinginternational.com","worldwidebank@newyork.com","04/20/XX","Application for issuing letter of credit"])},
+    {nbRep:6, correctReps: ["Dear Sir or Madam","We are currently in the process of importing 3000 men’s shirts from Japan.","Could you please accept this application and send the irrevocable letter of credit to the bank in Japan.","If you have any questions, please do not hesitate to contact me.","Yours faithfully","Name, 123Importing Company, NY"], reps:shuffle(["Dear Sir or Madam","We are currently in the process of importing 3000 men’s shirts from Japan.","Could you please accept this application and send the irrevocable letter of credit to the bank in Japan.","If you have any questions, please do not hesitate to contact me.","Yours faithfully","Name, 123Importing Company, NY"])}]
+
 
 function shuffle(a) {
     let j, x, i;
@@ -73,4 +77,4 @@ function shuffle(a) {
     return a;
 }
 
-export default {tabCI, tabAFS, tabSLI, tabBOL};
+export default {tabCI, tabAFS, tabSLI, tabBOL, tabMail};

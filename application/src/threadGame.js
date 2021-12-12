@@ -15,7 +15,7 @@ function Main(props) {
     const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
-    const [seconds, setSeconds] = useState(100);
+    const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [cookies, setCookie] = useCookies(['etape', 'time', 'dleft']);
 
@@ -225,7 +225,7 @@ function EtapeJeu(props) {
     } else if (props.etape === 4) {
         //Email exercice
         jeu = (
-            <div onClick={props.suivante}>Next</div>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
 
 
         )
