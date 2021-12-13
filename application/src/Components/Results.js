@@ -19,7 +19,7 @@ function Results(props) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_0ynaks1', 'template_mk1s5hw', form.current, 'user_e4XlCrdarKUld7xK3LUaD')
+        emailjs.sendForm('service_9vqccgg', 'template_jfpv0lj', form.current, 'user_nx8l5gXQzJC2MynrikCOK')
             .then(() => {
                 setOk("The Email was sent successfully")
             }, () => {
