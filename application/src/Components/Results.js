@@ -1,48 +1,45 @@
 import Time from "./Time";
-import Score from "./CalculScore";
-import React, {useState} from "react";
-import {AiFillPlusCircle, AiFillMinusCircle} from "react-icons/ai"
+
+import React, {useRef, useState} from "react";
 import emailjs from "emailjs-com"
 
 function Results(props) {
-    const [name, setName] = useState("");
-    const [nbmail, setNbMail] = useState(1);
 
-    const handleName = (event) => {
-        setName(event.target.value)
-    }
-    function sendEmail(){
+    const form = useRef();
+    const [ok, setOk] = useState(null);
 
-    }
-
-    let mailC
-    if (nbmail === 1) {
-        mailC = (<>
-                <div>Email 1: <input onChange={handleName} placeholder="Enter Email1"/></div>
-                <AiFillPlusCircle onClick={() => setNbMail(2)}/>
-            </>
-        );
-    } else {
-        mailC = (<>
-                <div>Email 1: <input onChange={handleName} placeholder="Enter Email1"/></div>
-                <div>Email 2: <input onChange={handleName} placeholder="Enter Email2"/></div>
-                <AiFillMinusCircle onClick={() => setNbMail(1)}/>
-            </>
-        );
-    }
+    let score = (1000 * props.jrestant) / props.seconds;
+    score = Math.trunc(score);
 
 
-    return (<div>Victory <br/><br/> Time :<Time seconds={props.seconds}/>Days Left: {props.jrestant}<Score
-        dl={props.jrestant}
-        time={props.seconds}/><br/>
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-        <div>Send your results:<br/>Name: <input onChange={(event) => {setName(event.target.value)}} placeholder="Enter Name"/></div>
-        {mailC}
-        <bouton onClick={sendEmail}>Send Results !</bouton>
-        <br/>
-        <btn onClick={props.return}>Return
-        </btn>
-    </div>);
+        emailjs.sendForm('service_0ynaks1', 'template_mk1s5hw', form.current, 'user_e4XlCrdarKUld7xK3LUaD')
+            .then(() => {
+                setOk("The Email was sent successfully")
+            }, () => {
+                setOk("Error, the Email could not be sent")
+            });
+    };
+
+    return (<div>Victory <br/><br/> Time :<Time seconds={props.seconds}/>Days Left: {props.jrestant}
+            <div>Score : {score}</div>
+            <br/>
+            <form ref={form} onSubmit={sendEmail}>
+                <label>Name</label>
+                <input type="text" name="name"/>
+                <label>Email</label>
+                <input type="email" name="user_email"/>
+                <input name="score" value={score} type="hidden"/>
+                <input type="submit" value="Send"/>
+            </form>
+            {ok === null ? <div/> : <div>{ok}</div>}
+
+
+        </div>
+    )
 }
+
 
 export default Results;

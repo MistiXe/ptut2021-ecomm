@@ -24,7 +24,7 @@ function Music(props) {
             <div className="musicDiv">
                 <Sound
                     url={props.src}
-                    playStatus={false}
+                    playStatus={Sound.status.PAUSED}
                     loop={true}
                     volume={10}
                 />
