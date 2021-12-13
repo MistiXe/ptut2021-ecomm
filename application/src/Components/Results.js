@@ -1,9 +1,43 @@
 import Time from "./Time";
 
+import "../App2.scss";
 import React, {useRef, useState} from "react";
 import emailjs from "emailjs-com"
 
 function Results(props) {
+
+    return (
+        <>
+
+            <h1 className="vict">Victory</h1>
+
+            <div className="div_resultats">
+                <table className="zigzag">
+                    <thead>
+                    <tr>
+                        <th className="header">Time</th>
+                        <th className="header">Day Left</th>
+                        <th className="header">Score</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><Time seconds={props.seconds}/></td>
+                        <td>{props.jrestant}</td>
+                        <td><Score dl={props.jrestant}
+                                   time={props.seconds}/><br/></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <button id="Play3" onClick={props.return}> Menu</button>
+        </>);
+
 
     const form = useRef();
     const [ok, setOk] = useState(null);
