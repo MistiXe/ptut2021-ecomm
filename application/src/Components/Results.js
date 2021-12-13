@@ -6,37 +6,7 @@ import emailjs from "emailjs-com"
 
 function Results(props) {
 
-    return (
-        <>
 
-            <h1 className="vict">Victory</h1>
-
-            <div className="div_resultats">
-                <table className="zigzag">
-                    <thead>
-                    <tr>
-                        <th className="header">Time</th>
-                        <th className="header">Day Left</th>
-                        <th className="header">Score</th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><Time seconds={props.seconds}/></td>
-                        <td>{props.jrestant}</td>
-                        <td><Score dl={props.jrestant}
-                                   time={props.seconds}/><br/></td>
-
-                    </tr>
-                    </tbody>
-                </table>
-
-
-            </div>
-
-            <button id="Play3" onClick={props.return}> Menu</button>
-        </>);
 
 
     const form = useRef();
@@ -57,22 +27,44 @@ function Results(props) {
             });
     };
 
-    return (<div>Victory <br/><br/> Time :<Time seconds={props.seconds}/>Days Left: {props.jrestant}
-            <div>Score : {score}</div>
-            <br/>
-            <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label>
-                <input type="text" name="name"/>
-                <label>Email</label>
-                <input type="email" name="user_email"/>
-                <input name="score" value={score} type="hidden"/>
-                <input type="submit" value="Send"/>
-            </form>
-            {ok === null ? <div/> : <div>{ok}</div>}
+    return (
+        <>
 
+            <h1 className="vict">Victory</h1>
 
-        </div>
-    )
+            <div className="div_resultats">
+                <table className="zigzag">
+                    <thead>
+                    <tr>
+                        <th className="header">Time</th>
+                        <th className="header">Day Left</th>
+                        <th className="header">Score</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><Time seconds={props.seconds}/></td>
+                        <td>{props.jrestant}</td>
+                        <td>Score: {score}<br/></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                <form ref={form} onSubmit={sendEmail}>
+                    <label>Name</label>
+                    <input type="text" name="name"/>
+                    <label>Email</label>
+                    <input type="email" name="user_email"/>
+                    <input name="score" value={score} type="hidden"/>
+                    <input type="submit" value="Send"/>
+                </form>
+                {ok === null ? <div/> : <div>{ok}</div>}
+
+            </div>
+
+            <button id="Play3" onClick={props.return}> Menu</button>
+        </>);
 }
 
 
