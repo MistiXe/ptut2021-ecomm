@@ -12,7 +12,7 @@ import NavBar from "./Components/NavBar";
 import Results from "./Components/Results";
 
 function Main(props) {
-    const [etape, setEtape] = useState(23);
+    const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState(0);
     const [seconds, setSeconds] = useState(100);

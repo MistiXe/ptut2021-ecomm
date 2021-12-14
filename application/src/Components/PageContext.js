@@ -9,36 +9,41 @@ function PageContext(props) {
     let morceauContext;
     if (page === 0) {
         morceauContext = <>
-            <h1>Context</h1>
+            <div>
+                <h1>Context</h1>
 
 
-            <div className="cardsE">
+                <div className="cardsE">
 
 
-                <div className="debile">
-                </div>
-                <div className="contenuTxtT">
-                    <h3>1>></h3>
-                    <h3>1>></h3>
+                    <div className="debile">
+                    </div>
+                    <div className="contenuTxtT">
+                        <h3>1>></h3>
+                        <h3>1>></h3>
 
-                </div>
-
-                <div className="info">
-                    <h1>The Beginning...</h1>
-                    <div>April 20th: The Importer is called 123 Importing Company, 89 High Street, New York, NY 70036,
-                        USA.
-                        It is interested in purchasing 3000 men's cotton shirts from a supplier in Japan, as detailed on
-                        Purchase
-                        Orders 7689 (1000 red/blue/white shirts in size S and 1000 red/blue/white shirts in size M) and
-                        7690
-                        (1000 red/blue/white shirts in size L) from a supplier (exporter) called Zen Export
-                        International
-                        Company, 31 Hinga, Tokyo, Japan.
                     </div>
 
+                    <div className="info">
+                        <h1>The Beginning...</h1>
+                        <div>April 20th: The Importer is called 123 Importing Company, 89 High Street, New York, NY
+                            70036,
+                            USA.
+                            It is interested in purchasing 3000 men's cotton shirts from a supplier in Japan, as
+                            detailed on
+                            Purchase
+                            Orders 7689 (1000 red/blue/white shirts in size S and 1000 red/blue/white shirts in size M)
+                            and
+                            7690
+                            (1000 red/blue/white shirts in size L) from a supplier (exporter) called Zen Export
+                            International
+                            Company, 31 Hinga, Tokyo, Japan.
+                        </div>
+
+                    </div>
+
+
                 </div>
-
-
             </div>
         </>
     } else if (page === 1) {
@@ -221,7 +226,8 @@ function PageContext(props) {
 
                 {morceauContext}
                 <div className="displayBtnCircle">
-                    <AiFillLeftCircle className="circleBtn" onClick={() => parseInt(page)===0?setPage(7):setPage(page-1)}/>
+                    <AiFillLeftCircle className="circleBtn"
+                                      onClick={() => parseInt(page) === 0 ? setPage(7) : setPage(page - 1)}/>
 
                     <AiFillRightCircle className="circleBtn" onClick={() => setPage((page + 1) % 8)}/>
                     <br/>
