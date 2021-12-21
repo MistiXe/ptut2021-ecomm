@@ -14,8 +14,8 @@ import Results from "./Components/Results";
 function Main(props) {
     const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
-    const [lastEtape, setLastEtape] = useState(0);
-    const [seconds, setSeconds] = useState(100);
+    const [lastEtape, setLastEtape] = useState();
+    const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [cookies, setCookie] = useCookies(['etape', 'time', 'dleft']);
 
@@ -190,7 +190,7 @@ function EtapeJeu(props) {
     let intitule;
 
     if (props.etape === 1) {
-        intitule = (<div>Commercial mes couilles</div>);
+        intitule = (<div>XXX</div>);
         jeu = (
             <>
                 <center><p>Choose the right step.</p>
@@ -435,7 +435,6 @@ function EtapeJeu(props) {
 
         <div className="acc">
             <ProgressBar completed={props.jrestant > 0 ? props.jrestant : 0}/>
-            <h1>Actual Step : {props.etape} </h1>
             <h1>Actual Step : {props.etape} {intitule}</h1>
             {jeu}
         </div>

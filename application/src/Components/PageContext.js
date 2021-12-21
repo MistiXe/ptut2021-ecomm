@@ -13,7 +13,7 @@ function PageContext(props) {
                 <h1>Context</h1>
 
 
-                <div className="cardsE">
+                <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
                     <div className="debile">
@@ -49,7 +49,7 @@ function PageContext(props) {
     } else if (page === 1) {
         morceauContext = <>
             <h1>Context</h1>
-            <div className="cardsE">
+            <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
                 <div className="debile">
@@ -79,7 +79,7 @@ function PageContext(props) {
     } else if (page === 2) {
         morceauContext = <>
             <h1>Context</h1>
-            <div className="cardsE">
+            <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
                 <div className="debile">
@@ -106,7 +106,7 @@ function PageContext(props) {
         morceauContext = <>
 
             <h1>Context</h1>
-            <div className="cardsE">
+            <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
                 <div className="debile">
@@ -136,7 +136,7 @@ function PageContext(props) {
         morceauContext = <>
 
             <h1>Context</h1>
-            <div className="cardsE">
+            <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
                 <div className="debile">
