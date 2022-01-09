@@ -52,18 +52,22 @@ function Results(props) {
                     </tbody>
                 </table>
                 <form ref={form} onSubmit={sendEmail}>
-                    <label>Name</label>
-                    <input type="text" name="name"/>
-                    <label>Email</label>
-                    <input type="email" name="user_email"/>
+                    <div>
+                    <label className="nameSub">Name : </label>
+                    <input className="namelabel" type="text" name="name"/>
+                    </div>
+                    <div>
+                    <label className="nameSub">Email : </label>
+                    <input className="namelabel" type="email" name="user_email"/>
                     <input name="score" value={score} type="hidden"/>
-                    <input type="submit" value="Send"/>
+                    </div>
+                    <input id="nextSub" type="submit" value="Send"/>
                 </form>
-                {ok === null ? <div/> : <div>{ok}</div>}
+                {ok === null ? <div/> : <button>{ok}</button>}
 
             </div>
 
-            <button id="Play3" onClick={props.return}> Menu</button>
+            <button id="PlaySub" onClick={props.return}> Menu</button>
         </>);
 }
 

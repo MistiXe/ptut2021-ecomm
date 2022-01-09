@@ -10,7 +10,7 @@ function PageContext(props) {
     if (page === 0) {
         morceauContext = <>
             <div>
-                <h1>Context</h1>
+                <header className="contextName">Context</header>
 
 
                 <div className="cardsE" onClick={() => setPage(page+1)}>

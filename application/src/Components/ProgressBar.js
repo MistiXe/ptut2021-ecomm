@@ -11,6 +11,7 @@ function ProgressBar(props) {
         <div className="pBarContainerStyle">
             <div className="pBarFillerStyle" style={fillerStyles}>
                 <span className="pBarLabelStyles">{`${completed} days left`}</span>
+
             </div>
         </div>
     );

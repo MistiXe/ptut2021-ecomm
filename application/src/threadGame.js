@@ -10,9 +10,11 @@ import imageicon from "./image/commercee.jpg";
 import {useCookies} from "react-cookie";
 import NavBar from "./Components/NavBar";
 import Results from "./Components/Results";
+import Music from "./Components/MusicPlayer";
+import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
-    const [etape, setEtape] = useState(0);
+    const [etape, setEtape] = useState(23);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState();
     const [seconds, setSeconds] = useState(0);
@@ -433,8 +435,14 @@ function EtapeJeu(props) {
 
     return (
 
+
+
         <div className="acc">
             <ProgressBar completed={props.jrestant > 0 ? props.jrestant : 0}/>
+           <Music src={musiP}/>
+
+                <p className="version" onClick={props.aboutus}>E-COMM V_0.3</p>
+
             <h1>Actual Step : {props.etape} {intitule}</h1>
             {jeu}
         </div>
@@ -464,10 +472,10 @@ function DevinerSuite(props) {
                 <div className="divcont" onClick={() => check(txt.id)}>
                     <div className="cards">
                         <div className="cont">
-                            <h2>{txt.id}</h2>
-                            <h3>Card {txt.id}</h3>
+                            <h2 className="font1">{txt.id}</h2>
+                            <h3 className="font2">Card {txt.id}</h3>
 
-                            <h5>{txt.text}</h5>
+                            <h5 className="font2">{txt.text}</h5>
 
 
                         </div>

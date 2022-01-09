@@ -20,10 +20,41 @@ table {
   border-collapse:separate;
   border-spacing:.25em 1em;
   tbody tr:nth-child(odd) {
-    transform:rotate(2deg);
+    transform:rotate(0deg);
   }
   thead tr,
   tbody tr:nth-child(even) {
-    transform:rotate(-1deg);
+    transform:rotate(0deg);
+  }
+}
+
+
+.pBarContainerStyleUltime {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bar {
+    min-height: 100px;
+    border-radius: 10px;
+    width: calc(113px * 4);
+    @media only screen and (max-width: 450px) {
+      width: calc(113px * 3);
+    }
+    @media only screen and (max-width: 350px) {
+      width: calc(113px * 2);
+    }
+    box-shadow: 0px 10px 13px -6px rgba(44, 62, 80, 1);
+    background-color: var(--colour2);
+    background-image: repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 40px,
+                    var(--colour1) 40px,
+                    var(--colour1) 80px
+    );
+
+    animation: slide var(--speed) linear infinite;
+    will-change: background-position;
   }
 }

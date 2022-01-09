@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@700;900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
 .App {
     text-align: center;
@@ -10,10 +11,11 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(
-            to bottom right,
-            #Af9fff, #ABB9f9, #A1Caf1, #B2F2c8 100%
-    );
+    background-image: linear-gradient( 135deg, #F6D242 10%, #FF52E5 100%);
+
+
+
+
     background-size: 200% 200%;
     animation: movingGradient 8s linear infinite alternate;
 
@@ -133,6 +135,10 @@
     margin-top: 10%;
 
 
+}
+
+#Play3:hover{
+    transform: translateY(20px);
 }
 
 #Play:before {
@@ -544,9 +550,10 @@ h1 {
     position: center;
     width: 200px;
     height: 300px;
-    margin: 20px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    margin: 15px;
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
 
@@ -554,7 +561,7 @@ h1 {
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
 
 
 }
@@ -576,14 +583,15 @@ h1 {
     top: 60px;
     right: 20px;
     font-size: 6em;
-    color: rgba(255, 0, 0, 0.05);
+    color: rgba(255, 1, 1, 0.25);
     pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
 
 
 }
 
 .divcont .cards .cont h5 {
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -606,12 +614,14 @@ h1 {
     background-color: #e0e0de;
     border-radius: 50px;
     margin: 50px;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
 }
 
 .pBarFillerStyle {
     height: 100%;
     background-color: #7a00ff;
-    border-radius: inherit;
     text-align: right;
     margin-right: 100%;
 }
@@ -626,9 +636,12 @@ h1 {
 .pBarFillerStyle {
     height: 100%;
     background-color: red;
-    border-radius: inherit;
+
     text-align: right;
     margin-right: 100%;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
 }
 
 .wrapper div {
@@ -935,7 +948,6 @@ div .dot {
     height: 40px;
     width: 40px;
     margin-bottom: 5%;
-    background: red;
     border-radius: 20%;
 
 }
@@ -1097,6 +1109,10 @@ div .dot {
     margin-top: 1%;
 
 
+}
+
+#next2:hover{
+    transform: translateY(10px);
 }
 
 .cardsF .info{
@@ -1442,11 +1458,7 @@ div .dot {
 
 }
 
-.form1Frag1:hover{
-    -ms-transform: scale(2.3); /* IE 9 */
-    -webkit-transform: scale(2.3); /* Safari 3-8 */
-    transform: scale(2.3);
-}
+
 
 #Play4{
 
@@ -1496,16 +1508,87 @@ select option {
 }
 
 .vict{
-    font-family: Impact;
-    font-size: 50px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 70px;
     font-style: italic;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 
-.div_resultats{
+.font1{
+    font-style: italic;
+    font-family: 'Comforter Brush', Regular_400;
+}
 
+.font2{
+    font-family: 'PT Sans Narrow', sans-serif;
 
 
 }
+
+.contextName{
+    font-size: 100px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: -90px;
+    font-style: italic;
+
+}
+
+.namelabel{
+    border-radius: 40px;
+    display: inline-block;
+    height: 30px;
+    width: 260px;
+    border: none;
+    margin-top: 3%;
+
+
+}
+
+#nextSub {
+    position: center;
+    padding: 15px 36px;
+
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    margin-top: 10%;
+
+
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+
+
+}
+
+#PlaySub {
+    font-family: Calibri, sans-serif;
+    padding: 15px 36px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    font-size: 19px;
+    letter-spacing: 3px;
+    border-radius: 40px;
+    background-color: #6949F3;
+    margin: 5%;
+
+
+}
+
+.nameSub{
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
 
 
