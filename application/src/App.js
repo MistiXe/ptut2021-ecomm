@@ -47,7 +47,7 @@ function App() {
 
                         <div className="plane">
 
-                            <Music src={cdlc}/>
+                            <Music  src={cdlc}/>
 
                             <p className="rien">E-COMM</p>
 

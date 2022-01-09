@@ -151,13 +151,14 @@ function Formulaire(props) {
                         <img className="form1Frag1" src={GenerateDoc.tabCI[2].img} alt="img"/>
 
                     </div>
+
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are :  {tabMR}</p></div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
                         check(tabRep, "CI", 2, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -224,7 +225,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 3, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
 
@@ -317,7 +318,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 4, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -467,7 +468,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 5, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
 
@@ -557,7 +558,7 @@ function Formulaire(props) {
                         check(tabRep, "Mail", 0, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div><p>Bad answers are : </p>{tabMR}</div>}
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 1) {

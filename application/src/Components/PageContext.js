@@ -48,7 +48,7 @@ function PageContext(props) {
         </>
     } else if (page === 1) {
         morceauContext = <>
-            <h1>Context</h1>
+            <h1 className="contextName">Context</h1>
             <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
@@ -78,7 +78,7 @@ function PageContext(props) {
         </>
     } else if (page === 2) {
         morceauContext = <>
-            <h1>Context</h1>
+            <h1 className="contextName">Context</h1>
             <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
@@ -105,7 +105,7 @@ function PageContext(props) {
     } else if (page === 3) {
         morceauContext = <>
 
-            <h1>Context</h1>
+            <h1 className="contextName">Context</h1>
             <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
@@ -135,7 +135,7 @@ function PageContext(props) {
     } else if (page === 4) {
         morceauContext = <>
 
-            <h1>Context</h1>
+            <h1 className="contextName">Context</h1>
             <div className="cardsE" onClick={() => setPage(page+1)}>
 
 
@@ -170,7 +170,7 @@ function PageContext(props) {
         </>
     } else if (page === 5) {
         morceauContext = <>
-            <h1>Context</h1>
+            <h1 className="contextName">Context</h1>
             <div className="cardsE">
 
 
@@ -198,7 +198,7 @@ function PageContext(props) {
     } else if (page === 6) {
 
 
-        morceauContext = <>     <h1>Image Context</h1>
+        morceauContext = <>     <h1 className="contextName">Image Context</h1>
             <div>
                 <img src={imageContext} alt="Image Context" className="context"/>
             </div>
@@ -208,7 +208,7 @@ function PageContext(props) {
     } else if (page === 7) {
         morceauContext =
             <div>
-                <h1>Tutorial</h1>
+                <h1 className="contextName">Tutorial</h1>
                 <h3>How to play ?</h3>
                 <div>
                     <h1>Instructions :</h1>

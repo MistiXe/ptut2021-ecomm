@@ -63,7 +63,7 @@ function Results(props) {
                     </div>
                     <input id="nextSub" type="submit" value="Send"/>
                 </form>
-                {ok === null ? <div/> : <button>{ok}</button>}
+                {ok === null ? <div/> : <h1>{ok}</h1>}
 
             </div>
 
