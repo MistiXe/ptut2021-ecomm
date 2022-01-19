@@ -1495,7 +1495,7 @@ select option {
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    color: black;
+    color: white;
 }
 
 .vict{
@@ -1557,6 +1557,7 @@ select option {
 
 
 }
+
 
 #PlaySub {
     font-family: Calibri, sans-serif;

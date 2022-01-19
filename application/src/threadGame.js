@@ -14,7 +14,7 @@ import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
-    const [etape, setEtape] = useState(4);
+    const [etape, setEtape] = useState(5);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState();
     const [seconds, setSeconds] = useState(0);
@@ -125,18 +125,16 @@ function Accueil(props) {
                 <div className="debile"><h3 className="h3Txt">E-</h3><h3>E-</h3>
                 </div>
                 <div className="contenuTxtT">
-                    <h3>V.0 >></h3>
-                    <h3>V.0 >></h3>
+                    <h3>V.1 >></h3>
+                    <h3>V.1 >></h3>
 
                 </div>
 
-                <div className="info">Version V_0.2
-                    <h1>What's news ?</h1>
+                <div className="info">Version V_1
+                    <h1>What's up ?</h1>
 
                     <p>
-                        New Cards
-                        Cookies added
-                        Music and more !
+                        We hope you will get the best score !
                     </p>
                 </div>
 
@@ -192,7 +190,7 @@ function EtapeJeu(props) {
     let intitule;
 
     if (props.etape === 1) {
-        intitule = (<div>XXX</div>);
+        intitule = (<div>intitulé</div>);
         jeu = (
             <>
                 <center><p>Choose the right step.</p>
@@ -441,7 +439,7 @@ function EtapeJeu(props) {
             <ProgressBar completed={props.jrestant > 0 ? props.jrestant : 0}/>
            <Music src={musiP}/>
 
-                <p className="version" onClick={props.aboutus}>E-COMM V_0.3</p>
+                <p className="version" onClick={props.aboutus}>E-COMM V_1</p>
 
             <h1>Actual Step : {props.etape} {intitule}</h1>
             {jeu}

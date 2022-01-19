@@ -7,10 +7,9 @@ import emailjs from "emailjs-com"
 function Results(props) {
 
 
-
-
     const form = useRef();
     const [ok, setOk] = useState(null);
+
 
     let score = (1000 * props.jrestant) / props.seconds;
     score = Math.trunc(score);
@@ -19,7 +18,7 @@ function Results(props) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_9vqccgg', 'template_jfpv0lj', form.current, 'user_nx8l5gXQzJC2MynrikCOK')
+        emailjs.sendForm('service_0ynaks1', 'template_mk1s5hw', form.current, 'user_e4XlCrdarKUld7xK3LUaD')
             .then(() => {
                 setOk("The Email was sent successfully")
             }, () => {
@@ -53,15 +52,16 @@ function Results(props) {
                 </table>
                 <form ref={form} onSubmit={sendEmail}>
                     <div>
-                    <label className="nameSub">Name : </label>
-                    <input className="namelabel" type="text" name="name"/>
+                        <label className="nameSub">Name : </label>
+                        <input className="namelabel" type="text" name="name"/>
                     </div>
                     <div>
-                    <label className="nameSub">Email : </label>
-                    <input className="namelabel" type="email" name="user_email"/>
-                    <input name="score" value={score} type="hidden"/>
+                        <label className="nameSub">Email : </label>
+                        <input className="namelabel" type="email" name="user_email"/>
+                        <input name="score" value={score} type="hidden"/>
                     </div>
                     <input id="nextSub" type="submit" value="Send"/>
+
                 </form>
                 {ok === null ? <div/> : <h1>{ok}</h1>}
 
