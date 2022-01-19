@@ -14,7 +14,7 @@ import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
-    const [etape, setEtape] = useState(0);
+    const [etape, setEtape] = useState(21);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState();
     const [seconds, setSeconds] = useState(0);
@@ -241,11 +241,9 @@ function EtapeJeu(props) {
     } else if (props.etape === 6) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
-                                              id: 3,
-                                              text: StepTxt[4]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={3} erreur={props.erreur}/></div>
+                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]},
+                                              {id: 3, text: StepTxt[7]},{id: 4, text: StepTxt[4]}]}
+                                          reponse={4} erreur={props.erreur}/></div>
 
 
         )
@@ -286,11 +284,11 @@ function EtapeJeu(props) {
     } else if (props.etape === 10) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[14]}, {
+                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[14]}, {
                                               id: 3,
                                               text: StepTxt[11]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={1} erreur={props.erreur}/></div>
+                                          },{id: 4, text: StepTxt[8]}]}
+                                          reponse={4} erreur={props.erreur}/></div>
 
         )
 
@@ -362,11 +360,11 @@ function EtapeJeu(props) {
     } else if (props.etape === 17) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
+                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[0]}, {
                                               id: 3,
                                               text: StepTxt[14]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={1} erreur={props.erreur}/></div>
+                                          }, {id: 4, text: StepTxt[2]}]}
+                                          reponse={4} erreur={props.erreur}/></div>
 
 
         )
@@ -409,11 +407,11 @@ function EtapeJeu(props) {
     } else if (props.etape === 21) {
         jeu = (
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[15]}, {id: 2, text: StepTxt[12]}, {
+                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[12]}, {
                                               id: 3,
                                               text: StepTxt[11]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={1} erreur={props.erreur}/></div>
+                                          }, {id: 4, text: StepTxt[15]}]}
+                                          reponse={4} erreur={props.erreur}/></div>
 
         )
 

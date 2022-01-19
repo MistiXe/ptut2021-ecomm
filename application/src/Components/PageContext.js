@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import {AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai"
 import imageContext from "../image/imgContext.jpg";
-import Music from "./MusicPlayer";
-import cdlc from "../Sound/ansia-orchestra-death-blossom.mp3";
-
 
 function PageContext(props) {
     const [page, setPage] = useState(0);
@@ -12,7 +9,6 @@ function PageContext(props) {
     if (page === 0) {
         morceauContext = <>
             <div>
-                <Music  src={cdlc}/>
                 <header className="contextName">Context</header>
 
 
@@ -211,13 +207,12 @@ function PageContext(props) {
     } else if (page === 7) {
         morceauContext =
             <div>
-                <Music  src={cdlc}/>
                 <h1 className="contextName">Tutorial</h1>
-                <h3>How to play ?</h3>
+                <h2>How to play ?</h2>
                 <div>
                     <h1>Instructions :</h1>
 
-                    <p>Put the following 17-step procedure into the correct order and complete the necessary
+                    <p id="tutoT">Put the following 17-step procedure into the correct order and complete the necessary
                         documentation where needed by clicking on the different cards.</p>
                 </div>
             </div>
