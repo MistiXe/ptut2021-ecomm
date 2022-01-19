@@ -1599,14 +1599,71 @@ select option {
 }
 
 .divemail{
-    height: 100px;
-    width: 200px;
-;
+    height: 65px;
+    width: 600px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: inline-block;
+}
+
+.divemailBG{
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    height: 340px;
+    width: 600px;
+    border-radius: 40px;
+    letter-spacing: 2px;
+
+
+}
+
+.one{
+    height:30px;
+    width: 30px;
+
+}
+.displaytextemail{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.displaytextemail .h2{
+
+
+
+
+
 }
 
 #tutoT{
     font-size: 25px;
 }
+
+.paraemail{
+
+
+    font-style: italic;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
+.emailprop{
+    display: inline-block;
+}
+
+
 
 
 

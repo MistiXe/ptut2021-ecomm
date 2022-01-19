@@ -1,5 +1,10 @@
 import React, {useState} from "react";
 import GenerateDoc from "./data/GenerateDoc";
+import one from "../image/number-1.png";
+import two from "../image/number-2.png";
+import three from "../image/number-3.png";
+import fourth from "../image/number-four.png";
+import five from "../image/number-5.png";
 
 function Formulaire(props) {
 
@@ -631,15 +636,17 @@ function Formulaire(props) {
 
 
                     </div>
-                    <div>
 
-                        <div>From:<br/>{box1}</div>
-                        <div>To:<br/>{box2}</div>
-                        <div>Date:<br/>{box3}</div>
-                        <div>Attach:<br/>{box4}</div>
-                        <div>Subject:<br/>{box5}</div>
+                    <div className="divemailBG">
+
+                        <div className="divemail">  <div className="displaytextemail"><h2> <img className="one" src={one} alt="one" /> From:  </h2>{box1}</div></div>
+                        <div className="divemail"> <div className="displaytextemail"><h2><img className="one" src={two} alt="one" /> To:</h2>{box2}</div></div>
+                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={three} alt="one" /> Date:</h2>{box3}</div></div>
+                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={fourth} alt="one" /> Attach:  </h2>{box4}</div></div>
+                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={five} alt="one" />Subject:<p></p></h2>{box5}</div></div>
 
                     </div>
+
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
