@@ -20,6 +20,7 @@ function Results(props) {
 
         emailjs.sendForm('service_0ynaks1', 'template_mk1s5hw', form.current, 'user_e4XlCrdarKUld7xK3LUaD')
             .then(() => {
+                alert("Email sent !");
                 setOk("The Email was sent successfully")
             }, () => {
                 setOk("Error, the Email could not be sent")

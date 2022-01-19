@@ -14,7 +14,7 @@ import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
-    const [etape, setEtape] = useState(5);
+    const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState();
     const [seconds, setSeconds] = useState(0);
