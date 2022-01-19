@@ -6,6 +6,7 @@ import musiP from "../Sound/persephone.mp3";
 import "./ConfirmDialog.css";
 import ultavion from "../image/UltimateAvion.png";
 
+
 function NavBar(props) {
     return (<center>
         <div className="main-page">
@@ -112,11 +113,14 @@ function NavBar(props) {
                                 <img className="avionicon" src={ultavion} alt="img"/>
                                 <div><span className="link-text"> Time : <Time seconds={props.seconds}/></span></div>
                             </btn>
+
+                            <button onClick={}>CHEAT</button>
                         </li>
 
 
 
                     </ul>
+
 
 
                 </nav>
