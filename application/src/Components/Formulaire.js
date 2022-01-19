@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import GenerateDoc from "./data/GenerateDoc";
 
-
 function Formulaire(props) {
-    const [pageFormu, setPageFormu] = useState(0);
+
+    const [pageFormu, setPageFormu] = useState(props.pformu);
 
     const [tabMR, setTabMR] = useState([]);
 
@@ -126,6 +126,8 @@ function Formulaire(props) {
             if (lastPage) {
                 props.suivante()
                 setPageFormu(0)
+                props.setPFormu(0)
+
             } else {
                 if (formulaire === "Mail") {
                     setBox1("")
@@ -135,6 +137,8 @@ function Formulaire(props) {
                     setBox5("")
                 }
                 setPageFormu(pageFormu + 1)
+                props.setPFormu(pageFormu+1)
+
             }
         } else {
             props.erreur()
@@ -153,6 +157,7 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setPageFormu(2);
+                        props.setPFormu(2)
                         setZoom(false)
                     }}> Complete the Document
                     </button>
@@ -227,7 +232,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabCI[2].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabCI[2].img} alt="img"/>
 
                     </div>
 
@@ -295,7 +301,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabCI[3].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabCI[3].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -388,7 +395,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabCI[4].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabCI[4].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -538,7 +546,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabCI[5].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabCI[5].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -753,7 +762,9 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setPageFormu(4);
+                        props.setPFormu(4)
                         setZoom(false)
+
                     }}> Complete the Document
                     </button>
                 </>
@@ -875,7 +886,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabAFS[4].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabAFS[4].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -931,7 +943,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabAFS[5].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabAFS[5].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -998,7 +1011,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabAFS[6].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabAFS[6].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1076,7 +1090,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabAFS[7].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabAFS[7].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1143,7 +1158,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabAFS[8].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabAFS[8].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1167,7 +1183,9 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setPageFormu(2);
+                        props.setPFormu(2)
                         setZoom(false)
+
                     }}> Complete the Document
                     </button>
                 </>
@@ -1252,7 +1270,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom} src={GenerateDoc.tabSLI[2].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom}
+                             src={GenerateDoc.tabSLI[2].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1356,7 +1375,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom} src={GenerateDoc.tabSLI[3].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom}
+                             src={GenerateDoc.tabSLI[3].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1471,7 +1491,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom} src={GenerateDoc.tabSLI[4].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom}
+                             src={GenerateDoc.tabSLI[4].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1567,7 +1588,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom} src={GenerateDoc.tabSLI[5].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom}
+                             src={GenerateDoc.tabSLI[5].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1592,7 +1614,9 @@ function Formulaire(props) {
                     </div>
                     <button id="next2" onClick={() => {
                         setPageFormu(2);
+                        props.setPFormu(2)
                         setZoom(false)
+
                     }}> Complete the Document
                     </button>
                 </>
@@ -1734,7 +1758,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabBOL[2].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabBOL[2].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1859,7 +1884,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom} src={GenerateDoc.tabBOL[3].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf} onClick={handleZoom}
+                             src={GenerateDoc.tabBOL[3].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1892,7 +1918,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf2} onClick={handleZoom} src={GenerateDoc.tabBOL[4].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf2} onClick={handleZoom}
+                             src={GenerateDoc.tabBOL[4].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {
@@ -1938,7 +1965,8 @@ function Formulaire(props) {
                     </div>
                     <div>
 
-                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom} src={GenerateDoc.tabBOL[5].img} alt="img"/>
+                        <img className="form1Frag1" style={styleImgf1} onClick={handleZoom}
+                             src={GenerateDoc.tabBOL[5].img} alt="img"/>
 
                     </div>
                     <button id="next2" onClick={() => {

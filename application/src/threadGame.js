@@ -14,12 +14,12 @@ import Music from "./Components/MusicPlayer";
 import musiP from "./Sound/persephone.mp3";
 
 function Main(props) {
-    const [etape, setEtape] = useState(21);
+    const [etape, setEtape] = useState(0);
     const [joursRestants, setJoursRestants] = useState(25);
     const [lastEtape, setLastEtape] = useState();
     const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
-    const [cookies, setCookie] = useCookies(['etape', 'time', 'dleft']);
+    const [cookies, setCookie] = useCookies(['etape', 'time', 'dleft', 'pformu']);
 
     useEffect(() => {
         window.addEventListener("beforeunload", (e) => {
@@ -45,6 +45,10 @@ function Main(props) {
                 setJoursRestants(parseInt(cookies.dleft))
                 setSeconds(parseInt(cookies.time))
             } else {
+                setCookie("etape",0);
+                setCookie("time",0);
+                setCookie("dleft",25)
+                setCookie("pformu",0)
 
                 if (etape !== -10) {
                     setLastEtape(1);
@@ -70,6 +74,7 @@ function Main(props) {
     } else if (etape === 23) {
         centre = (<Results return={() => {
                 setCookie('etape', 0);
+                setCookie('pformu', 0);
                 props.returnMenuP()
             }} seconds={seconds} jrestant={joursRestants}/>
         );
@@ -87,13 +92,17 @@ function Main(props) {
                                }
                            }} fin={() => {
             setIsActive(false);
-            setEtape(etape + 1)}}/>
+            setEtape(etape + 1)}}
+                           pformu={parseInt(cookies.pformu)}
+                           setPformu={(v) => setCookie("pformu", v)}
+        />
     }
 
     return (
         <NavBar returnM={() => {
 
             setCookie('etape', 0)
+            setCookie('pformu', 0)
             props.returnMenuP()
         }}
 
@@ -206,7 +215,7 @@ function EtapeJeu(props) {
     } else if (props.etape === 2) {
         jeu = (
             <>
-                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
+                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
             </>
 
 
@@ -226,13 +235,13 @@ function EtapeJeu(props) {
     } else if (props.etape === 4) {
         //Email exercice
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
     } else if (props.etape === 5) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
@@ -307,7 +316,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 12) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
@@ -338,7 +347,7 @@ function EtapeJeu(props) {
 
     } else if (props.etape === 15) {
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
