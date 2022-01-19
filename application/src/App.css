@@ -1441,15 +1441,10 @@ div .dot {
     width: 30px;
 }
 
-.form1Init{
-    height: 400px;
-    width: 300px;
-}
 
 .form1Frag1{
 
-    height: 250px;
-    width: 400px;
+
    margin-bottom: 20px;
     margin-top: 30px;
     transition: transform .1s;
