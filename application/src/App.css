@@ -1675,7 +1675,11 @@ select option {
     margin-bottom: 1%;
 }
 
+.btncheat{
+    background: transparent;
+    border: none;
 
+}
 
 
 
