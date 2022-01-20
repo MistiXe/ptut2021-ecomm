@@ -30,12 +30,12 @@ const StepTxt = ["Upon receiving a Purchase Order from 123 Importing, the export
 
     "The B/L serves as a receipt issued by the shipping company that a shipment has been received and loaded onboard the vesse for shipment to the port of destination (New York). The B/L will also be required by the importer (123 Importing) in order to clear the goods through Customs and receive them from the shipping company.",
 
-    "The exporter for the freight forwarder) presents the documents, evidencing full compliance with the terms of the letter of credit to the exporter's bank in Japan.",
+    "The exporter for the freight forwarder presents the documents, evidencing full compliance with the terms of the letter of credit to the exporter's bank in Japan.",
 
 
     "The bank reviews the documents to make sure that they are in order and have been presented prior to the expiration date. If everything is in order, the bank releases the money to the exporter (Zen Export International).",
 
-    "The documents are returned to the importer (the applicant 123 Importing via its bank.",
+    "The documents are returned to the importer (the applicant 123 Importing via its bank).",
 
     "The importer (123 Importing) submits the documents to a Customs broker (an individual who is licensed\n" +
     "to transact Customs business on behalf of others). The Customs broker's responsibilities include the\n" +
@@ -47,8 +47,8 @@ const StepTxt = ["Upon receiving a Purchase Order from 123 Importing, the export
     "when the bill of lading is returned to them. Without the onboard ocean bill of lading, the shipping\n" +
     "company will not release the cargo.",
 
-    "After the Customs broker receives the goods, the goods are transported and delivered to the importer\n" +
-    "(123 Importing). This payment term is called a letter of credit drawn at sight, because the bank releases\n" +
+    "After the Customs broker receives the goods, the goods are transported and delivered to the importer.\n" +
+    "This payment term is called a letter of credit drawn at sight, because the bank releases\n" +
     "the funds to the exporter upon seeing the documents. Bank fees are the responsibility of the importer\n" +
     "and are usually a percentage of the amount of the letter of credit."
 
