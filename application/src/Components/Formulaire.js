@@ -667,13 +667,13 @@ function Formulaire(props) {
                         </div>
                         <div className="divemail">
                             <div className="displaytextemail">
-                                <h2><img className="one" src={five} alt="one"/>Subject:<p></p></h2>
+                                <h2><img className="one" src={five} alt="one"/>Subject:<p/></h2>
                                 {box5}</div>
                         </div>
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
