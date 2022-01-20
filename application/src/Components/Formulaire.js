@@ -245,7 +245,8 @@ function Formulaire(props) {
 
 
                     <div className="partFormu">Part A</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
+
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -315,7 +316,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
@@ -411,7 +412,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -563,7 +564,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
@@ -672,7 +673,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -771,7 +772,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -925,7 +926,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
@@ -983,7 +984,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3];
@@ -1052,7 +1053,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
@@ -1132,7 +1133,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -1201,7 +1202,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part E</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
@@ -1314,7 +1315,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -1420,7 +1421,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
@@ -1537,7 +1538,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
@@ -1635,7 +1636,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -1806,7 +1807,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
@@ -1933,14 +1934,14 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
                         check(tabRep, "BOL", 3, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                 </>
             );
         } else if (pageFormu === 4) {
@@ -1969,7 +1970,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1];
@@ -2017,14 +2018,14 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2];
                         check(tabRep, "BOL", 5, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
+                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
                 </>
             );
         }

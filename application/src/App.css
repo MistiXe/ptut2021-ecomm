@@ -1495,11 +1495,9 @@ select option {
 
 .divBadRP{
     display: inline-block;
+    width: 100px;
 
-    border-radius: 40px;
-    letter-spacing: 10px;
-    align-items: center;
-    justify-content: center;
+
     font-size: 15px;
     color: white;
 }
@@ -1591,6 +1589,8 @@ select option {
     background-color: #FFFFFF;
     background-image: linear-gradient(225deg, #FBAB7E 10%, #FF0000 100%);
     border: #fffb00;
+    height:400px;
+
 
 
 
@@ -1689,5 +1689,11 @@ select option {
 }
 
 
-
+.divtabans{
+    right:90px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+}
 
