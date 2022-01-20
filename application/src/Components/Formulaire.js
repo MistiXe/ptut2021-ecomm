@@ -142,7 +142,7 @@ function Formulaire(props) {
                     setBox5("")
                 }
                 setPageFormu(pageFormu + 1)
-                props.setPFormu(pageFormu+1)
+                props.setPFormu(pageFormu + 1)
 
             }
         } else {
@@ -242,6 +242,8 @@ function Formulaire(props) {
 
                     </div>
 
+
+                    <div className="partFormu">Part A</div>
                     {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
@@ -249,6 +251,7 @@ function Formulaire(props) {
                         check(tabRep, "CI", 2, false);
                     }}>Check
                     </button>
+
                 </>
             );
         } else if (pageFormu === 3) {
@@ -310,13 +313,15 @@ function Formulaire(props) {
                              src={GenerateDoc.tabCI[3].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part B</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
                         check(tabRep, "CI", 3, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+
                 </>
             );
 
@@ -404,13 +409,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabCI[4].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part C</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
                         check(tabRep, "CI", 4, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -555,13 +561,15 @@ function Formulaire(props) {
                              src={GenerateDoc.tabCI[5].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part D</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
                         check(tabRep, "CI", 5, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
+
                 </>
             );
 
@@ -639,21 +647,37 @@ function Formulaire(props) {
 
                     <div className="divemailBG">
 
-                        <div className="divemail">  <div className="displaytextemail"><h2> <img className="one" src={one} alt="one" /> From:  </h2>{box1}</div></div>
-                        <div className="divemail"> <div className="displaytextemail"><h2><img className="one" src={two} alt="one" /> To:</h2>{box2}</div></div>
-                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={three} alt="one" /> Date:</h2>{box3}</div></div>
-                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={fourth} alt="one" /> Attach:  </h2>{box4}</div></div>
-                        <div className="divemail"><div className="displaytextemail"><h2><img className="one" src={five} alt="one" />Subject:<p></p></h2>{box5}</div></div>
+                        <div className="divemail">
+                            <div className="displaytextemail"><h2><img className="one" src={one} alt="one"/> From:
+                            </h2>{box1}</div>
+                        </div>
+                        <div className="divemail">
+                            <div className="displaytextemail"><h2><img className="one" src={two} alt="one"/> To:
+                            </h2>{box2}</div>
+                        </div>
+                        <div className="divemail">
+                            <div className="displaytextemail"><h2><img className="one" src={three} alt="one"/> Date:
+                            </h2>{box3}</div>
+                        </div>
+                        <div className="divemail">
+                            <div className="displaytextemail"><h2><img className="one" src={fourth} alt="one"/> Attach:
+                            </h2>{box4}</div>
+                        </div>
+                        <div className="divemail">
+                            <div className="displaytextemail">
+                                <h2><img className="one" src={five} alt="one"/>Subject:<p></p></h2>
+                                {box5}</div>
+                        </div>
 
                     </div>
-
+                    <div className="partFormu">Part A</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
                         check(tabRep, "Mail", 0, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 1) {
@@ -745,13 +769,15 @@ function Formulaire(props) {
                         <div>6 {box6}</div>
 
                     </div>
+                    <div className="partFormu">Part B</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
                         check(tabRep, "Mail", 1, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
+
                 </>
             );
         }
@@ -897,13 +923,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabAFS[4].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part A</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
                         check(tabRep, "AFS", 4, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -954,13 +981,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabAFS[5].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part B</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3];
                         check(tabRep, "AFS", 5, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 6) {
@@ -1022,13 +1050,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabAFS[6].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part C</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
                         check(tabRep, "AFS", 6, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 7) {
@@ -1101,13 +1130,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabAFS[7].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part D</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
                         check(tabRep, "AFS", 7, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 8) {
@@ -1169,13 +1199,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabAFS[8].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part E</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
                         check(tabRep, "AFS", 8, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         }
@@ -1281,13 +1312,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabSLI[2].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part A</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
                         check(tabRep, "SLI", 2, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -1386,13 +1418,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabSLI[3].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part B</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
                         check(tabRep, "SLI", 3, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 4) {
@@ -1502,13 +1535,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabSLI[4].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part C</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
                         check(tabRep, "SLI", 4, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -1599,13 +1633,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabSLI[5].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part D</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
                         check(tabRep, "SLI", 5, true);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         }
@@ -1769,13 +1804,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabBOL[2].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part A</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
                         check(tabRep, "BOL", 2, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 3) {
@@ -1895,6 +1931,8 @@ function Formulaire(props) {
                              src={GenerateDoc.tabBOL[3].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part B</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
@@ -1929,13 +1967,14 @@ function Formulaire(props) {
                              src={GenerateDoc.tabBOL[4].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part C</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1];
                         check(tabRep, "BOL", 4, false);
                     }}>Check
                     </button>
-                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : {tabMR}</p></div>}
                 </>
             );
         } else if (pageFormu === 5) {
@@ -1976,6 +2015,8 @@ function Formulaire(props) {
                              src={GenerateDoc.tabBOL[5].img} alt="img"/>
 
                     </div>
+                    <div className="partFormu">Part D</div>
+                    {tabMR.length === 0 ? <div/> : <div className="badAns"><p>Bad answers are : </p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2];

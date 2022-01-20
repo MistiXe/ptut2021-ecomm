@@ -628,7 +628,8 @@ h1 {
     padding: 5px;
     color: white;
     font-weight: bold;
-    font-size: 10px;;
+    font-size: 10px;
+    font-style: initial;
 }
 
 .pBarFillerStyle {
@@ -1648,7 +1649,12 @@ select option {
 }
 
 #tutoT{
-    font-size: 25px;
+    font-size: 19px;
+    margin: 2%;
+}
+
+#tutoTT{
+    font-weight: bold;
 }
 
 .paraemail{
@@ -1663,6 +1669,11 @@ select option {
     display: inline-block;
 }
 
+.partFormu{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
 
 
 

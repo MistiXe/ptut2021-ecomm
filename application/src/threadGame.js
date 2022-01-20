@@ -45,10 +45,10 @@ function Main(props) {
                 setJoursRestants(parseInt(cookies.dleft))
                 setSeconds(parseInt(cookies.time))
             } else {
-                setCookie("etape",0);
-                setCookie("time",0);
-                setCookie("dleft",25)
-                setCookie("pformu",0)
+                setCookie("etape", 0);
+                setCookie("time", 0);
+                setCookie("dleft", 25)
+                setCookie("pformu", 0)
 
                 if (etape !== -10) {
                     setLastEtape(1);
@@ -92,7 +92,8 @@ function Main(props) {
                                }
                            }} fin={() => {
             setIsActive(false);
-            setEtape(etape + 1)}}
+            setEtape(etape + 1)
+        }}
                            pformu={parseInt(cookies.pformu)}
                            setPformu={(v) => setCookie("pformu", v)}
         />
@@ -103,6 +104,7 @@ function Main(props) {
 
             setCookie('etape', 0)
             setCookie('pformu', 0)
+            props.returnMenuP()
             props.returnMenuP()
         }}
 
@@ -201,13 +203,12 @@ function Accueil(props) {
  */
 function EtapeJeu(props) {
     let jeu;
-    let intitule;
+    let intitule = "";
 
     if (props.etape === 1) {
-        intitule = (<div>intitulé</div>);
         jeu = (
             <>
-                <center><p>Choose the right step.</p>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
 
                     <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                                   possible={[{id: 1, text: StepTxt[0]}, {
@@ -218,9 +219,11 @@ function EtapeJeu(props) {
                 </center>
             </>)
     } else if (props.etape === 2) {
+        intitule = (<div>Commercial Invoice</div>);
         jeu = (
             <>
-                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
+                <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}
+                            pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
             </>
 
 
@@ -228,100 +231,126 @@ function EtapeJeu(props) {
         //Suite 2
     } else if (props.etape === 3) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[11]}, {id: 2, text: StepTxt[7]}, {
-                                              id: 3,
-                                              text: StepTxt[1]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={3} erreur={props.erreur}/></div>
-
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[11]}, {id: 2, text: StepTxt[6]}, {
+                                                      id: 3,
+                                                      text: StepTxt[1]
+                                                  }, {id: 4, text: StepTxt[12]}]}
+                                                  reponse={3} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
     } else if (props.etape === 4) {
         //Email exercice
+        intitule = (<div>Email</div>);
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}
+                        pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
     } else if (props.etape === 5) {
+        intitule = (<div>Application for issuing Letter of Credit</div>);
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}
+                        pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
 
 //Suite 3
     } else if (props.etape === 6) {
+
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]},
-                                              {id: 3, text: StepTxt[7]},{id: 4, text: StepTxt[4]}]}
-                                          reponse={4} erreur={props.erreur}/></div>
-
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[9]}, {id: 2, text: StepTxt[4]},
+                                                      {id: 3, text: StepTxt[7]}, {id: 4, text: StepTxt[2]}]}
+                                                  reponse={4} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
     } else if (props.etape === 7) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
-                                              id: 3,
-                                              text: StepTxt[4]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={3} erreur={props.erreur}/></div>
-
-        )
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[15]}, {
+                                                      id: 3,
+                                                      text: StepTxt[3]
+                                                  }, {id: 4, text: StepTxt[7]}]}
+                                                  reponse={3} erreur={props.erreur}/></div>
+                </center>
+            </>)
     } else if (props.etape === 8) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[5]}, {id: 2, text: StepTxt[1]}, {
-                                              id: 3,
-                                              text: StepTxt[1]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={1} erreur={props.erreur}/></div>
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[4]}, {id: 2, text: StepTxt[3]}, {
+                                                      id: 3,
+                                                      text: StepTxt[13]
+                                                  }, {id: 4, text: StepTxt[16]}]}
+                                                  reponse={1} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 9) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[1]}, {
-                                              id: 3,
-                                              text: StepTxt[7]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={3} erreur={props.erreur}/></div>
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[9]}, {id: 2, text: StepTxt[3]}, {
+                                                      id: 3,
+                                                      text: StepTxt[5]
+                                                  }, {id: 4, text: StepTxt[7]}]}
+                                                  reponse={3} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 10) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[14]}, {
-                                              id: 3,
-                                              text: StepTxt[11]
-                                          },{id: 4, text: StepTxt[8]}]}
-                                          reponse={4} erreur={props.erreur}/></div>
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[14]}, {
+                                                      id: 3,
+                                                      text: StepTxt[11]
+                                                  }, {id: 4, text: StepTxt[6]}]}
+                                                  reponse={4} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 11) {
         jeu = (
-            <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[9]}, {
-                                              id: 3,
-                                              text: StepTxt[6]
-                                          }, {id: 4, text: StepTxt[7]}]}
-                                          reponse={2} erreur={props.erreur}/></div>
-
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                    <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
+                                                  possible={[{id: 1, text: StepTxt[14]}, {id: 2, text: StepTxt[7]}, {
+                                                      id: 3,
+                                                      text: StepTxt[6]
+                                                  }, {id: 4, text: StepTxt[8]}]}
+                                                  reponse={2} erreur={props.erreur}/></div>
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 12) {
+        intitule = (<div>Shipper's letter of instruction</div>);
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
+
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}
+                        pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
@@ -329,30 +358,38 @@ function EtapeJeu(props) {
 //Suite 9
     } else if (props.etape === 13) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[2]}, {id: 2, text: StepTxt[0]}, {
+                                          possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[0]}, {
                                               id: 3,
                                               text: StepTxt[14]
                                           }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
-
+                </center>
+            </>
 
         )
 
     } else if (props.etape === 14) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[10]}, {id: 2, text: StepTxt[0]}, {
+                                          possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[9]}, {
                                               id: 3,
-                                              text: StepTxt[9]
+                                              text: StepTxt[10]
                                           }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
     } else if (props.etape === 15) {
+        intitule = (<div>Bill of Lading</div>);
         jeu = (
-            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur} pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
+            <Formulaire etape={props.etape} suivante={props.suivante} erreur={props.erreur}
+                        pformu={parseInt(props.pformu)} setPFormu={props.setPformu}/>
 
 
         )
@@ -361,82 +398,104 @@ function EtapeJeu(props) {
 //Suite 11
     } else if (props.etape === 16) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[3]}, {id: 2, text: StepTxt[13]}, {
                                               id: 3,
-                                              text: StepTxt[11]
+                                              text: StepTxt[10]
                                           }, {id: 4, text: StepTxt[7]}]}
                                           reponse={3} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 17) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[0]}, {
+                                          possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[5]}, {
                                               id: 3,
                                               text: StepTxt[14]
-                                          }, {id: 4, text: StepTxt[2]}]}
+                                          }, {id: 4, text: StepTxt[11]}]}
                                           reponse={4} erreur={props.erreur}/></div>
 
-
+                </center>
+            </>
         )
     } else if (props.etape === 18) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[1]}, {id: 2, text: StepTxt[12]}, {
                                               id: 3,
                                               text: StepTxt[2]
                                           }, {id: 4, text: StepTxt[7]}]}
                                           reponse={2} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 19) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
-                                          possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[14]}, {
+                                          possible={[{id: 1, text: StepTxt[13]}, {id: 2, text: StepTxt[11]}, {
                                               id: 3,
                                               text: StepTxt[16]
                                           }, {id: 4, text: StepTxt[7]}]}
                                           reponse={1} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 20) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[9]}, {id: 2, text: StepTxt[14]}, {
                                               id: 3,
                                               text: StepTxt[8]
-                                          }, {id: 4, text: StepTxt[7]}]}
+                                          }, {id: 4, text: StepTxt[12]}]}
                                           reponse={2} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 21) {
         jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p>
             <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                           possible={[{id: 1, text: StepTxt[7]}, {id: 2, text: StepTxt[12]}, {
                                               id: 3,
                                               text: StepTxt[11]
                                           }, {id: 4, text: StepTxt[15]}]}
                                           reponse={4} erreur={props.erreur}/></div>
-
+                </center>
+            </>
         )
 
 
     } else if (props.etape === 22) {
-        jeu = (<div id="suite"><DevinerSuite className="acc" suivante={props.fin}
+        jeu = (
+            <>
+                <center><p>Choose the right step in International Sales among the 4 cards.</p><div id="suite"><DevinerSuite className="acc" suivante={props.fin}
                                              possible={[{id: 1, text: StepTxt[8]}, {id: 2, text: StepTxt[0]}, {
                                                  id: 3,
                                                  text: StepTxt[16]
                                              }, {id: 4, text: StepTxt[7]}]}
-                                             reponse={3} erreur={props.erreur}/></div>)
+                                             reponse={3} erreur={props.erreur}/></div>
+                </center>
+            </>)
 
 
     } else {
@@ -446,14 +505,13 @@ function EtapeJeu(props) {
     return (
 
 
-
         <div className="acc">
             <ProgressBar completed={props.jrestant > 0 ? props.jrestant : 0}/>
-           <Music src={musiP}/>
+            <Music src={musiP}/>
 
-                <p className="version" onClick={props.aboutus}>E-COMM V_1</p>
+            <p className="version" onClick={props.aboutus}>E-COMM V_1</p>
 
-            <h1>Actual Step : {props.etape} {intitule}</h1>
+            <h1>Step : {props.etape} {intitule}</h1>
             {jeu}
         </div>
     )
@@ -467,8 +525,10 @@ function DevinerSuite(props) {
     function check(txt) {
 
         if (props.reponse === txt) {
+            alert("Well done !")
             props.suivante()
         } else {
+            alert("Try again !")
             props.erreur();
         }
     }

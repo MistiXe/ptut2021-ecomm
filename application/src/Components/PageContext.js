@@ -12,7 +12,7 @@ function PageContext(props) {
                 <header className="contextName">Context</header>
 
 
-                <div className="cardsE" onClick={() => setPage(page+1)}>
+                <div className="cardsE" onClick={() => setPage(page + 1)}>
 
 
                     <div className="debile">
@@ -48,7 +48,7 @@ function PageContext(props) {
     } else if (page === 1) {
         morceauContext = <>
             <h1 className="contextName">Context</h1>
-            <div className="cardsE" onClick={() => setPage(page+1)}>
+            <div className="cardsE" onClick={() => setPage(page + 1)}>
 
 
                 <div className="debile">
@@ -78,7 +78,7 @@ function PageContext(props) {
     } else if (page === 2) {
         morceauContext = <>
             <h1 className="contextName">Context</h1>
-            <div className="cardsE" onClick={() => setPage(page+1)}>
+            <div className="cardsE" onClick={() => setPage(page + 1)}>
 
 
                 <div className="debile">
@@ -105,7 +105,7 @@ function PageContext(props) {
         morceauContext = <>
 
             <h1 className="contextName">Context</h1>
-            <div className="cardsE" onClick={() => setPage(page+1)}>
+            <div className="cardsE" onClick={() => setPage(page + 1)}>
 
 
                 <div className="debile">
@@ -135,7 +135,7 @@ function PageContext(props) {
         morceauContext = <>
 
             <h1 className="contextName">Context</h1>
-            <div className="cardsE" onClick={() => setPage(page+1)}>
+            <div className="cardsE" onClick={() => setPage(page + 1)}>
 
 
                 <div className="debile">
@@ -211,9 +211,23 @@ function PageContext(props) {
                 <h2>How to play ?</h2>
                 <div>
                     <h1>Instructions :</h1>
+                    <p id="tutoT">Your teams has 25 days to complete an International Trade game. You will have to put
+                        the different steps of International Trade into the correct order, as well as completing
+                        necessary documents based on a scenario where you are importing goods from Japan into the USA
+                        (please click on the 'context' button for details). Be careful, each wrongly submitted answer
+                        will result in loosing one day.</p>
 
-                    <p id="tutoT">Put the following 17-step procedure into the correct order and complete the necessary
-                        documentation where needed by clicking on the different cards.</p>
+                    <p id="tutoT"><span id="tutoTT">Goal :</span> complete the steps and submit all the documents within
+                        the 25 days. The team with the highest score wins
+                        the game.</p>
+
+                    <p id="tutoT"><span id="tutoTT">Choosing a step :</span> Pick one card among the four to select your
+                        answer. Be careful as you
+                        will loose one day for each wrong response</p>
+                    <p id="tutoT"><span id="tutoTT">Completing the documents :</span> Use the dropdown menu and context
+                        button to complete the
+                        document.You can zoom on a document by clicking on it. Be careful as you will loose one day for
+                        each wrongly completed document.</p>
                 </div>
             </div>
 
