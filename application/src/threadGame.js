@@ -116,7 +116,12 @@ function Main(props) {
                 setLastEtape(etape);
                 setEtape(-9)
             }
-        }} centre={centre} seconds={seconds}/>
+        }} centre={centre} seconds={seconds} suivante={() => {
+            setEtape((etape + 1));
+            setCookie('etape', etape + 1);
+            setCookie('time', seconds);
+            setCookie('dleft', joursRestants);
+        }}/>
 
     )
 
