@@ -761,7 +761,7 @@ function Formulaire(props) {
 
 
                     </div>
-                    <div className="divemailBG">
+                    <div className="divemailBG2">
 
                         <div className="divemail"><img className="one" src={one} alt="one"/> {box1}</div>
                         <div className="divemail"> <img className="one" src={two} alt="one"/>{box2}</div>
