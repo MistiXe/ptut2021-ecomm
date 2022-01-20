@@ -5,6 +5,7 @@ import two from "../image/number-2.png";
 import three from "../image/number-3.png";
 import fourth from "../image/number-four.png";
 import five from "../image/number-5.png";
+import six from "../image/six.png";
 
 function Formulaire(props) {
 
@@ -759,14 +760,14 @@ function Formulaire(props) {
 
 
                     </div>
-                    <div>
+                    <div className="divemailBG">
 
-                        <div>1 {box1}</div>
-                        <div>2 {box2}</div>
-                        <div>3 {box3}</div>
-                        <div>4 {box4}</div>
-                        <div>5 {box5}</div>
-                        <div>6 {box6}</div>
+                        <div className="divemail"><img className="one" src={one} alt="one"/> {box1}</div>
+                        <div className="divemail"> <img className="one" src={two} alt="one"/>{box2}</div>
+                        <div className="divemail"><img className="one" src={three} alt="one"/>{box3}</div>
+                        <div className="divemail"><img className="one" src={fourth} alt="one"/> {box4}</div>
+                        <div className="divemail"><img className="one" src={five} alt="one"/> {box5}</div>
+                        <div  className="divemail"><img className="one" src={six} alt="one"/>{box6}</div>
 
                     </div>
                     <div className="partFormu">Part B</div>
