@@ -54,7 +54,12 @@
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-image: linear-gradient(200deg, #ff0000 1%, #FBAB7E 100%);
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+
 }
 
 .navbar-nav {
@@ -1589,6 +1594,7 @@ select option {
 
 
 
+
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
@@ -1678,6 +1684,7 @@ select option {
 .btncheat{
     background: transparent;
     border: none;
+    color:transparent;
 
 }
 
