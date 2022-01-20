@@ -114,7 +114,8 @@ function NavBar(props) {
                                 <div><span className="link-text"> Time : <Time seconds={props.seconds}/></span></div>
                             </btn>
 
-                            <button onClick={props.suivante}>CHEAT</button>
+                            <button className="btncheat" onClick={props.suivante}>CHEAT</button>
+
                         </li>
 
 
