@@ -246,7 +246,7 @@ function Formulaire(props) {
 
                     <div className="partFormu">Part A</div>
 
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -412,7 +412,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -564,7 +564,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
@@ -673,7 +673,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -772,7 +772,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -926,7 +926,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
@@ -984,7 +984,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3];
@@ -1053,7 +1053,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
@@ -1133,7 +1133,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5];
@@ -1202,7 +1202,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part E</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4];
@@ -1315,7 +1315,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -1421,7 +1421,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
@@ -1538,7 +1538,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7];
@@ -1636,7 +1636,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6];
@@ -1807,7 +1807,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part A</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
@@ -1934,14 +1934,14 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part B</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11];
                         check(tabRep, "BOL", 3, false);
                     }}>Check
                     </button>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                 </>
             );
         } else if (pageFormu === 4) {
@@ -1970,7 +1970,7 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part C</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1];
@@ -2018,14 +2018,14 @@ function Formulaire(props) {
 
                     </div>
                     <div className="partFormu">Part D</div>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}
                     <button id="next2" onClick={() => {
                         setTabMR([]);
                         let tabRep = [box1, box2];
                         check(tabRep, "BOL", 5, true);
                     }}>Check
                     </button>
-                    <div className="divtabans"><p>Bad Answers</p>{tabMR}</div>
+                    {tabMR.length===0?<div/>:<div className="divtabans"><p>Bad Answers</p>{tabMR}</div>}>
                 </>
             );
         }
