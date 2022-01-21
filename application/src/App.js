@@ -6,7 +6,7 @@ import PreLoader2 from "./Preloader/Preloader2";
 import Music from "./Components/MusicPlayer";
 import cdlc from "./Sound/optheme.mp3";
 
-import CreateParty from "./Server/CreateParty.";
+
 
 
 function App() {
