@@ -218,7 +218,7 @@ function EtapeJeu(props) {
     if (props.etape === 1) {
         jeu = (
             <>
-                <center><p>Choose the right step in International Sales among the 4 cards.</p>
+                <center><p>Choose the right step in International Trade among the 4 cards.</p>
 
                     <div id="suite"><DevinerSuite className="acc" suivante={props.suivante}
                                                   possible={[{id: 1, text: StepTxt[0]}, {
